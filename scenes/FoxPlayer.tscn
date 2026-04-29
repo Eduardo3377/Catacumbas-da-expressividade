@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bjtiequkylufh"]
+
+[ext_resource type="Script" uid="uid://c0dtlk1ox4mn8" path="res://scripts/foxplayer.gd" id="1_cvc2j"]
+[ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/Fox.png" id="1_qfc0c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvc2j"]
+size = Vector2(15, 14)
+
+[node name="Node2D" type="Node2D" unique_id=1629078187]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1373295261]
+script = ExtResource("1_cvc2j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=753726193]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_cvc2j")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1134510352]
+position = Vector2(0, -18)
+texture = ExtResource("1_qfc0c")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=141045748]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
