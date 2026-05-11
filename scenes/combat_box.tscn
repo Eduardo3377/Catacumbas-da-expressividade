@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bfis7btgelswh"]
+
+[ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/Fox.png" id="1_58c3k"]
+[ext_resource type="Script" uid="uid://b1hq1qi30minh" path="res://CombatBox.gd" id="1_t3eek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3eek"]
+size = Vector2(21.25, 21.25)
+
+[node name="CombatBox" type="Node2D" unique_id=1263972995]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1211658649]
+script = ExtResource("1_t3eek")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=700937002]
+texture = ExtResource("1_58c3k")
+offset = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=735701073]
+position = Vector2(1, 18)
+shape = SubResource("RectangleShape2D_t3eek")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

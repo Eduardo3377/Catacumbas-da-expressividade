@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dd4k6f1he267x"]
+
+[ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/FoxPlayer.tscn" id="1_764e3"]
+[ext_resource type="Texture2D" uid="uid://t42kujs46r1x" path="res://assets/sprites/icon.svg" id="2_qajva"]
+
+[node name="Combat" type="Node2D" unique_id=1613444367]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=828186851]
+position = Vector2(172, 97)
+texture = ExtResource("2_qajva")
+
+[node name="fox" parent="." unique_id=1629078187 instance=ExtResource("1_764e3")]
+position = Vector2(191, 110)
+
+[node name="Control" type="Control" parent="." unique_id=810824922]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 386.0
+offset_bottom = 216.0
+
+[node name="Container" type="Container" parent="Control" unique_id=1706425433]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2

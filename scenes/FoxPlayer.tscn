@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/Fox.png" id="1_qfc0c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvc2j"]
-size = Vector2(15, 14)
+size = Vector2(18, 14)
 
-[node name="Node2D" type="Node2D" unique_id=1629078187]
+[node name="fox" type="Node2D" unique_id=1629078187]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1373295261]
 script = ExtResource("1_cvc2j")
