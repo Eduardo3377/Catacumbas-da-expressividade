@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://c0dtlk1ox4mn8" path="res://scripts/foxplayer.gd" id="1_cvc2j"]
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/Fox.png" id="1_qfc0c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvc2j"]
-size = Vector2(18, 14)
+[sub_resource type="CircleShape2D" id="CircleShape2D_cvc2j"]
+radius = 7.5
 
 [node name="fox" type="Node2D" unique_id=1629078187]
 
@@ -12,8 +12,8 @@ size = Vector2(18, 14)
 script = ExtResource("1_cvc2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=753726193]
-position = Vector2(0, 3)
-shape = SubResource("RectangleShape2D_cvc2j")
+position = Vector2(-0.5, 2)
+shape = SubResource("CircleShape2D_cvc2j")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1134510352]
 position = Vector2(0, -18)
