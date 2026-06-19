@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dd4k6f1he267x"]
+
+[ext_resource type="PackedScene" uid="uid://bmkngekvtnsbd" path="res://scenes/objects/tp.tscn" id="1_4w0uv"]
+[ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/FoxPlayer.tscn" id="2_aok5s"]
+
+[node name="room2" type="Node2D" unique_id=1613444367]
+
+[node name="TP" parent="." unique_id=699943426 instance=ExtResource("1_4w0uv")]
+position = Vector2(349, 65)
+
+[node name="fox" parent="." unique_id=1629078187 instance=ExtResource("2_aok5s")]
+position = Vector2(191, 110)
+
+[node name="Control" type="Control" parent="." unique_id=810824922]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 386.0
+offset_bottom = 216.0
+
+[node name="Container" type="Container" parent="Control" unique_id=1706425433]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2

@@ -5,16 +5,14 @@ shader_type canvas_item;
 
 uniform vec4 my_color;
 
-uniform float speed = 20.0;
+uniform float speed = 2.0;
 
 
 
 void vertex() {
-
-
-    VERTEX.x += cos(TIME - (TIME * 2.5)) - 2.0 * sin(TIME * VERTEX.y + VERTEX.x);
-
-    VERTEX.y += 10.0 / (TIME - VERTEX.y) - cos(VERTEX.x) + sin(TIME / 4.4) - (VERTEX.x/TIME);
+    VERTEX.x += cos(TIME - (TIME * 2.5)) - 2.0 * sin(TIME * VERTEX.y + VERTEX.x) * speed;
+	VERTEX.x += (cos(VERTEX.x) * VERTEX.x);
+    VERTEX.y += (cos(VERTEX.x) * VERTEX.x);
 
 } 
 

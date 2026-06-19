@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://bfis7btgelswh"]
 
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/Fox.png" id="1_58c3k"]
-[ext_resource type="Shader" uid="uid://dej2414ooskcs" path="res://scenes/myfirstshaderdontbuly.gdshader" id="1_bbvfq"]
 [ext_resource type="Script" uid="uid://b1hq1qi30minh" path="res://CombatBox.gd" id="1_t3eek"]
+[ext_resource type="Shader" uid="uid://c70wfohph1tf8" path="res://shaders/green.gdshader" id="2_bbvfq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bbvfq"]
-shader = ExtResource("1_bbvfq")
+shader = ExtResource("2_bbvfq")
 shader_parameter/my_color = Vector4(0, 0, 0, 0)
 shader_parameter/speed = 20.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3eek"]
-size = Vector2(21.25, 21.25)
+[sub_resource type="CircleShape2D" id="CircleShape2D_t3eek"]
+radius = 11.0
 
-[node name="CombatBox" type="Node2D" unique_id=1263972995]
+[node name="Enemy1" type="Node2D" unique_id=1263972995]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1211658649]
 script = ExtResource("1_t3eek")
@@ -23,7 +23,8 @@ texture = ExtResource("1_58c3k")
 offset = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=735701073]
-position = Vector2(1, 18)
-shape = SubResource("RectangleShape2D_t3eek")
+visible = false
+position = Vector2(1, 20)
+shape = SubResource("CircleShape2D_t3eek")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
