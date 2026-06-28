@@ -1,32 +1,27 @@
 [gd_scene format=3 uid="uid://bjtiequkylufh"]
 
 [ext_resource type="Script" uid="uid://c0dtlk1ox4mn8" path="res://scripts/foxplayer.gd" id="1_ls70h"]
-[ext_resource type="Shader" uid="uid://cesrvyc2l37yp" path="res://shaders/gold.gdshader" id="2_ahsjp"]
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/Fox.png" id="3_ion0l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvc2j"]
 radius = 7.5
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ardvf"]
-shader = ExtResource("2_ahsjp")
-shader_parameter/my_color = Vector4(0, 0, 0, 0)
-shader_parameter/speed = 1.0
-
 [node name="fox" type="Node2D" unique_id=1629078187]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1373295261]
 script = ExtResource("1_ls70h")
-SPEED = 200.0
+SPEED = 150.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=753726193]
 position = Vector2(-0.5, 2)
 shape = SubResource("CircleShape2D_cvc2j")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1134510352]
-material = SubResource("ShaderMaterial_ardvf")
 position = Vector2(0, -18)
 texture = ExtResource("3_ion0l")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=141045748]
 zoom = Vector2(3, 3)
+limit_smoothed = true
+position_smoothing_enabled = true
 position_smoothing_speed = 10.0

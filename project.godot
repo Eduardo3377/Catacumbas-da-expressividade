@@ -12,8 +12,13 @@ config_version=5
 
 config/name="Catacumbas da Expressividade"
 run/main_scene="uid://cjtogc2y0pddc"
-config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://assets/sprites/icon.svg"
+config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/bg_color=Color(0.15281755, 0.10473084, 0.26747897, 1)
+config/icon="uid://crumfuv4x5le1"
+
+[autoload]
+
+GameManager="*uid://brmjuyg8hmlfv"
 
 [input]
 

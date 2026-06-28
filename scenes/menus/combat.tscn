@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ca35mpvs3njpr"]
+
+[node name="combat" type="Control" unique_id=1368979020]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=702125360]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1737329053]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "combate"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=661687876]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1353842431]
+layout_mode = 2
+text = "atatacxke"
+
+[node name="Button2" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1754109696]
+layout_mode = 2
+text = "gozar"
+
+[node name="Button3" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=333990409]
+layout_mode = 2
+text = "items"
+
+[node name="Button4" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=2030230653]
+layout_mode = 2
+text = "sair"
