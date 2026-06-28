@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c04y0e34jrmaf"]
+
+[ext_resource type="Texture2D" uid="uid://t42kujs46r1x" path="res://assets/sprites/icon.svg" id="1_8u8tn"]
+[ext_resource type="Shader" uid="uid://b323cj5raa1fa" path="res://scenes/objects/pulse.gdshader" id="1_ruc3x"]
+[ext_resource type="Script" uid="uid://blynasfhmwbhr" path="res://scripts/bgmove.gd" id="2_8u8tn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8u8tn"]
+shader = ExtResource("1_ruc3x")
+
+[node name="background" type="Node2D" unique_id=1011117589]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1508591302]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8u8tn")
+texture = ExtResource("1_8u8tn")
+region_enabled = true
+region_rect = Rect2(0, 0, 1152, 648)
+script = ExtResource("2_8u8tn")
