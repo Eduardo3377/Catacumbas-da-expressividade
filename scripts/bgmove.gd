@@ -8,5 +8,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	region_rect.position += Vector2(0.5,0.5)
+	region_rect.position += Vector2(-0.3,0.3)
 	pass

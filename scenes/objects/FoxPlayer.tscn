@@ -23,6 +23,7 @@ texture = ExtResource("3_ion0l")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=141045748]
 zoom = Vector2(3, 3)
+process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
