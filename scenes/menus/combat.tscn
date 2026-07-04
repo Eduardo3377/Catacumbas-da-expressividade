@@ -26,18 +26,18 @@ grow_vertical = 0
 size_flags_stretch_ratio = 0.0
 alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1353842431]
+[node name="ataque" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1353842431]
 layout_mode = 2
 text = "atatacxke"
 
-[node name="Button2" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1754109696]
+[node name="gozar" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1754109696]
 layout_mode = 2
 text = "gozar"
 
-[node name="Button3" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=333990409]
+[node name="item" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=333990409]
 layout_mode = 2
 text = "items"
 
-[node name="Button4" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=2030230653]
+[node name="goonar" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=2030230653]
 layout_mode = 2
 text = "sair"

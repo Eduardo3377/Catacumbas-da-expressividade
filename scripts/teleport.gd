@@ -1,12 +1,17 @@
-extends Sprite2D
-@export_range(-1.0, 1.0) var MoveX: float = 0.0
-@export_range(-1.0, 1.0) var MoveY: float = 0.0
+extends Area2D
+@export var room = preload("res://scenes/rooms/room2.tscn")
+signal levelchange
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	region_rect.position += Vector2(MoveX, MoveY)
+	pass
+	
+func _on_body_entered(_body: Node2D) -> void:
+	print("tocou no tp")
+	GameManager.levelchange(room)
 	pass

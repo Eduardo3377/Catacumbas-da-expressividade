@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cnuln0rjg3b5g"]
+
+[ext_resource type="Script" uid="uid://brmjuyg8hmlfv" path="res://scripts/game_manager.gd" id="1_r76ct"]
+[ext_resource type="PackedScene" uid="uid://5co47aqvx6b" path="res://scenes/managers/level_manager.tscn" id="2_6t86j"]
+[ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="2_cax2t"]
+[ext_resource type="PackedScene" uid="uid://bupelt6x3afgh" path="res://scenes/managers/ui_manager.tscn" id="4_6t86j"]
+
+[node name="GameManager" type="Node" unique_id=899266031]
+script = ExtResource("1_r76ct")
+
+[node name="LevelManager" parent="." unique_id=1967891978 instance=ExtResource("2_6t86j")]
+
+[node name="TestRoom" parent="LevelManager" unique_id=59091156 instance=ExtResource("2_cax2t")]
+
+[node name="UIManager" parent="." unique_id=1016761966 instance=ExtResource("4_6t86j")]

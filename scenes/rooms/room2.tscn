@@ -1,25 +1,106 @@
 [gd_scene format=3 uid="uid://dd4k6f1he267x"]
 
-[ext_resource type="PackedScene" uid="uid://bmkngekvtnsbd" path="res://scenes/objects/tp.tscn" id="1_4w0uv"]
+[ext_resource type="Texture2D" uid="uid://cgwxf8g7l88a1" path="res://assets/sprites/tileset2.png" id="1_50vm0"]
+[ext_resource type="PackedScene" uid="uid://bfis7btgelswh" path="res://scenes/objects/enemy1.tscn" id="2_4w0uv"]
+[ext_resource type="Texture2D" uid="uid://c52b70pmyw0ar" path="res://assets/sprites/tileset3.png" id="2_27dsb"]
 [ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/FoxPlayer.tscn" id="2_aok5s"]
+[ext_resource type="Texture2D" uid="uid://bau8bd3gnhg0s" path="res://assets/sprites/tileset1.png" id="3_6r7di"]
+[ext_resource type="Texture2D" uid="uid://c50w86uvq7li" path="res://assets/sprites/hitboxes.png" id="4_dqv01"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3frf"]
+texture = ExtResource("1_50vm0")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e25b3"]
+texture = ExtResource("2_27dsb")
+0:0/0 = 0
+0:1/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+3:0/0 = 0
+3:1/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+5:0/0 = 0
+5:1/0 = 0
+6:0/0 = 0
+6:1/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tt76m"]
+texture = ExtResource("3_6r7di")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tad5b"]
+uv_clipping = true
+sources/0 = SubResource("TileSetAtlasSource_b3frf")
+sources/1 = SubResource("TileSetAtlasSource_e25b3")
+sources/2 = SubResource("TileSetAtlasSource_tt76m")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vf0v6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2pkj"]
+texture = ExtResource("4_dqv01")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 8, 0, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
+
+[sub_resource type="TileSet" id="TileSet_xb5vf"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_vf0v6")
+sources/0 = SubResource("TileSetAtlasSource_g2pkj")
 
 [node name="room2" type="Node2D" unique_id=1613444367]
 
-[node name="TP" parent="." unique_id=699943426 instance=ExtResource("1_4w0uv")]
-position = Vector2(349, 65)
+[node name="Background" type="TileMapLayer" parent="." unique_id=1858621776]
+tile_set = SubResource("TileSet_tad5b")
+
+[node name="Hitboxes" type="TileMapLayer" parent="." unique_id=2014476461]
+modulate = Color(1, 1, 1, 0.21176471)
+tile_set = SubResource("TileSet_xb5vf")
 
 [node name="fox" parent="." unique_id=1629078187 instance=ExtResource("2_aok5s")]
 position = Vector2(191, 110)
 
-[node name="Control" type="Control" parent="." unique_id=810824922]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 386.0
-offset_bottom = 216.0
-
-[node name="Container" type="Container" parent="Control" unique_id=1706425433]
-layout_mode = 1
-anchors_preset = -1
-offset_right = 40.0
-offset_bottom = 40.0
-grow_horizontal = 2
+[node name="Enemy1" parent="." unique_id=1263972995 instance=ExtResource("2_4w0uv")]
+position = Vector2(107, 135)

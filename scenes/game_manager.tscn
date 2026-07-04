@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cnuln0rjg3b5g"]
-
-[ext_resource type="Script" uid="uid://brmjuyg8hmlfv" path="res://scripts/game_manager.gd" id="1_hwd4i"]
-[ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="2_glms7"]
-
-[node name="GameManager" type="Node" unique_id=899266031]
-script = ExtResource("1_hwd4i")
-
-[node name="TestRoom" parent="." unique_id=59091156 instance=ExtResource("2_glms7")]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://5co47aqvx6b"]
+
+[ext_resource type="Script" uid="uid://bp8o3qdw64vg4" path="res://level_manager.gd" id="1_dypyr"]
+
+[node name="LevelManager" type="Node2D" unique_id=1967891978]
+script = ExtResource("1_dypyr")

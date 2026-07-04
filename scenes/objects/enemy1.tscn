@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bfis7btgelswh"]
 
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/Fox.png" id="1_58c3k"]
-[ext_resource type="Script" uid="uid://b1hq1qi30minh" path="res://scripts/CombatBox.gd" id="1_t3eek"]
+[ext_resource type="Script" uid="uid://b1hq1qi30minh" path="res://scripts/Enemy.gd" id="1_t3eek"]
 [ext_resource type="Shader" uid="uid://c70wfohph1tf8" path="res://shaders/green.gdshader" id="2_bbvfq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bbvfq"]
