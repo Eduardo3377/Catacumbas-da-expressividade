@@ -15,7 +15,7 @@ func combatstart():
 func levelchange(room):
 	print("Helllooooooo")
 	level_change.emit(room)
-	#hi future me you should make this thing talk to level manager and make it replace the their vhildren (kill them KILL THEM KILL THEM KILL THEM KILL
+	#hi future me you should make this thing talk to level manager and make it replace the their vhildren
 	pass 
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,5 +1,5 @@
 extends Area2D
-signal combatstart
+#signal combatstart
 # var simultaneous_scene = preload("res://scenes/combat.tscn")
 func _ready():
 	pass
