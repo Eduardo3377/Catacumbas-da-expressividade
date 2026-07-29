@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crumfuv4x5le1"
-path="res://.godot/imported/Fox.png-bc87d8676c1a95c1c2e5acdb186ff659.ctex"
+uid="uid://f5oi6nh1ye84"
+path="res://.godot/imported/Predo.png-97e7a8848d54917d620de20db4899065.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fox.png"
-dest_files=["res://.godot/imported/Fox.png-bc87d8676c1a95c1c2e5acdb186ff659.ctex"]
+source_file="res://assets/sprites/players/Predo.png"
+dest_files=["res://.godot/imported/Predo.png-97e7a8848d54917d620de20db4899065.ctex"]
 
 [params]
 

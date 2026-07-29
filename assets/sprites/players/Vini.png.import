@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bau8bd3gnhg0s"
-path="res://.godot/imported/tileset1.png-82008a83d5bf1468fb80be0ffb5a2037.ctex"
+uid="uid://oqcn6lop7jxw"
+path="res://.godot/imported/Vini.png-45279c5d52ada37080b21ac30cbbb273.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tileset1.png"
-dest_files=["res://.godot/imported/tileset1.png-82008a83d5bf1468fb80be0ffb5a2037.ctex"]
+source_file="res://assets/sprites/players/Vini.png"
+dest_files=["res://.godot/imported/Vini.png-45279c5d52ada37080b21ac30cbbb273.ctex"]
 
 [params]
 

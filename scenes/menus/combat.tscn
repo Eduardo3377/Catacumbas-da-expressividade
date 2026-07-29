@@ -30,14 +30,15 @@ alignment = 1
 layout_mode = 2
 text = "atatacxke"
 
-[node name="gozar" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1754109696]
+[node name="magia" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1754109696]
 layout_mode = 2
-text = "gozar"
+text = "magia
+"
 
 [node name="item" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=333990409]
 layout_mode = 2
 text = "items"
 
-[node name="goonar" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=2030230653]
+[node name="sair" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=2030230653]
 layout_mode = 2
 text = "sair"

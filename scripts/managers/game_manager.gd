@@ -1,17 +1,20 @@
 extends Node
 #SOCOFOROOROOIIJGFJALSGFLEWFUWEORHUGWFEHRKQWJHELPPPHELEPPAYUDAAAA
+signal addUi
+signal dropUi
+signal level_change
 func _ready():
 	pass
 
 func combatstart():
 	print("ESCUTEI")
-	var combat = load("res://scenes/menus/combat.tscn").instantiate()
-	get_tree().root.add_child(combat)
+	addUi.emit()
 	# make it UImanagers problem
 	pass
 	
 func levelchange(room):
 	print("Helllooooooo")
+	level_change.emit(room)
 	#hi future me you should make this thing talk to level manager and make it replace the their vhildren (kill them KILL THEM KILL THEM KILL THEM KILL
 	pass 
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfcqlw0ausyqb"
-path="res://.godot/imported/cdabg.png-220effd4f950d40306f41af0c0ef614d.ctex"
+uid="uid://pa7b0lmwnw3p"
+path="res://.godot/imported/Edu(mundo dos sonhos).png-624e625188ae467e36459a0217a4fde7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cdabg.png"
-dest_files=["res://.godot/imported/cdabg.png-220effd4f950d40306f41af0c0ef614d.ctex"]
+source_file="res://assets/sprites/players/Edu(mundo dos sonhos).png"
+dest_files=["res://.godot/imported/Edu(mundo dos sonhos).png-624e625188ae467e36459a0217a4fde7.ctex"]
 
 [params]
 

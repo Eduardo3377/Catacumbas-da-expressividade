@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgwxf8g7l88a1"
-path="res://.godot/imported/tileset2.png-d5767706bcddb67a8c6c28f525824203.ctex"
+uid="uid://clgso05j5d36h"
+path="res://.godot/imported/Vini(mundo dos sonhos).png-3a8d4000e0e6515bc86e3fd801228051.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tileset2.png"
-dest_files=["res://.godot/imported/tileset2.png-d5767706bcddb67a8c6c28f525824203.ctex"]
+source_file="res://assets/sprites/players/Vini(mundo dos sonhos).png"
+dest_files=["res://.godot/imported/Vini(mundo dos sonhos).png-3a8d4000e0e6515bc86e3fd801228051.ctex"]
 
 [params]
 
