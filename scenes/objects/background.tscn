@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://c04y0e34jrmaf"]
 
+[ext_resource type="Shader" uid="uid://b323cj5raa1fa" path="res://shaders/pulse.gdshader" id="1_5fwci"]
 [ext_resource type="Script" uid="uid://blynasfhmwbhr" path="res://scripts/bgmove.gd" id="2_8u8tn"]
-[ext_resource type="Texture2D" uid="uid://bfcqlw0ausyqb" path="res://assets/sprites/cdabg.png" id="2_ruc3x"]
+[ext_resource type="Texture2D" uid="uid://bfcqlw0ausyqb" path="res://assets/sprites/objects/cdabg.png" id="2_ruc3x"]
 [ext_resource type="Shader" uid="uid://hglmryn53wl1" path="res://shaders/shadow.gdshader" id="3_n3rws"]
-[ext_resource type="Texture2D" uid="uid://j0ov36l1txlj" path="res://assets/sprites/cdabg2.png" id="4_n3rws"]
+[ext_resource type="Texture2D" uid="uid://j0ov36l1txlj" path="res://assets/sprites/objects/cdabg2.png" id="4_n3rws"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ls70h"]
+shader = ExtResource("1_5fwci")
+shader_parameter/my_color = Vector4(0, 0, 0, 0)
+shader_parameter/speed = 2.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ruc3x"]
 shader = ExtResource("3_n3rws")
@@ -12,9 +18,10 @@ shader = ExtResource("3_n3rws")
 
 [node name="Layer1" type="Sprite2D" parent="." unique_id=1508591302]
 texture_repeat = 2
+material = SubResource("ShaderMaterial_ls70h")
 texture = ExtResource("2_ruc3x")
 region_enabled = true
-region_rect = Rect2(0, 0, 1152, 648)
+region_rect = Rect2(0, 0, 758, 426.375)
 script = ExtResource("2_8u8tn")
 MoveX = -0.19999999999999996
 MoveY = 0.19999999999999996
@@ -25,7 +32,7 @@ material = SubResource("ShaderMaterial_ruc3x")
 texture = ExtResource("4_n3rws")
 flip_h = true
 region_enabled = true
-region_rect = Rect2(0, 0, 1152, 648)
+region_rect = Rect2(0, 0, 757.18164, 425.91467)
 script = ExtResource("2_8u8tn")
 MoveX = 0.10000000000000007
 MoveY = 0.19999999999999996

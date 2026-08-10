@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ca35mpvs3njpr"]
 
+[ext_resource type="Script" uid="uid://bhsr631mk5yoa" path="res://scripts/ui/combat.gd" id="1_mf56a"]
+
 [node name="combat" type="Control" unique_id=1368979020]
 layout_mode = 3
 anchors_preset = 15
@@ -7,15 +9,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_mf56a")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=702125360]
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1737329053]
-offset_right = 40.0
+[node name="Label" type="Label" parent="." unique_id=1737329053]
+layout_mode = 0
+offset_right = 68.0
 offset_bottom = 23.0
 text = "combate"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=661687876]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=661687876]
+layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -26,19 +30,25 @@ grow_vertical = 0
 size_flags_stretch_ratio = 0.0
 alignment = 1
 
-[node name="ataque" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1353842431]
+[node name="ataque" type="Button" parent="HBoxContainer" unique_id=1353842431]
+unique_name_in_owner = true
 layout_mode = 2
 text = "atatacxke"
 
-[node name="magia" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1754109696]
+[node name="magia" type="Button" parent="HBoxContainer" unique_id=1754109696]
+unique_name_in_owner = true
 layout_mode = 2
 text = "magia
 "
 
-[node name="item" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=333990409]
+[node name="item" type="Button" parent="HBoxContainer" unique_id=333990409]
+unique_name_in_owner = true
 layout_mode = 2
 text = "items"
 
-[node name="sair" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=2030230653]
+[node name="sair" type="Button" parent="HBoxContainer" unique_id=2030230653]
+unique_name_in_owner = true
 layout_mode = 2
 text = "sair"
+
+[connection signal="pressed" from="HBoxContainer/sair" to="." method="_on_sair_pressed"]
