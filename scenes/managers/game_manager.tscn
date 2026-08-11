@@ -4,15 +4,11 @@
 [ext_resource type="Script" uid="uid://d1kqt01al3u74" path="res://scripts/managers/ui_manager.gd" id="2_6t86j"]
 [ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="2_cax2t"]
 [ext_resource type="PackedScene" uid="uid://ca35mpvs3njpr" path="res://scenes/menus/combat.tscn" id="4_3yu1d"]
+[ext_resource type="PackedScene" uid="uid://cc51k0u4ygcvh" path="res://scenes/menus/configuracoes.tscn" id="4_c2g8d"]
 [ext_resource type="PackedScene" uid="uid://dhtue0fqghk7n" path="res://scenes/menus/main_menu.tscn" id="5_c2g8d"]
+[ext_resource type="PackedScene" uid="uid://xd784lehpsjb" path="res://scenes/menus/creditos.tscn" id="5_fagfu"]
 
 [node name="MainGame" type="Node" unique_id=899266031]
-
-[node name="TestRoom" parent="." unique_id=59091156 instance=ExtResource("2_cax2t")]
-position = Vector2(13, 25)
-
-[node name="fox" parent="." unique_id=1629078187 instance=ExtResource("2_3yu1d")]
-position = Vector2(-34, 27)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1860841989]
 unique_name_in_owner = true
@@ -21,7 +17,17 @@ script = ExtResource("2_6t86j")
 [node name="combat" parent="UI" unique_id=1368979020 instance=ExtResource("4_3yu1d")]
 unique_name_in_owner = true
 
+[node name="Configuracoes" parent="UI" unique_id=879079264 instance=ExtResource("4_c2g8d")]
+unique_name_in_owner = true
+
 [node name="mainMenu" parent="UI" unique_id=1212305132 instance=ExtResource("5_c2g8d")]
 unique_name_in_owner = true
-mouse_filter = 1
-script = null
+
+[node name="Creditos" parent="UI" unique_id=2103972884 instance=ExtResource("5_fagfu")]
+unique_name_in_owner = true
+
+[node name="TestRoom" parent="." unique_id=59091156 instance=ExtResource("2_cax2t")]
+position = Vector2(13, 25)
+
+[node name="fox" parent="." unique_id=1629078187 instance=ExtResource("2_3yu1d")]
+position = Vector2(-34, 27)

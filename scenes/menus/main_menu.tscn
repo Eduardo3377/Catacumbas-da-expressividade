@@ -11,6 +11,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i04j1")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1371053452]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15356618, 0.42794237, 0.6385509, 1)
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1014509302]
 layout_mode = 1
 anchors_preset = 8
@@ -45,6 +54,15 @@ text = "Jogar"
 layout_mode = 2
 text = "opcoes"
 
+[node name="Creditos" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=1985454760]
+layout_mode = 2
+text = "Creditos"
+
 [node name="Sair" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=2075968135]
 layout_mode = 2
 text = "Sair "
+
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Opcoes" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
