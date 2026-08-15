@@ -6,12 +6,9 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("AAAAAAAAAAAAAAAAAAAAAAA")
+	for child in get_children():
+		child.hide()
 	main_menu.show()
-	combat.hide()
-	configuracoes.hide()
-	creditos.hide()
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
@@ -22,7 +19,7 @@ func currentMenu(menu):
 	current.show()
 	
 func combatstart(_enemy):
-	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa")
+	print("comecando combate")
 	combat.show()
 	
 func opcoes():

@@ -14,20 +14,24 @@
 unique_name_in_owner = true
 script = ExtResource("2_6t86j")
 
+[node name="mainMenu" parent="UI" unique_id=1212305132 instance=ExtResource("5_c2g8d")]
+unique_name_in_owner = true
+
 [node name="combat" parent="UI" unique_id=1368979020 instance=ExtResource("4_3yu1d")]
 unique_name_in_owner = true
 
 [node name="Configuracoes" parent="UI" unique_id=879079264 instance=ExtResource("4_c2g8d")]
 unique_name_in_owner = true
 
-[node name="mainMenu" parent="UI" unique_id=1212305132 instance=ExtResource("5_c2g8d")]
-unique_name_in_owner = true
-
 [node name="Creditos" parent="UI" unique_id=2103972884 instance=ExtResource("5_fagfu")]
 unique_name_in_owner = true
 
-[node name="TestRoom" parent="." unique_id=59091156 instance=ExtResource("2_cax2t")]
-position = Vector2(13, 25)
+[node name="Mapa" type="Node" parent="." unique_id=520810482]
 
-[node name="fox" parent="." unique_id=1629078187 instance=ExtResource("2_3yu1d")]
-position = Vector2(-34, 27)
+[node name="TestRoom" parent="Mapa" unique_id=59091156 instance=ExtResource("2_cax2t")]
+position = Vector2(973, -738)
+
+[node name="Players" type="Node" parent="." unique_id=2113725382]
+
+[node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("2_3yu1d")]
+position = Vector2(981, -733)
