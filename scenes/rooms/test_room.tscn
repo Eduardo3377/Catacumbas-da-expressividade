@@ -114,6 +114,12 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_vf0v6")
 sources/0 = SubResource("TileSetAtlasSource_dp88d")
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nqirj"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
 [sub_resource type="Gradient" id="Gradient_nnide"]
 offsets = PackedFloat32Array(0, 0.09174312, 0.5091743, 0.9954128)
 colors = PackedColorArray(1, 1, 1, 0, 0.97808117, 0.35589388, 0.99999994, 1, 0.658599, 0.23421764, 1, 1, 0, 0.26805353, 0.2680534, 0)
@@ -124,8 +130,10 @@ gradient = SubResource("Gradient_nnide")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pmg6p"]
 particle_flag_disable_z = true
 emission_shape = 2
-emission_sphere_radius = 1.46
-gravity = Vector3(0, 90, 0)
+emission_sphere_radius = 75.2
+initial_velocity_min = 6.7
+initial_velocity_max = 68.65
+gravity = Vector3(0, 100, 0)
 linear_accel_min = 99.99999
 linear_accel_max = 99.99999
 radial_accel_min = 99.99999
@@ -169,6 +177,7 @@ position = Vector2(104, -71)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Objects" unique_id=1163824128]
 modulate = Color(1, 1, 0.99470645, 1)
-position = Vector2(278, 288)
+material = SubResource("CanvasItemMaterial_nqirj")
+position = Vector2(246, 284)
 amount = 100
 process_material = SubResource("ParticleProcessMaterial_pmg6p")
