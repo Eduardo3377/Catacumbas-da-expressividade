@@ -8,6 +8,49 @@
 [ext_resource type="PackedScene" uid="uid://dhtue0fqghk7n" path="res://scenes/menus/main_menu.tscn" id="5_c2g8d"]
 [ext_resource type="PackedScene" uid="uid://xd784lehpsjb" path="res://scenes/menus/creditos.tscn" id="5_fagfu"]
 
+[sub_resource type="Curve" id="Curve_s6d7f"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.37704915, 0.6526316), 2.7415736, 2.7415736, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ssqxr"]
+curve = SubResource("Curve_s6d7f")
+
+[sub_resource type="Gradient" id="Gradient_psj4q"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.03211009, 0.21559633, 0.51376146, 0.8761468)
+colors = PackedColorArray(0, 0, 1, 1, 0.5281222, 1, 1, 1, 0, 0.7623703, 1, 1, 0, 0, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_psj4q"]
+gradient = SubResource("Gradient_psj4q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_psj4q"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(100, 10, 1)
+angle_min = 1.0728835e-05
+angle_max = 267.6
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 395.03998
+gravity = Vector3(10, 500, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = -2.2351742e-06
+radial_accel_min = -2.2351742e-06
+radial_accel_max = -2.2351742e-06
+tangential_accel_min = -2.2351742e-06
+tangential_accel_max = -2.2351742e-06
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_psj4q")
+alpha_curve = SubResource("CurveTexture_ssqxr")
+turbulence_enabled = true
+turbulence_noise_strength = 2.8
+turbulence_noise_scale = 3.215
+turbulence_noise_speed_random = 0.8
+turbulence_influence_min = 0.0
+turbulence_influence_max = 0.095000006
+turbulence_initial_displacement_min = -100.0
+turbulence_initial_displacement_max = 100.0
+
 [node name="MainGame" type="Node" unique_id=899266031]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1860841989]
@@ -35,3 +78,9 @@ position = Vector2(973, -738)
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("2_3yu1d")]
 position = Vector2(981, -733)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Players" unique_id=1315819663]
+position = Vector2(992, -425)
+amount = 1000
+amount_ratio = 0.43
+process_material = SubResource("ParticleProcessMaterial_psj4q")

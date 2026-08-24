@@ -114,20 +114,20 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_vf0v6")
 sources/0 = SubResource("TileSetAtlasSource_dp88d")
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nqirj"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nnide"]
 particles_animation = true
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = true
 
-[sub_resource type="Gradient" id="Gradient_nnide"]
+[sub_resource type="Gradient" id="Gradient_vf0v6"]
 offsets = PackedFloat32Array(0, 0.09174312, 0.5091743, 0.9954128)
 colors = PackedColorArray(1, 1, 1, 0, 0.97808117, 0.35589388, 0.99999994, 1, 0.658599, 0.23421764, 1, 1, 0, 0.26805353, 0.2680534, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_dp88d"]
-gradient = SubResource("Gradient_nnide")
+gradient = SubResource("Gradient_vf0v6")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pmg6p"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dp88d"]
 particle_flag_disable_z = true
 emission_shape = 2
 emission_sphere_radius = 75.2
@@ -175,9 +175,9 @@ tile_set = SubResource("TileSet_vmham")
 [node name="Enemy1" parent="Objects" unique_id=1263972995 instance=ExtResource("4_dp88d")]
 position = Vector2(104, -71)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Objects" unique_id=1163824128]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=869830487]
 modulate = Color(1, 1, 0.99470645, 1)
-material = SubResource("CanvasItemMaterial_nqirj")
-position = Vector2(246, 284)
+material = SubResource("CanvasItemMaterial_nnide")
+position = Vector2(268, 293)
 amount = 100
-process_material = SubResource("ParticleProcessMaterial_pmg6p")
+process_material = SubResource("ParticleProcessMaterial_dp88d")
