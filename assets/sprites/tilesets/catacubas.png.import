@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dimktjhu014rv"
-path="res://.godot/imported/unnamed.png-6c8241e955e0ea6a4e8f2e81cd600fa2.ctex"
+uid="uid://2j1o4tn83uu6"
+path="res://.godot/imported/catacubas.png-0d8de2b2c6c6a130f8db7f4c9025d7a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilesets/unnamed.png"
-dest_files=["res://.godot/imported/unnamed.png-6c8241e955e0ea6a4e8f2e81cd600fa2.ctex"]
+source_file="res://assets/sprites/tilesets/catacubas.png"
+dest_files=["res://.godot/imported/catacubas.png-0d8de2b2c6c6a130f8db7f4c9025d7a1.ctex"]
 
 [params]
 
