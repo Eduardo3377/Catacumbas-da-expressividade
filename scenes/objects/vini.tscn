@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b1n156nwwqnqq"]
+
+[ext_resource type="Script" uid="uid://cbqnk7hylklw" path="res://scripts/followplayer.gd" id="1_2xalk"]
+[ext_resource type="Texture2D" uid="uid://bckulkpke54ga" path="res://assets/sprites/players/Figura de capuz.png" id="1_c1073"]
+
+[node name="Vini" type="Node2D" unique_id=1937835004]
+script = ExtResource("1_2xalk")
+PosIndex = 50
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=568160691]
+position = Vector2(0, -23.999998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_c1073")

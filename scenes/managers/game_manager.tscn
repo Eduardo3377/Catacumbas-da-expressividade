@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cc51k0u4ygcvh" path="res://scenes/menus/configuracoes.tscn" id="4_c2g8d"]
 [ext_resource type="PackedScene" uid="uid://dhtue0fqghk7n" path="res://scenes/menus/main_menu.tscn" id="5_c2g8d"]
 [ext_resource type="PackedScene" uid="uid://xd784lehpsjb" path="res://scenes/menus/creditos.tscn" id="5_fagfu"]
+[ext_resource type="Script" uid="uid://c62glimd228tp" path="res://scenes/managers/players.gd" id="7_s6d7f"]
+[ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/pedro.tscn" id="8_psj4q"]
+[ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/vini.tscn" id="9_ssqxr"]
 
 [sub_resource type="Curve" id="Curve_s6d7f"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.37704915, 0.6526316), 2.7415736, 2.7415736, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -75,11 +78,18 @@ unique_name_in_owner = true
 position = Vector2(973, -738)
 
 [node name="Players" type="Node" parent="." unique_id=2113725382]
+script = ExtResource("7_s6d7f")
+
+[node name="Pedro" parent="Players" unique_id=883880857 instance=ExtResource("8_psj4q")]
+PosIndex = 30
+
+[node name="Vini" parent="Players" unique_id=1937835004 instance=ExtResource("9_ssqxr")]
+PosIndex = 10
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("2_3yu1d")]
 position = Vector2(981, -733)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Players" unique_id=1315819663]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1315819663]
 position = Vector2(992, -425)
 amount = 1000
 amount_ratio = 0.43

@@ -14,11 +14,11 @@ script = ExtResource("1_ls70h")
 SPEED = 150.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=753726193]
-position = Vector2(-0.5, 2)
+position = Vector2(-1, -7)
 shape = SubResource("CircleShape2D_cvc2j")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1134510352]
-position = Vector2(0, -18)
+position = Vector2(0, -28)
 texture = ExtResource("3_ion0l")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=141045748]
