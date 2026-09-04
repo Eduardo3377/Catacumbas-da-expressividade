@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cc51k0u4ygcvh" path="res://scenes/menus/configuracoes.tscn" id="4_ll2y6"]
 [ext_resource type="PackedScene" uid="uid://xd784lehpsjb" path="res://scenes/menus/creditos.tscn" id="5_qxu4n"]
 [ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="6_3g53l"]
-[ext_resource type="Script" uid="uid://c62glimd228tp" path="res://scripts/managers/players.gd" id="7_f5q8n"]
 [ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/pedro.tscn" id="8_c456e"]
 [ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/vini.tscn" id="9_j4x4q"]
 [ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/FoxPlayer.tscn" id="10_p6fov"]
@@ -35,7 +34,6 @@ unique_name_in_owner = true
 position = Vector2(1866, 1011)
 
 [node name="Players" type="Node" parent="." unique_id=2113725382]
-script = ExtResource("7_f5q8n")
 
 [node name="Pedro" parent="Players" unique_id=883880857 instance=ExtResource("8_c456e")]
 PosIndex = 40
@@ -45,3 +43,5 @@ PosIndex = 20
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]
 position = Vector2(1929, 1062)
+
+[node name="Players2" type="Node2D" parent="." unique_id=499072006]

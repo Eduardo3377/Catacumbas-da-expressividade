@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://gf8vevltcarv" path="res://assets/sprites/tilesets/grass.png" id="5_dp88d"]
 [ext_resource type="Texture2D" uid="uid://2j1o4tn83uu6" path="res://assets/sprites/tilesets/catacubas.png" id="6_dp88d"]
 [ext_resource type="Texture2D" uid="uid://bk6qb4s7x2wde" path="res://assets/sprites/tilesets/grass_shadow.png" id="6_vmham"]
-[ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/objects/Polaris.png" id="9_vmham"]
+[ext_resource type="PackedScene" uid="uid://b4ajgfmfpvr3m" path="res://scenes/objects/polaris.tscn" id="10_suhbj"]
 
 [sub_resource type="Environment" id="Environment_pmg6p"]
 background_mode = 3
@@ -253,9 +253,9 @@ position = Vector2(184, 46)
 
 [node name="Props" type="Node2D" parent="Objects" unique_id=597679777]
 
-[node name="Polaris" type="Sprite2D" parent="Objects/Props" unique_id=1147729727]
-position = Vector2(1039, 303)
-texture = ExtResource("9_vmham")
+[node name="Polaris" parent="Objects/Props" unique_id=1161611922 instance=ExtResource("10_suhbj")]
+y_sort_enabled = true
+position = Vector2(1050, 311)
 
 [node name="Particles" type="Node2D" parent="Objects" unique_id=1359235253]
 

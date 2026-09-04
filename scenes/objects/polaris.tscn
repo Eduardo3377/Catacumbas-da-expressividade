@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b4ajgfmfpvr3m"]
+
+[ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/objects/Polaris.png" id="1_3h5ws"]
+
+[node name="Polaris" type="Node2D" unique_id=1161611922]
+
+[node name="Polaris" type="Sprite2D" parent="." unique_id=896067107]
+position = Vector2(1, -16)
+texture = ExtResource("1_3h5ws")

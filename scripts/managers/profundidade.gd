@@ -6,5 +6,5 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _process(_delta):
-	for player in get_children():
-		player.z_index = 1000 + player.global_position.y
+	for node2d in get_children():
+		node2d.z_index = 1000 + node2d.global_position.y
