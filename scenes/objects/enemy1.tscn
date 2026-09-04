@@ -10,21 +10,20 @@ shader_parameter/my_color = Vector4(0, 0, 0, 0)
 shader_parameter/speed = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t3eek"]
-radius = 11.0
+radius = 14.0
 
 [node name="Enemy1" type="Node2D" unique_id=1263972995]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1211658649]
+position = Vector2(-1, -29)
 script = ExtResource("1_t3eek")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=700937002]
 material = SubResource("ShaderMaterial_bbvfq")
 texture = ExtResource("1_58c3k")
-offset = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=735701073]
-visible = false
-position = Vector2(1, 20)
+position = Vector2(0, 19)
 shape = SubResource("CircleShape2D_t3eek")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

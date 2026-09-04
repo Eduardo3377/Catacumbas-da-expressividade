@@ -12,14 +12,11 @@ func PP(PlayerPosition):
 	
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	ArraySize = len(GameManager.PlayerPosition) -1
 	if !GameManager.PlayerPosition.is_empty():
 		if ArraySize < PosIndex:
 			global_position = GameManager.PlayerPosition[ArraySize]
-			print(GameManager.PlayerPosition[ArraySize])
 		else:
 			global_position = GameManager.PlayerPosition[PosIndex]
-			print(GameManager.PlayerPosition[PosIndex])
-	print("OI EU (", self,") ESTOU EM ", position)
 	pass
