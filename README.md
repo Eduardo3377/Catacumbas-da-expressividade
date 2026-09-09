@@ -6,7 +6,9 @@ ele foi desenvolvido por tres alunos para um TCC (Trabalho de Conclusao de curso
 ## Integrantes
 **Eduardo:**
 Programador, Design de UX/UI, Artista secundário
+
 **Pedro:**
-Arte, Sound Design, Balanceamento
+Arte, Sound Design, Balanceamento 
+
 **Vinícius:**
 Documentação, Roteiro, Controle de Qualidade
