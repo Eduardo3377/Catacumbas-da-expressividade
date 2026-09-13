@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/pedro.tscn" id="8_c456e"]
 [ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/vini.tscn" id="9_j4x4q"]
 [ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/FoxPlayer.tscn" id="10_p6fov"]
+[ext_resource type="AudioStream" uid="uid://clbvsl0fj3sje" path="res://assets/audio/music/Tobu_-_Candyland_NCS_Release-190269240.mp3" id="11_mim0e"]
 
 [node name="MainGame" type="Node" unique_id=899266031]
 
@@ -45,3 +46,9 @@ PosIndex = 20
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]
 position = Vector2(1945, 1132)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=57257390]
+stream = ExtResource("11_mim0e")
+pitch_scale = 0.55
+autoplay = true
+parameters/looping = true
