@@ -1,6 +1,7 @@
 extends Node
 # signal level_change
 var PlayerPosition = []
+var PlayerMoving: bool
 func _ready():
 	pass
 	
@@ -18,7 +19,9 @@ func combatstart():
 	
 func PlayerPos(position):
 	PlayerPosition.insert(0, position)
-
+	
+func IsMoving(state):
+	PlayerMoving = state
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

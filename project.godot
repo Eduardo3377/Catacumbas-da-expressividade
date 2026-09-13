@@ -19,6 +19,19 @@ config/icon="uid://bsfbrke23jf8a"
 [autoload]
 
 GameManager="*uid://brmjuyg8hmlfv"
+DialogueManager="*uid://c3rodes2l3gxb"
+
+[display]
+
+window/size/viewport_width=384
+window/size/viewport_height=216
+window/size/window_width_override=1152
+window/size/window_height_override=648
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 

@@ -2,11 +2,94 @@
 
 [ext_resource type="Script" uid="uid://cbqnk7hylklw" path="res://scripts/followplayer.gd" id="1_0tfep"]
 [ext_resource type="Texture2D" uid="uid://f5oi6nh1ye84" path="res://assets/sprites/players/Predo.png" id="1_lpg6p"]
+[ext_resource type="Texture2D" uid="uid://jwmjrn13m6xi" path="res://assets/sprites/players/real_potragonistaas.png" id="3_1wcti"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cn6bg"]
+atlas = ExtResource("3_1wcti")
+region = Rect2(0, 0, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcy73"]
+atlas = ExtResource("3_1wcti")
+region = Rect2(19, 0, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o80am"]
+atlas = ExtResource("3_1wcti")
+region = Rect2(57, 0, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri5m4"]
+atlas = ExtResource("3_1wcti")
+region = Rect2(38, 0, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbgg6"]
+atlas = ExtResource("3_1wcti")
+region = Rect2(0, 32, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81pef"]
+atlas = ExtResource("3_1wcti")
+region = Rect2(19, 32, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qka1n"]
+atlas = ExtResource("3_1wcti")
+region = Rect2(57, 32, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12lwv"]
+atlas = ExtResource("3_1wcti")
+region = Rect2(38, 32, 19, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pmg6p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cn6bg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcy73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o80am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri5m4")
+}],
+"loop": 1,
+"name": &"frente",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"lado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbgg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81pef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qka1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12lwv")
+}],
+"loop": 1,
+"name": &"tras",
+"speed": 5.0
+}]
 
 [node name="Pedro" type="Node2D" unique_id=883880857]
 script = ExtResource("1_0tfep")
+PosIndex = 20
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1365436549]
+visible = false
 position = Vector2(0, -24.999998)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_lpg6p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1705547541]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_pmg6p")
+animation = &"frente"
+autoplay = "frente"

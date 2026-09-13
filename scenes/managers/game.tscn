@@ -38,14 +38,16 @@ position = Vector2(1866, 1011)
 [node name="Players" type="Node2D" parent="." unique_id=499072006]
 script = ExtResource("7_f5q8n")
 
-[node name="Pedro" parent="Players" unique_id=883880857 instance=ExtResource("8_c456e")]
-PosIndex = 40
-
 [node name="Vini" parent="Players" unique_id=1937835004 instance=ExtResource("9_j4x4q")]
-PosIndex = 20
+z_index = -1
+position = Vector2(2087, 1281)
+
+[node name="Pedro" parent="Players" unique_id=883880857 instance=ExtResource("8_c456e")]
+z_index = -1
+position = Vector2(2087, 1281)
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]
-position = Vector2(1945, 1132)
+position = Vector2(2087, 1281)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=57257390]
 stream = ExtResource("11_mim0e")
