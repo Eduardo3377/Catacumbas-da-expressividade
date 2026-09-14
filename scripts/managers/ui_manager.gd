@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 @onready var main_menu: Control = %mainMenu
 @onready var combat: Control = %combat
 @onready var configuracoes: Control = %Configuracoes

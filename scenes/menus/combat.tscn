@@ -81,5 +81,25 @@ text = "Sair"
 [node name="TabContainer" type="TabContainer" parent="HBoxContainer" unique_id=402082665]
 layout_mode = 2
 size_flags_horizontal = 3
+tab_alignment = 1
+clip_tabs = false
+use_hidden_tabs_for_min_size = true
+tab_0/hidden = true
+tab_1/hidden = true
+
+[node name="Control" type="Control" parent="HBoxContainer/TabContainer" unique_id=1859814003]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/TabContainer/Control" unique_id=828011011]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control2" type="Control" parent="HBoxContainer/TabContainer" unique_id=1087929811]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/sair" to="." method="_on_sair_pressed"]
