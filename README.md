@@ -1,6 +1,6 @@
 # Catacumbas-da-expressividade
 Catacumbas da expressividade é um jogo 2D do gênero RPG 
-ele foi desenvolvido por tres alunos para um TCC (Trabalho de Conclusao de curso) usando a Engine Godot, Aseprite, Piskel e LMMS
+ele foi desenvolvido por tres alunos para um TCC (Trabalho de Conclusao de curso) usando a Engine Godot e os softwares Aseprite, Piskel e LMMS
 
 
 ## Integrantes
