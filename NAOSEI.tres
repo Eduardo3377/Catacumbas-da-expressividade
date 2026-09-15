@@ -2,12 +2,26 @@
 
 [ext_resource type="FontFile" uid="uid://bka0il8rkxm1r" path="res://assets/fonts/Bitcount_Single/static/BitcountSingle-Medium.ttf" id="1_km3g4"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_63g1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_km3g4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wugto"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_65ltr"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vbpl5"]
 
 [resource]
 default_font = ExtResource("1_km3g4")
 default_font_size = 10
-Button/colors/font_color = Color(0.6862291, 0.7576317, 0.5667063, 1)
+Button/colors/font_color = Color(0.30260497, 0.28879935, 0.24298519, 1)
+Button/colors/font_focus_color = Color(0.10979863, 0.10417541, 0.081709065, 1)
+Button/colors/font_hover_color = Color(0.17773283, 0.16985372, 0.13836607, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_63g1t")
+Button/styles/focus = SubResource("StyleBoxEmpty_km3g4")
+Button/styles/hover = SubResource("StyleBoxEmpty_wugto")
+Button/styles/normal = SubResource("StyleBoxEmpty_65ltr")
 Label/colors/font_color = Color(0.15753332, 0.15907869, 0.15677518, 1)
 TabContainer/colors/font_outline_color = Color(0, 0, 0, 0)
 TabContainer/styles/panel = SubResource("StyleBoxEmpty_vbpl5")

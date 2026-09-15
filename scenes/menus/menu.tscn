@@ -31,7 +31,7 @@ anchor_bottom = 1.0
 offset_left = -106.0
 offset_top = 28.0
 offset_right = 106.0
-offset_bottom = -28.0
+offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -40,6 +40,50 @@ propagate_maximum_size = false
 clip_contents = true
 layout_mode = 2
 alignment = 1
+
+[node name="1" type="Control" parent="MarginContainer/HBoxContainer" unique_id=758836115]
+layout_mode = 2
+
+[node name="page1" type="TabContainer" parent="MarginContainer/HBoxContainer/1" unique_id=1825582679]
+layout_mode = 0
+offset_left = -103.0
+offset_right = -10.0
+offset_bottom = 164.0
+size_flags_horizontal = 3
+current_tab = 0
+tabs_visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/1/page1" unique_id=920106903]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=1838342063]
+layout_mode = 2
+text = "catacumbas 
+da 
+expressivade"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=915458871]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Jogar" type="Button" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=1246840443]
+layout_mode = 2
+text = "Jogar"
+
+[node name="Opcoes" type="Button" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=2123705278]
+layout_mode = 2
+text = "opcoes"
+
+[node name="Creditos" type="Button" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=1133590190]
+layout_mode = 2
+text = "Creditos"
+
+[node name="Sair" type="Button" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=2060696582]
+layout_mode = 2
+text = "Sair "
 
 [node name="2" type="Control" parent="MarginContainer/HBoxContainer" unique_id=83960820]
 layout_mode = 2
@@ -55,54 +99,51 @@ size_flags_horizontal = 3
 current_tab = 1
 tabs_visible = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=386913158]
+[node name="creditos" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=386913158]
 visible = false
 clip_contents = true
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/VBoxContainer" unique_id=453518202]
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/2/page2/creditos" unique_id=621043974]
 layout_mode = 2
-text = "Descricao
+text = "Creditos:"
 
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2/creditos" unique_id=231178309]
+layout_mode = 2
+
+[node name="Eduardo" type="Label" parent="MarginContainer/HBoxContainer/2/page2/creditos/VBoxContainer" unique_id=639780199]
+layout_mode = 2
+text = "Eduardo"
+
+[node name="Pedro" type="Label" parent="MarginContainer/HBoxContainer/2/page2/creditos/VBoxContainer" unique_id=983966435]
+layout_mode = 2
+text = "Pedro"
+
+[node name="Vinicius" type="Label" parent="MarginContainer/HBoxContainer/2/page2/creditos/VBoxContainer" unique_id=353137242]
+layout_mode = 2
+text = "Vinicius
 "
-horizontal_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=1182667799]
+[node name="confuiguracoes" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=1182667799]
 clip_contents = true
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/VBoxContainer2" unique_id=482665715]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/confuiguracoes" unique_id=482665715]
 layout_mode = 2
-text = "cccccccccccc"
+text = "configguarcao"
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=1632789947]
+[node name="opcao" type="Button" parent="MarginContainer/HBoxContainer/2/page2/confuiguracoes" unique_id=277741541]
+layout_mode = 2
+text = "opcao"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=1632789947]
 visible = false
 propagate_maximum_size = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/VBoxContainer3" unique_id=1268319108]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/VBoxContainer" unique_id=1268319108]
 layout_mode = 2
 text = "b b b b b b b b b b b b b b b b"
-
-[node name="1" type="Control" parent="MarginContainer/HBoxContainer" unique_id=758836115]
-layout_mode = 2
-
-[node name="page1" type="TabContainer" parent="MarginContainer/HBoxContainer/1" unique_id=1825582679]
-layout_mode = 0
-offset_left = -108.0
-offset_right = -10.0
-offset_bottom = 159.0
-size_flags_horizontal = 3
-current_tab = 0
-tabs_visible = false
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/1/page1" unique_id=920106903]
-layout_mode = 2
-metadata/_tab_index = 0
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=1604756026]
-layout_mode = 2
-text = "aaaaaaaaaa"

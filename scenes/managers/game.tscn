@@ -12,9 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/FoxPlayer.tscn" id="10_p6fov"]
 [ext_resource type="AudioStream" uid="uid://clbvsl0fj3sje" path="res://assets/audio/music/Tobu_-_Candyland_NCS_Release-190269240.mp3" id="11_mim0e"]
 
-[sub_resource type="Theme" id="Theme_pmg6p"]
-default_font_size = 10
-
 [node name="MainGame" type="Node" unique_id=899266031]
 
 [node name="Canvas" type="CanvasLayer" parent="." unique_id=1860841989]
@@ -27,7 +24,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_pmg6p")
 
 [node name="mainMenu" parent="Canvas/UI" unique_id=1212305132 instance=ExtResource("2_mim0e")]
 unique_name_in_owner = true
