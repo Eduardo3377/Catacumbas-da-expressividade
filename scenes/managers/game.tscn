@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cnuln0rjg3b5g"]
 
-[ext_resource type="Script" uid="uid://d1kqt01al3u74" path="res://scripts/managers/ui_manager.gd" id="1_f5q8n"]
 [ext_resource type="PackedScene" uid="uid://dhtue0fqghk7n" path="res://scenes/menus/main_menu.tscn" id="2_mim0e"]
 [ext_resource type="PackedScene" uid="uid://ca35mpvs3njpr" path="res://scenes/menus/combat.tscn" id="3_upjpn"]
 [ext_resource type="PackedScene" uid="uid://cc51k0u4ygcvh" path="res://scenes/menus/configuracoes.tscn" id="4_ll2y6"]
 [ext_resource type="PackedScene" uid="uid://xd784lehpsjb" path="res://scenes/menus/creditos.tscn" id="5_qxu4n"]
 [ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="6_3g53l"]
+[ext_resource type="PackedScene" uid="uid://bvg7svt1jnhsw" path="res://scenes/menus/menu.tscn" id="6_upjpn"]
 [ext_resource type="Script" uid="uid://c62glimd228tp" path="res://scripts/managers/profundidade.gd" id="7_f5q8n"]
 [ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/pedro.tscn" id="8_c456e"]
 [ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/vini.tscn" id="9_j4x4q"]
@@ -28,22 +28,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_pmg6p")
-script = ExtResource("1_f5q8n")
 
 [node name="mainMenu" parent="Canvas/UI" unique_id=1212305132 instance=ExtResource("2_mim0e")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="combat" parent="Canvas/UI" unique_id=1368979020 instance=ExtResource("3_upjpn")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="Configuracoes" parent="Canvas/UI" unique_id=879079264 instance=ExtResource("4_ll2y6")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="Creditos" parent="Canvas/UI" unique_id=2103972884 instance=ExtResource("5_qxu4n")]
 unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="Control" parent="Canvas/UI" unique_id=2121695693 instance=ExtResource("6_upjpn")]
 layout_mode = 1
 
 [node name="Players" type="Node2D" parent="." unique_id=499072006]

@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bvg7svt1jnhsw"]
+
+[ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://NAOSEI.tres" id="1_63g1t"]
+[ext_resource type="Texture2D" uid="uid://tt04phtopwvd" path="res://assets/sprites/ui/fullbook.png" id="1_v46pp"]
+
+[node name="Control" type="Control" unique_id=2121695693]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_63g1t")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1377752638]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_v46pp")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1132704639]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = 28.0
+offset_right = 106.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1949970232]
+propagate_maximum_size = false
+clip_contents = true
+layout_mode = 2
+alignment = 1
+
+[node name="2" type="Control" parent="MarginContainer/HBoxContainer" unique_id=83960820]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="page2" type="TabContainer" parent="MarginContainer/HBoxContainer/2" unique_id=1476800340]
+propagate_maximum_size = false
+layout_mode = 0
+offset_left = 10.0
+offset_right = 107.0
+offset_bottom = 159.0
+size_flags_horizontal = 3
+current_tab = 1
+tabs_visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=386913158]
+visible = false
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/VBoxContainer" unique_id=453518202]
+layout_mode = 2
+text = "Descricao
+
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=1182667799]
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/VBoxContainer2" unique_id=482665715]
+layout_mode = 2
+text = "cccccccccccc"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=1632789947]
+visible = false
+propagate_maximum_size = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/VBoxContainer3" unique_id=1268319108]
+layout_mode = 2
+text = "b b b b b b b b b b b b b b b b"
+
+[node name="1" type="Control" parent="MarginContainer/HBoxContainer" unique_id=758836115]
+layout_mode = 2
+
+[node name="page1" type="TabContainer" parent="MarginContainer/HBoxContainer/1" unique_id=1825582679]
+layout_mode = 0
+offset_left = -108.0
+offset_right = -10.0
+offset_bottom = 159.0
+size_flags_horizontal = 3
+current_tab = 0
+tabs_visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/1/page1" unique_id=920106903]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=1604756026]
+layout_mode = 2
+text = "aaaaaaaaaa"

@@ -1,27 +1,48 @@
-Bitcount Grid Single Ink Variable Font
-======================================
+Bitcount Single Variable Font
+=============================
 
-This download contains Bitcount Grid Single Ink as both a variable font and static fonts.
+This download contains Bitcount Single as both a variable font and static fonts.
 
-Bitcount Grid Single Ink is a variable font with these axes:
+Bitcount Single is a variable font with these axes:
   CRSV
   ELSH
   ELXP
-  SZP1
-  SZP2
-  XPN1
-  XPN2
-  YPN1
-  YPN2
   slnt
   wght
 
 This means all the styles are contained in a single file:
-  BitcountGridSingleInk-VariableFont_CRSV,ELSH,ELXP,SZP1,SZP2,XPN1,XPN2,YPN1,YPN2,slnt,wght.ttf
+  BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Bitcount Grid Single Ink:
+in those cases you can use the static font files for Bitcount Single:
+  static/BitcountSingle_Roman-Thin.ttf
+  static/BitcountSingle_Roman-ExtraLight.ttf
+  static/BitcountSingle_Roman-Light.ttf
+  static/BitcountSingle_Roman-Regular.ttf
+  static/BitcountSingle_Roman-Medium.ttf
+  static/BitcountSingle_Roman-SemiBold.ttf
+  static/BitcountSingle_Roman-Bold.ttf
+  static/BitcountSingle_Roman-ExtraBold.ttf
+  static/BitcountSingle_Roman-Black.ttf
+  static/BitcountSingle-Thin.ttf
+  static/BitcountSingle-ExtraLight.ttf
+  static/BitcountSingle-Light.ttf
+  static/BitcountSingle-Regular.ttf
+  static/BitcountSingle-Medium.ttf
+  static/BitcountSingle-SemiBold.ttf
+  static/BitcountSingle-Bold.ttf
+  static/BitcountSingle-ExtraBold.ttf
+  static/BitcountSingle-Black.ttf
+  static/BitcountSingle_Cursive-Thin.ttf
+  static/BitcountSingle_Cursive-ExtraLight.ttf
+  static/BitcountSingle_Cursive-Light.ttf
+  static/BitcountSingle_Cursive-Regular.ttf
+  static/BitcountSingle_Cursive-Medium.ttf
+  static/BitcountSingle_Cursive-SemiBold.ttf
+  static/BitcountSingle_Cursive-Bold.ttf
+  static/BitcountSingle_Cursive-ExtraBold.ttf
+  static/BitcountSingle_Cursive-Black.ttf
 
 Get started
 -----------
