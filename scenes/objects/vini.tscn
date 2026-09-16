@@ -2,21 +2,86 @@
 
 [ext_resource type="Script" uid="uid://cbqnk7hylklw" path="res://scripts/followplayer.gd" id="1_2xalk"]
 [ext_resource type="Texture2D" uid="uid://bckulkpke54ga" path="res://assets/sprites/players/Figura de capuz.png" id="1_c1073"]
-[ext_resource type="Texture2D" uid="uid://jwmjrn13m6xi" path="res://assets/sprites/players/real_potragonistaas.png" id="3_inywm"]
+[ext_resource type="Texture2D" uid="uid://da8j0bespjje" path="res://assets/sprites/players/protagonistas.png" id="3_inywm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17c8q"]
 atlas = ExtResource("3_inywm")
+region = Rect2(0, 64, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf77g"]
+atlas = ExtResource("3_inywm")
 region = Rect2(19, 64, 19, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_inywm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcvuj"]
 atlas = ExtResource("3_inywm")
 region = Rect2(38, 64, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp1sn"]
+atlas = ExtResource("3_inywm")
+region = Rect2(57, 64, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i71u"]
+atlas = ExtResource("3_inywm")
+region = Rect2(0, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qo4m"]
+atlas = ExtResource("3_inywm")
+region = Rect2(19, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqkny"]
+atlas = ExtResource("3_inywm")
+region = Rect2(38, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv5ng"]
+atlas = ExtResource("3_inywm")
+region = Rect2(57, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugn1t"]
+atlas = ExtResource("3_inywm")
+region = Rect2(152, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aipc4"]
+atlas = ExtResource("3_inywm")
+region = Rect2(171, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8knk"]
+atlas = ExtResource("3_inywm")
+region = Rect2(190, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0vwl"]
+atlas = ExtResource("3_inywm")
+region = Rect2(209, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14rmb"]
+atlas = ExtResource("3_inywm")
+region = Rect2(76, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck6ag"]
+atlas = ExtResource("3_inywm")
+region = Rect2(95, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgssp"]
+atlas = ExtResource("3_inywm")
+region = Rect2(114, 96, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1h8r"]
+atlas = ExtResource("3_inywm")
+region = Rect2(133, 96, 19, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pmg6p"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_17c8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mf77g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcvuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp1sn")
 }],
 "loop": 1,
 "name": &"capuz",
@@ -24,18 +89,51 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_inywm")
+"texture": SubResource("AtlasTexture_2i71u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qo4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqkny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv5ng")
 }],
 "loop": 1,
 "name": &"frente",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugn1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aipc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8knk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0vwl")
+}],
 "loop": 1,
 "name": &"lado",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14rmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck6ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgssp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1h8r")
+}],
 "loop": 1,
 "name": &"tras",
 "speed": 5.0

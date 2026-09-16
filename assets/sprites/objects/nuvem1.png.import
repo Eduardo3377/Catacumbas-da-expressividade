@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jwmjrn13m6xi"
-path="res://.godot/imported/real_potragonistaas.png-5eaa43eed47b34ca5098957471e1cfb6.ctex"
+uid="uid://d4dvn0ns4y1fq"
+path="res://.godot/imported/nuvem1.png-570839ba7abc708fe14b3058da7bd2fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/players/real_potragonistaas.png"
-dest_files=["res://.godot/imported/real_potragonistaas.png-5eaa43eed47b34ca5098957471e1cfb6.ctex"]
+source_file="res://assets/sprites/objects/nuvem1.png"
+dest_files=["res://.godot/imported/nuvem1.png-570839ba7abc708fe14b3058da7bd2fb.ctex"]
 
 [params]
 

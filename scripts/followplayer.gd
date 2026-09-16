@@ -22,11 +22,11 @@ func _physics_process(_delta: float) -> void:
 	elif Next_pos.y > global_position.y:
 		$AnimatedSprite2D.play("tras")
 	elif Next_pos.x < global_position.x:
-#		$AnimatedSprite2D.play("lado")
-		$AnimatedSprite2D.flip_h = true 
+		$AnimatedSprite2D.play("lado")
+		$AnimatedSprite2D.flip_h = false 
 	elif Next_pos.x > global_position.x:
-#		$AnimatedSprite2D.play("lado")
-		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.play("lado")
+		$AnimatedSprite2D.flip_h = true
 		
 	if GameManager.PlayerMoving == false:
 		$AnimatedSprite2D.frame = 0

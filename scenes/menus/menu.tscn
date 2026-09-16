@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://tt04phtopwvd" path="res://assets/sprites/ui/fullbook.png" id="1_v46pp"]
 
 [node name="Control" type="Control" unique_id=2121695693]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
