@@ -19,6 +19,8 @@ func combatstart():
 	
 func PlayerPos(position):
 	PlayerPosition.insert(0, position)
+	if PlayerPosition.size() > 500:
+		PlayerPosition.pop_back()
 	
 func IsMoving(state):
 	PlayerMoving = state

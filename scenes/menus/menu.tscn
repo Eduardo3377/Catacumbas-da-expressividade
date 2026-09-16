@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://NAOSEI.tres" id="1_63g1t"]
 [ext_resource type="Texture2D" uid="uid://tt04phtopwvd" path="res://assets/sprites/ui/fullbook.png" id="1_v46pp"]
+[ext_resource type="Script" uid="uid://rpnf8qf8ru2f" path="res://scripts/ui/menu.gd" id="2_65ltr"]
 
-[node name="Control" type="Control" unique_id=2121695693]
-visible = false
+[node name="menu" type="Control" unique_id=2121695693]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +12,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_63g1t")
+script = ExtResource("2_65ltr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1719374885]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.76000005)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1377752638]
 layout_mode = 1
@@ -46,6 +56,7 @@ alignment = 1
 layout_mode = 2
 
 [node name="page1" type="TabContainer" parent="MarginContainer/HBoxContainer/1" unique_id=1825582679]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = -103.0
 offset_right = -10.0
@@ -60,15 +71,16 @@ metadata/_tab_index = 0
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=1838342063]
 layout_mode = 2
-text = "catacumbas 
+text = "Catacumbas 
 da 
-expressivade"
+Expressivade"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=915458871]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/separation = 10
-alignment = 1
+alignment = 2
 
 [node name="Jogar" type="Button" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=1246840443]
 layout_mode = 2
@@ -76,7 +88,7 @@ text = "Jogar"
 
 [node name="Opcoes" type="Button" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=2123705278]
 layout_mode = 2
-text = "opcoes"
+text = "Opcoes"
 
 [node name="Creditos" type="Button" parent="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=1133590190]
 layout_mode = 2
@@ -91,60 +103,93 @@ layout_mode = 2
 size_flags_horizontal = 0
 
 [node name="page2" type="TabContainer" parent="MarginContainer/HBoxContainer/2" unique_id=1476800340]
+unique_name_in_owner = true
 propagate_maximum_size = false
 layout_mode = 0
 offset_left = 10.0
-offset_right = 107.0
+offset_right = 102.0
 offset_bottom = 159.0
 size_flags_horizontal = 3
-current_tab = 1
+current_tab = 2
 tabs_visible = false
-
-[node name="creditos" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=386913158]
-visible = false
-clip_contents = true
-layout_mode = 2
-metadata/_tab_index = 0
-
-[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/2/page2/creditos" unique_id=621043974]
-layout_mode = 2
-text = "Creditos:"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2/creditos" unique_id=231178309]
-layout_mode = 2
-
-[node name="Eduardo" type="Label" parent="MarginContainer/HBoxContainer/2/page2/creditos/VBoxContainer" unique_id=639780199]
-layout_mode = 2
-text = "Eduardo"
-
-[node name="Pedro" type="Label" parent="MarginContainer/HBoxContainer/2/page2/creditos/VBoxContainer" unique_id=983966435]
-layout_mode = 2
-text = "Pedro"
-
-[node name="Vinicius" type="Label" parent="MarginContainer/HBoxContainer/2/page2/creditos/VBoxContainer" unique_id=353137242]
-layout_mode = 2
-text = "Vinicius
-"
-
-[node name="confuiguracoes" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=1182667799]
-clip_contents = true
-layout_mode = 2
-metadata/_tab_index = 1
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/confuiguracoes" unique_id=482665715]
-layout_mode = 2
-text = "configguarcao"
-
-[node name="opcao" type="Button" parent="MarginContainer/HBoxContainer/2/page2/confuiguracoes" unique_id=277741541]
-layout_mode = 2
-text = "opcao"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=1632789947]
 visible = false
 propagate_maximum_size = false
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Conf" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=1182667799]
+visible = false
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/Conf" unique_id=482665715]
+layout_mode = 2
+text = "Opcoes:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/2/page2/Conf" unique_id=694575549]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer" unique_id=979516276]
+layout_mode = 2
+text = "Musicas"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer" unique_id=1543118005]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/2/page2/Conf" unique_id=987319224]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer2" unique_id=1074429821]
+layout_mode = 2
+text = "Efeitos"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer2" unique_id=1119194424]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="silenciar" type="Button" parent="MarginContainer/HBoxContainer/2/page2/Conf" unique_id=461051401]
+layout_mode = 2
+toggle_mode = true
+text = "Silenciar Jogo"
+
+[node name="fullscreen" type="Button" parent="MarginContainer/HBoxContainer/2/page2/Conf" unique_id=277741541]
+layout_mode = 2
+toggle_mode = true
+text = "Fullscreen"
+
+[node name="Creditos" type="VBoxContainer" parent="MarginContainer/HBoxContainer/2/page2" unique_id=386913158]
+clip_contents = true
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/2/page2/VBoxContainer" unique_id=1268319108]
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/2/page2/Creditos" unique_id=621043974]
 layout_mode = 2
-text = "b b b b b b b b b b b b b b b b"
+text = "Creditos:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/2/page2/Creditos" unique_id=569734982]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Eduardo:
+Programador, UI
+Pedro:
+Artista, Roteiro
+Vini:
+Roteiro, Documentacao
+
+
+Engine godot
+fonte sla oq do google fonts
+plugin dialogue manager
+minha bunda"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Opcoes" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]

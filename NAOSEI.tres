@@ -16,5 +16,7 @@ Button/colors/icon_normal_color = Color(0.6363759, 0, 0.2511172, 1)
 Button/colors/icon_pressed_color = Color(0.7068942, 0.371627, 0.120957874, 1)
 Button/styles/normal = SubResource("StyleBoxEmpty_65ltr")
 Label/colors/font_color = Color(0.15753332, 0.15907869, 0.15677518, 1)
+RichTextLabel/colors/default_color = Color(0.24477637, 0.2447764, 0.24477637, 1)
+RichTextLabel/font_sizes/normal_font_size = 7
 TabContainer/colors/font_outline_color = Color(0, 0, 0, 0)
 TabContainer/styles/panel = SubResource("StyleBoxEmpty_vbpl5")

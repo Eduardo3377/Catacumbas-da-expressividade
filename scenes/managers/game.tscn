@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cnuln0rjg3b5g"]
 
+[ext_resource type="Script" uid="uid://d1kqt01al3u74" path="res://scripts/managers/ui_manager.gd" id="1_upjpn"]
 [ext_resource type="PackedScene" uid="uid://dhtue0fqghk7n" path="res://scenes/menus/main_menu.tscn" id="2_mim0e"]
 [ext_resource type="PackedScene" uid="uid://ca35mpvs3njpr" path="res://scenes/menus/combat.tscn" id="3_upjpn"]
 [ext_resource type="PackedScene" uid="uid://cc51k0u4ygcvh" path="res://scenes/menus/configuracoes.tscn" id="4_ll2y6"]
@@ -24,6 +25,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_upjpn")
+
+[node name="menu" parent="Canvas/UI" unique_id=2121695693 instance=ExtResource("6_upjpn")]
+unique_name_in_owner = true
+layout_mode = 1
 
 [node name="mainMenu" parent="Canvas/UI" unique_id=1212305132 instance=ExtResource("2_mim0e")]
 unique_name_in_owner = true
@@ -43,9 +49,6 @@ layout_mode = 1
 [node name="Creditos" parent="Canvas/UI" unique_id=2103972884 instance=ExtResource("5_qxu4n")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 1
-
-[node name="Control" parent="Canvas/UI" unique_id=2121695693 instance=ExtResource("6_upjpn")]
 layout_mode = 1
 
 [node name="Players" type="Node2D" parent="." unique_id=499072006]
