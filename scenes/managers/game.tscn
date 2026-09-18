@@ -2,17 +2,31 @@
 
 [ext_resource type="Script" uid="uid://d1kqt01al3u74" path="res://scripts/managers/ui_manager.gd" id="1_upjpn"]
 [ext_resource type="PackedScene" uid="uid://dhtue0fqghk7n" path="res://scenes/menus/main_menu.tscn" id="2_mim0e"]
+[ext_resource type="PackedScene" uid="uid://bcsaae0v3cv7g" path="res://scenes/menus/dialogo.tscn" id="2_qxu4n"]
 [ext_resource type="PackedScene" uid="uid://ca35mpvs3njpr" path="res://scenes/menus/combat.tscn" id="3_upjpn"]
 [ext_resource type="PackedScene" uid="uid://cc51k0u4ygcvh" path="res://scenes/menus/configuracoes.tscn" id="4_ll2y6"]
 [ext_resource type="PackedScene" uid="uid://xd784lehpsjb" path="res://scenes/menus/creditos.tscn" id="5_qxu4n"]
 [ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="6_3g53l"]
 [ext_resource type="PackedScene" uid="uid://bvg7svt1jnhsw" path="res://scenes/menus/menu.tscn" id="6_upjpn"]
-[ext_resource type="Script" uid="uid://c62glimd228tp" path="res://scripts/managers/profundidade.gd" id="7_f5q8n"]
 [ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/pedro.tscn" id="8_c456e"]
 [ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/vini.tscn" id="9_j4x4q"]
 [ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/FoxPlayer.tscn" id="10_p6fov"]
 [ext_resource type="PackedScene" uid="uid://cgvata4tj8171" path="res://scenes/objects/edu.tscn" id="11_ll2y6"]
 [ext_resource type="AudioStream" uid="uid://clbvsl0fj3sje" path="res://assets/audio/music/Tobu_-_Candyland_NCS_Release-190269240.mp3" id="11_mim0e"]
+[ext_resource type="PackedScene" uid="uid://barvi3txwhx3" path="res://scenes/objects/fala.tscn" id="15_3g53l"]
+
+[sub_resource type="GDScript" id="GDScript_ll2y6"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+func _process(_delta):
+	for node2d in get_children():
+		node2d.z_index = 1000 + node2d.global_position.y
+"
 
 [node name="MainGame" type="Node" unique_id=899266031]
 
@@ -27,6 +41,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_upjpn")
+
+[node name="Dialogo" parent="Canvas/UI" unique_id=910116923 instance=ExtResource("2_qxu4n")]
+unique_name_in_owner = true
+layout_mode = 1
 
 [node name="menu" parent="Canvas/UI" unique_id=2121695693 instance=ExtResource("6_upjpn")]
 unique_name_in_owner = true
@@ -53,7 +71,7 @@ visible = false
 layout_mode = 1
 
 [node name="Players" type="Node2D" parent="." unique_id=499072006]
-script = ExtResource("7_f5q8n")
+script = SubResource("GDScript_ll2y6")
 
 [node name="Vini" parent="Players" unique_id=1937835004 instance=ExtResource("9_j4x4q")]
 z_index = -1
@@ -118,3 +136,6 @@ parameters/looping = true
 
 [node name="TestRoom" parent="Mapa" unique_id=59091156 instance=ExtResource("6_3g53l")]
 position = Vector2(1866, 1011)
+
+[node name="fala" parent="Mapa" unique_id=244818867 instance=ExtResource("15_3g53l")]
+position = Vector2(2179, 1436)

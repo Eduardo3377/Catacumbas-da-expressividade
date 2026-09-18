@@ -4,6 +4,7 @@ extends Control
 @onready var configuracoes: Control = %Configuracoes
 @onready var creditos: Control = %Creditos
 @onready var menu: Control = %menu
+@onready var dialogo: Control = %Dialogo
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,6 +12,7 @@ func _ready() -> void:
 		child.hide()
 #	main_menu.show()
 	menu.show()
+	dialogo.show()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
@@ -29,3 +31,6 @@ func opcoes():
 	configuracoes.show()
 	pass
 	
+func dialogoo(id):
+	dialogo.dialogo(id)
+	pass
