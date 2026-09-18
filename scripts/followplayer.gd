@@ -1,5 +1,5 @@
 extends Node2D
-@export_range(0, 500) var PosIndex = 100
+@export_range(0, 100000) var PosIndex = 100
 var ArraySize = 0
 var Next_pos: Vector2
 

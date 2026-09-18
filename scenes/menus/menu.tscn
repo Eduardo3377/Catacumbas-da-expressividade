@@ -60,7 +60,7 @@ unique_name_in_owner = true
 layout_mode = 0
 offset_left = -103.0
 offset_right = -10.0
-offset_bottom = 164.0
+offset_bottom = 161.0
 size_flags_horizontal = 3
 current_tab = 0
 tabs_visible = false
@@ -184,10 +184,13 @@ Vini:
 Roteiro, Documentacao
 
 
-Engine godot
-fonte sla oq do google fonts
-plugin dialogue manager
-minha bunda"
+Engine: Godot
+Fonte: Bitcount
+Copyright 1980 The Bitcount Project Authors
+Licenciada sob a SIL Open Font License, versão 1.1.
+
+https://github.com/petrvanblokland/TYPETR-Bitcount
+"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Opcoes" to="." method="_on_opcoes_pressed"]

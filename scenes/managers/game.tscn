@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/pedro.tscn" id="8_c456e"]
 [ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/vini.tscn" id="9_j4x4q"]
 [ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/FoxPlayer.tscn" id="10_p6fov"]
+[ext_resource type="PackedScene" uid="uid://cgvata4tj8171" path="res://scenes/objects/edu.tscn" id="11_ll2y6"]
 [ext_resource type="AudioStream" uid="uid://clbvsl0fj3sje" path="res://assets/audio/music/Tobu_-_Candyland_NCS_Release-190269240.mp3" id="11_mim0e"]
 
 [node name="MainGame" type="Node" unique_id=899266031]
@@ -64,6 +65,48 @@ position = Vector2(2087, 1281)
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]
 position = Vector2(2087, 1281)
+
+[node name="Edu" parent="Players" unique_id=531438909 instance=ExtResource("11_ll2y6")]
+position = Vector2(-15.139893, -79.528755)
+PosIndex = 10000
+
+[node name="Node2D" type="Node2D" parent="Players" unique_id=610728505]
+
+[node name="Vini" parent="Players/Node2D" unique_id=1057108331 instance=ExtResource("9_j4x4q")]
+PosIndex = 70
+
+[node name="Vini2" parent="Players/Node2D" unique_id=2011951048 instance=ExtResource("9_j4x4q")]
+PosIndex = 100
+
+[node name="Vini3" parent="Players/Node2D" unique_id=1699269763 instance=ExtResource("9_j4x4q")]
+PosIndex = 120
+
+[node name="Vini4" parent="Players/Node2D" unique_id=1274608356 instance=ExtResource("9_j4x4q")]
+PosIndex = 140
+
+[node name="Vini5" parent="Players/Node2D" unique_id=317083824 instance=ExtResource("9_j4x4q")]
+PosIndex = 167
+
+[node name="Vini6" parent="Players/Node2D" unique_id=1864303696 instance=ExtResource("9_j4x4q")]
+PosIndex = 200
+
+[node name="Pedro" parent="Players/Node2D" unique_id=1118580674 instance=ExtResource("8_c456e")]
+PosIndex = 10
+
+[node name="Pedro2" parent="Players/Node2D" unique_id=1824041484 instance=ExtResource("8_c456e")]
+PosIndex = 78
+
+[node name="Pedro3" parent="Players/Node2D" unique_id=1192287558 instance=ExtResource("8_c456e")]
+PosIndex = 30
+
+[node name="Pedro4" parent="Players/Node2D" unique_id=1905871698 instance=ExtResource("8_c456e")]
+PosIndex = 234
+
+[node name="Pedro5" parent="Players/Node2D" unique_id=886599573 instance=ExtResource("8_c456e")]
+PosIndex = 210
+
+[node name="Pedro6" parent="Players/Node2D" unique_id=426562435 instance=ExtResource("8_c456e")]
+PosIndex = 239
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=57257390]
 stream = ExtResource("11_mim0e")

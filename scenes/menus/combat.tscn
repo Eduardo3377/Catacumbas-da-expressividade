@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://ca35mpvs3njpr"]
 
 [ext_resource type="Script" uid="uid://bhsr631mk5yoa" path="res://scripts/ui/combat.gd" id="1_mf56a"]
+[ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://NAOSEI.tres" id="1_p6wtg"]
 [ext_resource type="Texture2D" uid="uid://bota8infw4bd1" path="res://assets/sprites/ui/combat.png" id="2_1dlp3"]
-
-[sub_resource type="Theme" id="Theme_ad8ho"]
 
 [node name="combat" type="Control" unique_id=1368979020]
 layout_mode = 3
@@ -13,7 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme = SubResource("Theme_ad8ho")
+theme = ExtResource("1_p6wtg")
 script = ExtResource("1_mf56a")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1064144564]
@@ -47,8 +46,8 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -96.5
-offset_top = -31.0
-offset_right = 96.5
+offset_top = -47.0
+offset_right = 107.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_stretch_ratio = 0.0
@@ -59,36 +58,33 @@ layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="ataque" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1353842431]
+[node name="Atk" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1353842431]
 layout_mode = 2
 text = "Ataque
 "
+alignment = 0
 
-[node name="magia" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1754109696]
+[node name="Cor" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=333990409]
 layout_mode = 2
-text = "Cor
-"
-
-[node name="item" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=333990409]
-layout_mode = 2
-text = "Item
-"
+text = "Cor"
+alignment = 0
 
 [node name="sair" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=2030230653]
 layout_mode = 2
 text = "Sair"
+alignment = 0
 
 [node name="TabContainer" type="TabContainer" parent="HBoxContainer" unique_id=402082665]
 layout_mode = 2
 size_flags_horizontal = 3
 tab_alignment = 1
+current_tab = 0
 clip_tabs = false
 use_hidden_tabs_for_min_size = true
 tab_0/hidden = true
 tab_1/hidden = true
 
 [node name="Control" type="Control" parent="HBoxContainer/TabContainer" unique_id=1859814003]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
