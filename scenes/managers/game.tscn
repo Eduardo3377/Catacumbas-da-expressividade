@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://cnuln0rjg3b5g"]
 
 [ext_resource type="Script" uid="uid://d1kqt01al3u74" path="res://scripts/managers/ui_manager.gd" id="1_upjpn"]
-[ext_resource type="PackedScene" uid="uid://dhtue0fqghk7n" path="res://scenes/menus/main_menu.tscn" id="2_mim0e"]
-[ext_resource type="PackedScene" uid="uid://bcsaae0v3cv7g" path="res://scenes/menus/dialogo.tscn" id="2_qxu4n"]
-[ext_resource type="PackedScene" uid="uid://ca35mpvs3njpr" path="res://scenes/menus/combat.tscn" id="3_upjpn"]
-[ext_resource type="PackedScene" uid="uid://cc51k0u4ygcvh" path="res://scenes/menus/configuracoes.tscn" id="4_ll2y6"]
-[ext_resource type="PackedScene" uid="uid://xd784lehpsjb" path="res://scenes/menus/creditos.tscn" id="5_qxu4n"]
+[ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://NAOSEI.tres" id="2_qxu4n"]
+[ext_resource type="Script" uid="uid://capfm5afmq3ob" path="res://scenes/menus/dialogo.gd" id="3_3g53l"]
+[ext_resource type="Script" uid="uid://rpnf8qf8ru2f" path="res://scripts/ui/menu.gd" id="4_vigns"]
+[ext_resource type="Texture2D" uid="uid://tt04phtopwvd" path="res://assets/sprites/ui/fullbook.png" id="5_c456e"]
 [ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="6_3g53l"]
-[ext_resource type="PackedScene" uid="uid://bvg7svt1jnhsw" path="res://scenes/menus/menu.tscn" id="6_upjpn"]
-[ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/pedro.tscn" id="8_c456e"]
-[ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/vini.tscn" id="9_j4x4q"]
-[ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/FoxPlayer.tscn" id="10_p6fov"]
-[ext_resource type="PackedScene" uid="uid://cgvata4tj8171" path="res://scenes/objects/edu.tscn" id="11_ll2y6"]
+[ext_resource type="Script" uid="uid://bhsr631mk5yoa" path="res://scripts/ui/combat.gd" id="6_j4x4q"]
+[ext_resource type="Texture2D" uid="uid://bota8infw4bd1" path="res://assets/sprites/ui/combat.png" id="7_p6fov"]
+[ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/players/pedro.tscn" id="8_c456e"]
+[ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/players/vini.tscn" id="9_j4x4q"]
+[ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/players/FoxPlayer.tscn" id="10_p6fov"]
+[ext_resource type="PackedScene" uid="uid://cgvata4tj8171" path="res://scenes/objects/players/edu.tscn" id="11_ll2y6"]
 [ext_resource type="AudioStream" uid="uid://clbvsl0fj3sje" path="res://assets/audio/music/Tobu_-_Candyland_NCS_Release-190269240.mp3" id="11_mim0e"]
 [ext_resource type="PackedScene" uid="uid://barvi3txwhx3" path="res://scenes/objects/fala.tscn" id="15_3g53l"]
 
@@ -42,100 +42,375 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_upjpn")
 
-[node name="Dialogo" parent="Canvas/UI" unique_id=910116923 instance=ExtResource("2_qxu4n")]
-unique_name_in_owner = true
-layout_mode = 1
-
-[node name="menu" parent="Canvas/UI" unique_id=2121695693 instance=ExtResource("6_upjpn")]
-unique_name_in_owner = true
-layout_mode = 1
-
-[node name="mainMenu" parent="Canvas/UI" unique_id=1212305132 instance=ExtResource("2_mim0e")]
+[node name="Dialogo" type="Control" parent="Canvas/UI" unique_id=910116923]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_qxu4n")
+script = ExtResource("3_3g53l")
 
-[node name="combat" parent="Canvas/UI" unique_id=1368979020 instance=ExtResource("3_upjpn")]
+[node name="MarginContainer" type="MarginContainer" parent="Canvas/UI/Dialogo" unique_id=1392002209]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="ColorRect" type="ColorRect" parent="Canvas/UI/Dialogo/MarginContainer" unique_id=1596199430]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Canvas/UI/Dialogo/MarginContainer" unique_id=1830519920]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/Dialogo/MarginContainer/MarginContainer" unique_id=412719203]
+layout_mode = 2
+
+[node name="Nome" type="Label" parent="Canvas/UI/Dialogo/MarginContainer/MarginContainer/VBoxContainer" unique_id=1645158590]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Edu:"
+
+[node name="Texto" type="RichTextLabel" parent="Canvas/UI/Dialogo/MarginContainer/MarginContainer/VBoxContainer" unique_id=547753069]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "oi"
+
+[node name="menu" type="Control" parent="Canvas/UI" unique_id=2121695693]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_qxu4n")
+script = ExtResource("4_vigns")
 
-[node name="Configuracoes" parent="Canvas/UI" unique_id=879079264 instance=ExtResource("4_ll2y6")]
+[node name="ColorRect" type="ColorRect" parent="Canvas/UI/menu" unique_id=1719374885]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.76000005)
+
+[node name="TextureRect" type="TextureRect" parent="Canvas/UI/menu" unique_id=1377752638]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_c456e")
+
+[node name="MarginContainer" type="MarginContainer" parent="Canvas/UI/menu" unique_id=1132704639]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = 28.0
+offset_right = 106.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Canvas/UI/menu/MarginContainer" unique_id=1949970232]
+propagate_maximum_size = false
+clip_contents = true
+layout_mode = 2
+alignment = 1
+
+[node name="1" type="Control" parent="Canvas/UI/menu/MarginContainer/HBoxContainer" unique_id=758836115]
+layout_mode = 2
+
+[node name="page1" type="TabContainer" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/1" unique_id=1825582679]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -103.0
+offset_right = -10.0
+offset_bottom = 161.0
+size_flags_horizontal = 3
+current_tab = 0
+tabs_visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1" unique_id=920106903]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=1838342063]
+layout_mode = 2
+text = "Catacumbas 
+da 
+Expressivade"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=915458871]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="Jogar" type="Button" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=1246840443]
+layout_mode = 2
+text = "Jogar"
+
+[node name="Opcoes" type="Button" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=2123705278]
+layout_mode = 2
+text = "Opcoes"
+
+[node name="Creditos" type="Button" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=1133590190]
+layout_mode = 2
+text = "Creditos"
+
+[node name="Sair" type="Button" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=2060696582]
+layout_mode = 2
+text = "Sair "
+
+[node name="2" type="Control" parent="Canvas/UI/menu/MarginContainer/HBoxContainer" unique_id=83960820]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="page2" type="TabContainer" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2" unique_id=1476800340]
+unique_name_in_owner = true
+propagate_maximum_size = false
+layout_mode = 0
+offset_left = 10.0
+offset_right = 102.0
+offset_bottom = 159.0
+size_flags_horizontal = 3
+current_tab = 2
+tabs_visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2" unique_id=1632789947]
+visible = false
+propagate_maximum_size = false
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Conf" type="VBoxContainer" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2" unique_id=1182667799]
+visible = false
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=482665715]
+layout_mode = 2
+text = "Opcoes:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=694575549]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer" unique_id=979516276]
+layout_mode = 2
+text = "Musicas"
+
+[node name="HSlider" type="HSlider" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer" unique_id=1543118005]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=987319224]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer2" unique_id=1074429821]
+layout_mode = 2
+text = "Efeitos"
+
+[node name="HSlider" type="HSlider" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer2" unique_id=1119194424]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="silenciar" type="Button" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=461051401]
+layout_mode = 2
+toggle_mode = true
+text = "Silenciar Jogo"
+
+[node name="fullscreen" type="Button" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=277741541]
+layout_mode = 2
+toggle_mode = true
+text = "Fullscreen"
+
+[node name="Creditos" type="VBoxContainer" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2" unique_id=386913158]
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label2" type="Label" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Creditos" unique_id=621043974]
+layout_mode = 2
+text = "Creditos:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Canvas/UI/menu/MarginContainer/HBoxContainer/2/page2/Creditos" unique_id=569734982]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Eduardo:
+Programador, UI
+Pedro:
+Artista, Roteiro
+Vini:
+Roteiro, Documentacao
+
+
+Engine: Godot
+Fonte: Bitcount
+Copyright 1980 The Bitcount Project Authors
+Licenciada sob a SIL Open Font License, versão 1.1.
+
+https://github.com/petrvanblokland/TYPETR-Bitcount
+"
+
+[node name="combat" type="Control" parent="Canvas/UI" unique_id=1368979020]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_qxu4n")
+script = ExtResource("6_j4x4q")
 
-[node name="Creditos" parent="Canvas/UI" unique_id=2103972884 instance=ExtResource("5_qxu4n")]
-unique_name_in_owner = true
-visible = false
+[node name="ColorRect" type="ColorRect" parent="Canvas/UI/combat" unique_id=1064144564]
 layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.476)
+
+[node name="TextureRect" type="TextureRect" parent="Canvas/UI/combat" unique_id=1734200638]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_p6fov")
+
+[node name="Label" type="Label" parent="Canvas/UI/combat" unique_id=1737329053]
+layout_mode = 0
+offset_right = 68.0
+offset_bottom = 23.0
+text = "combate"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Canvas/UI/combat" unique_id=661687876]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.5
+offset_top = -47.0
+offset_right = 107.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/combat/HBoxContainer" unique_id=126316651]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Atk" type="Button" parent="Canvas/UI/combat/HBoxContainer/VBoxContainer" unique_id=1353842431]
+layout_mode = 2
+text = "Ataque
+"
+alignment = 0
+
+[node name="Cor" type="Button" parent="Canvas/UI/combat/HBoxContainer/VBoxContainer" unique_id=333990409]
+layout_mode = 2
+text = "Cor"
+alignment = 0
+
+[node name="sair" type="Button" parent="Canvas/UI/combat/HBoxContainer/VBoxContainer" unique_id=2030230653]
+layout_mode = 2
+text = "Sair"
+alignment = 0
+
+[node name="TabContainer" type="TabContainer" parent="Canvas/UI/combat/HBoxContainer" unique_id=402082665]
+layout_mode = 2
+size_flags_horizontal = 3
+tab_alignment = 1
+current_tab = 0
+clip_tabs = false
+use_hidden_tabs_for_min_size = true
+tab_0/hidden = true
+tab_1/hidden = true
+
+[node name="Control" type="Control" parent="Canvas/UI/combat/HBoxContainer/TabContainer" unique_id=1859814003]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ColorRect" type="ColorRect" parent="Canvas/UI/combat/HBoxContainer/TabContainer/Control" unique_id=828011011]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control2" type="Control" parent="Canvas/UI/combat/HBoxContainer/TabContainer" unique_id=1087929811]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="Players" type="Node2D" parent="." unique_id=499072006]
 script = SubResource("GDScript_ll2y6")
 
 [node name="Vini" parent="Players" unique_id=1937835004 instance=ExtResource("9_j4x4q")]
 z_index = -1
-position = Vector2(2087, 1281)
+position = Vector2(192, 300)
 
 [node name="Pedro" parent="Players" unique_id=883880857 instance=ExtResource("8_c456e")]
 z_index = -1
-position = Vector2(2087, 1281)
+position = Vector2(192, 300)
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]
-position = Vector2(2087, 1281)
+position = Vector2(192, 300)
 
 [node name="Edu" parent="Players" unique_id=531438909 instance=ExtResource("11_ll2y6")]
+visible = false
 position = Vector2(-15.139893, -79.528755)
-PosIndex = 10000
+PosIndex = 1
 
-[node name="Node2D" type="Node2D" parent="Players" unique_id=610728505]
+[node name="Mapa" type="Node2D" parent="." unique_id=285224400]
 
-[node name="Vini" parent="Players/Node2D" unique_id=1057108331 instance=ExtResource("9_j4x4q")]
-PosIndex = 70
+[node name="TestRoom" parent="Mapa" unique_id=59091156 instance=ExtResource("6_3g53l")]
 
-[node name="Vini2" parent="Players/Node2D" unique_id=2011951048 instance=ExtResource("9_j4x4q")]
-PosIndex = 100
+[node name="fala" parent="Mapa" unique_id=244818867 instance=ExtResource("15_3g53l")]
+position = Vector2(319, 460)
 
-[node name="Vini3" parent="Players/Node2D" unique_id=1699269763 instance=ExtResource("9_j4x4q")]
-PosIndex = 120
-
-[node name="Vini4" parent="Players/Node2D" unique_id=1274608356 instance=ExtResource("9_j4x4q")]
-PosIndex = 140
-
-[node name="Vini5" parent="Players/Node2D" unique_id=317083824 instance=ExtResource("9_j4x4q")]
-PosIndex = 167
-
-[node name="Vini6" parent="Players/Node2D" unique_id=1864303696 instance=ExtResource("9_j4x4q")]
-PosIndex = 200
-
-[node name="Pedro" parent="Players/Node2D" unique_id=1118580674 instance=ExtResource("8_c456e")]
-PosIndex = 10
-
-[node name="Pedro2" parent="Players/Node2D" unique_id=1824041484 instance=ExtResource("8_c456e")]
-PosIndex = 78
-
-[node name="Pedro3" parent="Players/Node2D" unique_id=1192287558 instance=ExtResource("8_c456e")]
-PosIndex = 30
-
-[node name="Pedro4" parent="Players/Node2D" unique_id=1905871698 instance=ExtResource("8_c456e")]
-PosIndex = 234
-
-[node name="Pedro5" parent="Players/Node2D" unique_id=886599573 instance=ExtResource("8_c456e")]
-PosIndex = 210
-
-[node name="Pedro6" parent="Players/Node2D" unique_id=426562435 instance=ExtResource("8_c456e")]
-PosIndex = 239
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=57257390]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Mapa" unique_id=57257390]
 stream = ExtResource("11_mim0e")
 pitch_scale = 0.55
 autoplay = true
 parameters/looping = true
 
-[node name="Mapa" type="Node" parent="." unique_id=520810482]
-
-[node name="TestRoom" parent="Mapa" unique_id=59091156 instance=ExtResource("6_3g53l")]
-position = Vector2(1866, 1011)
-
-[node name="fala" parent="Mapa" unique_id=244818867 instance=ExtResource("15_3g53l")]
-position = Vector2(2179, 1436)
+[connection signal="pressed" from="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Jogar" to="Canvas/UI/menu" method="_on_jogar_pressed"]
+[connection signal="pressed" from="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Opcoes" to="Canvas/UI/menu" method="_on_opcoes_pressed"]
+[connection signal="pressed" from="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Creditos" to="Canvas/UI/menu" method="_on_creditos_pressed"]
+[connection signal="pressed" from="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Sair" to="Canvas/UI/menu" method="_on_sair_pressed"]
+[connection signal="pressed" from="Canvas/UI/combat/HBoxContainer/VBoxContainer/sair" to="Canvas/UI/combat" method="_on_sair_pressed"]

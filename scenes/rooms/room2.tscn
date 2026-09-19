@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dd4k6f1he267x"]
 
-[ext_resource type="Texture2D" uid="uid://cgwxf8g7l88a1" path="res://assets/sprites/tileset2.png" id="1_50vm0"]
+[ext_resource type="Texture2D" uid="uid://cgwxf8g7l88a1" path="res://assets/sprites/tilesets/tileset2.png" id="1_50vm0"]
 [ext_resource type="PackedScene" uid="uid://bfis7btgelswh" path="res://scenes/objects/enemy1.tscn" id="2_4w0uv"]
-[ext_resource type="Texture2D" uid="uid://c52b70pmyw0ar" path="res://assets/sprites/tileset3.png" id="2_27dsb"]
-[ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/FoxPlayer.tscn" id="2_aok5s"]
-[ext_resource type="Texture2D" uid="uid://bau8bd3gnhg0s" path="res://assets/sprites/tileset1.png" id="3_6r7di"]
-[ext_resource type="Texture2D" uid="uid://c50w86uvq7li" path="res://assets/sprites/hitboxes.png" id="4_dqv01"]
+[ext_resource type="Texture2D" uid="uid://c52b70pmyw0ar" path="res://assets/sprites/tilesets/tileset3.png" id="2_27dsb"]
+[ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/players/FoxPlayer.tscn" id="2_aok5s"]
+[ext_resource type="Texture2D" uid="uid://bau8bd3gnhg0s" path="res://assets/sprites/tilesets/tileset1.png" id="3_6r7di"]
+[ext_resource type="Texture2D" uid="uid://c50w86uvq7li" path="res://assets/sprites/tilesets/hitboxes.png" id="4_dqv01"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3frf"]
 texture = ExtResource("1_50vm0")

@@ -1,8 +1,5 @@
 extends Control
-@onready var main_menu: Control = %mainMenu
 @onready var combat: Control = %combat
-@onready var configuracoes: Control = %Configuracoes
-@onready var creditos: Control = %Creditos
 @onready var menu: Control = %menu
 @onready var dialogo: Control = %Dialogo
 
@@ -10,7 +7,6 @@ extends Control
 func _ready() -> void:
 	for child in get_children():
 		child.hide()
-#	main_menu.show()
 	menu.show()
 	dialogo.show()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,12 +21,7 @@ func _process(_delta: float) -> void:
 func combatstart(_enemy):
 	print("comecando combate")
 	combat.show()
-	
-func opcoes():
-	print("entra nas opcao")
-	configuracoes.show()
-	pass
-	
+
 func dialogoo(id):
 	dialogo.dialogo(id)
 	pass
