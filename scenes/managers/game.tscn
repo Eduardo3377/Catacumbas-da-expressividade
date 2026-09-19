@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="6_3g53l"]
 [ext_resource type="Texture2D" uid="uid://d37bnrtd8mahs" path="res://assets/sprites/ui/Texturelabs_Paper_206S.jpg" id="6_c456e"]
 [ext_resource type="Script" uid="uid://bhsr631mk5yoa" path="res://scripts/ui/combat.gd" id="6_j4x4q"]
-[ext_resource type="Texture2D" uid="uid://bota8infw4bd1" path="res://assets/sprites/ui/combat.png" id="7_p6fov"]
 [ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/players/pedro.tscn" id="8_c456e"]
 [ext_resource type="Texture2D" uid="uid://cuog0ma42t077" path="res://assets/sprites/ui/Texturelabs_Paper_204S.jpg" id="9_c456e"]
 [ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/players/vini.tscn" id="9_j4x4q"]
@@ -301,7 +300,6 @@ https://github.com/petrvanblokland/TYPETR-Bitcount
 
 [node name="combat" type="Control" parent="Canvas/UI" unique_id=1368979020]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -328,11 +326,16 @@ grow_vertical = 0
 texture = ExtResource("9_c456e")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="Canvas/UI/combat" unique_id=1734200638]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("7_p6fov")
+[node name="TextureRect" type="TextureRect" parent="Canvas/UI/combat" unique_id=1410549400]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 117.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_c456e")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Canvas/UI/combat" unique_id=661687876]
 layout_mode = 1
@@ -341,8 +344,8 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -96.5
-offset_top = -47.0
+offset_left = -104.0
+offset_top = -110.0
 offset_right = 107.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -352,20 +355,71 @@ alignment = 1
 [node name="MarginContainer" type="MarginContainer" parent="Canvas/UI/combat/HBoxContainer" unique_id=890364864]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_right = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/combat/HBoxContainer/MarginContainer" unique_id=126316651]
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/combat/HBoxContainer/MarginContainer" unique_id=1634271704]
+clip_contents = true
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer" unique_id=402082665]
 layout_mode = 2
 size_flags_horizontal = 3
-alignment = 1
+size_flags_vertical = 3
+tab_alignment = 2
+current_tab = 0
+clip_tabs = false
+switch_on_drag_hover = false
+use_hidden_tabs_for_min_size = true
 
-[node name="Atk" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1353842431]
+[node name="C" type="VBoxContainer" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=126316651]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+metadata/_tab_index = 0
+
+[node name="Atk" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/TabContainer/C" unique_id=1353842431]
 layout_mode = 2
 text = "Ataque
 "
 alignment = 0
 
-[node name="Cor" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer" unique_id=333990409]
+[node name="Cor" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/TabContainer/C" unique_id=333990409]
+layout_mode = 2
+text = "Cor"
+alignment = 0
+
+[node name="M" type="VBoxContainer" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=19912864]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+metadata/_tab_index = 1
+
+[node name="Atk" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/TabContainer/M" unique_id=930771423]
+layout_mode = 2
+text = "Ataque
+"
+alignment = 0
+
+[node name="Cor" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/TabContainer/M" unique_id=716604802]
+layout_mode = 2
+text = "Cor"
+alignment = 0
+
+[node name="Y" type="VBoxContainer" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=1713751529]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+metadata/_tab_index = 2
+
+[node name="Atk" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/TabContainer/Y" unique_id=2123558437]
+layout_mode = 2
+text = "Ataque
+"
+alignment = 0
+
+[node name="Cor" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/TabContainer/Y" unique_id=1871402075]
 layout_mode = 2
 text = "Cor"
 alignment = 0
@@ -375,29 +429,23 @@ layout_mode = 2
 text = "Sair"
 alignment = 0
 
-[node name="TabContainer" type="TabContainer" parent="Canvas/UI/combat/HBoxContainer" unique_id=402082665]
+[node name="MarginContainer2" type="MarginContainer" parent="Canvas/UI/combat/HBoxContainer" unique_id=264398884]
 layout_mode = 2
 size_flags_horizontal = 3
-tab_alignment = 1
-current_tab = 0
-clip_tabs = false
-use_hidden_tabs_for_min_size = true
-tab_0/hidden = true
-tab_1/hidden = true
+theme_override_constants/margin_top = 40
 
-[node name="Control" type="Control" parent="Canvas/UI/combat/HBoxContainer/TabContainer" unique_id=1859814003]
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/combat/HBoxContainer/MarginContainer2" unique_id=1150953488]
 layout_mode = 2
-metadata/_tab_index = 0
 
-[node name="ColorRect" type="ColorRect" parent="Canvas/UI/combat/HBoxContainer/TabContainer/Control" unique_id=828011011]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Control2" type="Control" parent="Canvas/UI/combat/HBoxContainer/TabContainer" unique_id=1087929811]
-visible = false
+[node name="Label" type="Label" parent="Canvas/UI/combat/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1910969623]
 layout_mode = 2
-metadata/_tab_index = 1
+text = "AAAAAAAAAAA"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Canvas/UI/combat/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1328497541]
+layout_mode = 2
+text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+fit_content = true
 
 [node name="Players" type="Node2D" parent="." unique_id=499072006]
 script = SubResource("GDScript_ll2y6")
