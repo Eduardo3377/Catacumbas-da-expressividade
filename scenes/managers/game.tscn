@@ -3,12 +3,15 @@
 [ext_resource type="Script" uid="uid://d1kqt01al3u74" path="res://scripts/managers/ui_manager.gd" id="1_upjpn"]
 [ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://NAOSEI.tres" id="2_qxu4n"]
 [ext_resource type="Script" uid="uid://capfm5afmq3ob" path="res://scenes/menus/dialogo.gd" id="3_3g53l"]
+[ext_resource type="Texture2D" uid="uid://ck4dxo1433an5" path="res://assets/sprites/ui/Texturelabs_Paper_138S.png" id="4_c456e"]
 [ext_resource type="Script" uid="uid://rpnf8qf8ru2f" path="res://scripts/ui/menu.gd" id="4_vigns"]
 [ext_resource type="Texture2D" uid="uid://tt04phtopwvd" path="res://assets/sprites/ui/fullbook.png" id="5_c456e"]
 [ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="6_3g53l"]
+[ext_resource type="Texture2D" uid="uid://d37bnrtd8mahs" path="res://assets/sprites/ui/Texturelabs_Paper_206S.jpg" id="6_c456e"]
 [ext_resource type="Script" uid="uid://bhsr631mk5yoa" path="res://scripts/ui/combat.gd" id="6_j4x4q"]
 [ext_resource type="Texture2D" uid="uid://bota8infw4bd1" path="res://assets/sprites/ui/combat.png" id="7_p6fov"]
 [ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/players/pedro.tscn" id="8_c456e"]
+[ext_resource type="Texture2D" uid="uid://cuog0ma42t077" path="res://assets/sprites/ui/Texturelabs_Paper_204S.jpg" id="9_c456e"]
 [ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/players/vini.tscn" id="9_j4x4q"]
 [ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/players/FoxPlayer.tscn" id="10_p6fov"]
 [ext_resource type="PackedScene" uid="uid://cgvata4tj8171" path="res://scenes/objects/players/edu.tscn" id="11_ll2y6"]
@@ -68,7 +71,20 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
 
 [node name="ColorRect" type="ColorRect" parent="Canvas/UI/Dialogo/MarginContainer" unique_id=1596199430]
+clip_contents = true
 layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Canvas/UI/Dialogo/MarginContainer/ColorRect" unique_id=1809062478]
+modulate = Color(0.9872399, 1, 0.9379286, 1)
+self_modulate = Color(0.8862616, 0.88626146, 0.8862615, 1)
+layout_mode = 0
+offset_left = -13.0
+offset_top = -21.0
+offset_right = 374.0
+offset_bottom = 70.0
+texture = ExtResource("4_c456e")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Canvas/UI/Dialogo/MarginContainer" unique_id=1830519920]
 layout_mode = 2
@@ -103,14 +119,16 @@ grow_vertical = 2
 theme = ExtResource("2_qxu4n")
 script = ExtResource("4_vigns")
 
-[node name="ColorRect" type="ColorRect" parent="Canvas/UI/menu" unique_id=1719374885]
+[node name="ColorRect" type="TextureRect" parent="Canvas/UI/menu" unique_id=1905348774]
+modulate = Color(0.8007072, 0.8200692, 0.7429809, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.76000005)
+texture = ExtResource("6_c456e")
+expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="Canvas/UI/menu" unique_id=1377752638]
 layout_mode = 1
@@ -294,28 +312,27 @@ mouse_filter = 2
 theme = ExtResource("2_qxu4n")
 script = ExtResource("6_j4x4q")
 
-[node name="ColorRect" type="ColorRect" parent="Canvas/UI/combat" unique_id=1064144564]
+[node name="ColorRect" type="TextureRect" parent="Canvas/UI/combat" unique_id=1111096347]
+modulate = Color(0.8623745, 0.86822885, 0.79832965, 1)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -216.0
+offset_right = 192.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0, 0, 0, 0.476)
+texture = ExtResource("9_c456e")
+expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="Canvas/UI/combat" unique_id=1734200638]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("7_p6fov")
-
-[node name="Label" type="Label" parent="Canvas/UI/combat" unique_id=1737329053]
-layout_mode = 0
-offset_right = 68.0
-offset_bottom = 23.0
-text = "combate"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Canvas/UI/combat" unique_id=661687876]
 layout_mode = 1
@@ -332,23 +349,28 @@ grow_vertical = 0
 size_flags_stretch_ratio = 0.0
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/combat/HBoxContainer" unique_id=126316651]
+[node name="MarginContainer" type="MarginContainer" parent="Canvas/UI/combat/HBoxContainer" unique_id=890364864]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/combat/HBoxContainer/MarginContainer" unique_id=126316651]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="Atk" type="Button" parent="Canvas/UI/combat/HBoxContainer/VBoxContainer" unique_id=1353842431]
+[node name="Atk" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1353842431]
 layout_mode = 2
 text = "Ataque
 "
 alignment = 0
 
-[node name="Cor" type="Button" parent="Canvas/UI/combat/HBoxContainer/VBoxContainer" unique_id=333990409]
+[node name="Cor" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer" unique_id=333990409]
 layout_mode = 2
 text = "Cor"
 alignment = 0
 
-[node name="sair" type="Button" parent="Canvas/UI/combat/HBoxContainer/VBoxContainer" unique_id=2030230653]
+[node name="sair" type="Button" parent="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer" unique_id=2030230653]
 layout_mode = 2
 text = "Sair"
 alignment = 0
@@ -392,13 +414,13 @@ position = Vector2(192, 300)
 position = Vector2(192, 300)
 
 [node name="Edu" parent="Players" unique_id=531438909 instance=ExtResource("11_ll2y6")]
-visible = false
 position = Vector2(-15.139893, -79.528755)
 PosIndex = 1
 
 [node name="Mapa" type="Node2D" parent="." unique_id=285224400]
 
 [node name="TestRoom" parent="Mapa" unique_id=59091156 instance=ExtResource("6_3g53l")]
+position = Vector2(-12, -2)
 
 [node name="fala" parent="Mapa" unique_id=244818867 instance=ExtResource("15_3g53l")]
 position = Vector2(319, 460)
@@ -413,4 +435,4 @@ parameters/looping = true
 [connection signal="pressed" from="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Opcoes" to="Canvas/UI/menu" method="_on_opcoes_pressed"]
 [connection signal="pressed" from="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Creditos" to="Canvas/UI/menu" method="_on_creditos_pressed"]
 [connection signal="pressed" from="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Sair" to="Canvas/UI/menu" method="_on_sair_pressed"]
-[connection signal="pressed" from="Canvas/UI/combat/HBoxContainer/VBoxContainer/sair" to="Canvas/UI/combat" method="_on_sair_pressed"]
+[connection signal="pressed" from="Canvas/UI/combat/HBoxContainer/MarginContainer/VBoxContainer/sair" to="Canvas/UI/combat" method="_on_sair_pressed"]
