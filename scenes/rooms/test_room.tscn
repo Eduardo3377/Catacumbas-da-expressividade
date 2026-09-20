@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c52b70pmyw0ar" path="res://assets/sprites/tilesets/tileset3.png" id="3_vf0v6"]
 [ext_resource type="PackedScene" uid="uid://bfis7btgelswh" path="res://scenes/objects/enemy1.tscn" id="4_dp88d"]
 [ext_resource type="Texture2D" uid="uid://c50w86uvq7li" path="res://assets/sprites/tilesets/hitboxes.png" id="4_nnide"]
+[ext_resource type="Texture2D" uid="uid://1ri42uwljk75" path="res://assets/sprites/tilesets/Circo.png" id="4_suhbj"]
 [ext_resource type="Texture2D" uid="uid://gf8vevltcarv" path="res://assets/sprites/tilesets/grass.png" id="5_dp88d"]
 [ext_resource type="Texture2D" uid="uid://2j1o4tn83uu6" path="res://assets/sprites/tilesets/catacubas.png" id="6_dp88d"]
 [ext_resource type="Texture2D" uid="uid://bk6qb4s7x2wde" path="res://assets/sprites/tilesets/grass_shadow.png" id="6_vmham"]
@@ -75,6 +76,22 @@ texture = ExtResource("1_betf1")
 6:1/0 = 0
 7:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sdgtb"]
+texture = ExtResource("4_suhbj")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suhbj"]
 texture = ExtResource("5_dp88d")
 0:0/0 = 0
@@ -125,6 +142,7 @@ sources/2 = SubResource("TileSetAtlasSource_betf1")
 sources/4 = SubResource("TileSetAtlasSource_suhbj")
 sources/5 = SubResource("TileSetAtlasSource_lumvt")
 sources/6 = SubResource("TileSetAtlasSource_vmham")
+sources/3 = SubResource("TileSetAtlasSource_sdgtb")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vf0v6"]
 
