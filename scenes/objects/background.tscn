@@ -2,16 +2,11 @@
 
 [ext_resource type="Script" uid="uid://blynasfhmwbhr" path="res://scripts/bgmove.gd" id="2_8u8tn"]
 [ext_resource type="Texture2D" uid="uid://bfcqlw0ausyqb" path="res://assets/sprites/objects/cdabg.png" id="2_ruc3x"]
-[ext_resource type="Shader" uid="uid://hglmryn53wl1" path="res://shaders/shadow.gdshader" id="3_n3rws"]
 [ext_resource type="Texture2D" uid="uid://j0ov36l1txlj" path="res://assets/sprites/objects/cdabg2.png" id="4_n3rws"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ruc3x"]
-shader = ExtResource("3_n3rws")
 
 [node name="background" type="Node2D" unique_id=1011117589]
 
 [node name="Layer1" type="Sprite2D" parent="." unique_id=1508591302]
-modulate = Color(0, 0, 0, 1)
 texture_repeat = 2
 texture = ExtResource("2_ruc3x")
 region_enabled = true
@@ -21,8 +16,8 @@ MoveX = -0.19999999999999996
 MoveY = 0.19999999999999996
 
 [node name="Layer2" type="Sprite2D" parent="." unique_id=851100703]
+modulate = Color(0, 0, 0, 1)
 texture_repeat = 2
-material = SubResource("ShaderMaterial_ruc3x")
 texture = ExtResource("4_n3rws")
 flip_h = true
 region_enabled = true
