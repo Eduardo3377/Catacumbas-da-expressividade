@@ -8,7 +8,7 @@ func _ready() -> void:
 	for child in get_children():
 		child.hide()
 	menu.show()
-	dialogo.show()
+	#dialogo.show()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass

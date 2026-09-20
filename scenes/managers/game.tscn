@@ -459,6 +459,7 @@ z_index = -1
 position = Vector2(192, 300)
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]
+visible = false
 position = Vector2(192, 300)
 
 [node name="Edu" parent="Players" unique_id=531438909 instance=ExtResource("11_ll2y6")]
