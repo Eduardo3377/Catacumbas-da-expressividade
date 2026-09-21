@@ -252,8 +252,12 @@ centered = false
 [node name="Interactions" type="Node2D" parent="." unique_id=1206674914]
 metadata/_edit_lock_ = true
 
-[node name="fala" parent="Interactions" unique_id=221709484 instance=ExtResource("11_4bum4")]
-position = Vector2(267, 461)
+[node name="fala2" parent="Interactions" unique_id=221709484 instance=ExtResource("11_4bum4")]
+position = Vector2(285, 467)
+FalaId = 6
+
+[node name="fala" parent="Interactions" unique_id=1549854913 instance=ExtResource("11_4bum4")]
+position = Vector2(212, 461)
 
 [node name="Enemy" parent="Interactions" unique_id=1211658649 instance=ExtResource("12_w3tgf")]
 position = Vector2(609, 354)

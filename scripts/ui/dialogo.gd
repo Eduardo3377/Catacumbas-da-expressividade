@@ -1,25 +1,31 @@
 extends Control
 @onready var nome: Label = %Nome
 @onready var texto: RichTextLabel = %Texto
+var idAtual
+var linhas: Array = []
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
-func dialogo(_id):
 	var file = FileAccess.open("res://data/roteiro/TCC CDE - Roteiro.csv", FileAccess.READ)
-	var data := {}
-	file.get_csv_line()
-	
 	while not file.eof_reached():
 		var linha = file.get_csv_line()
-		nome.text = "Edu" + ":" 
-		texto.text = "AAAAAAAAAAAAAAAAA"
+		linhas.append(linha)
 
-	pass
+func dialogo(id):
+	show()
+	idAtual = id
+	print(id)
+	if idAtual < linhas.size():
+		var linha = linhas[id]
+		if linha[0].strip_edges() == "":
+			hide()
+		else: 
+			nome.text = linha[0] + ":"
+			texto.text = linha[1]
+			print(linha)
+	else: 
+		hide()
+
+		
+func _input(event):
+	if event.is_action_pressed("ui_accept"):
+		dialogo(idAtual + 1)

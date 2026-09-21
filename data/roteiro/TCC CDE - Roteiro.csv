@@ -1,4 +1,10 @@
-id,name,text
-1,Edu,A
-2,Edu,AAAAAAAA
-3,Edu,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+name,text
+Edu,A
+Edu,AAAAAAAA
+Edu,os dialogos sobem um por um
+Edu,a coluna vazia termina o dialogo
+,
+Edu ,novo dialogo
+Edu,six
+Edu,Seven
+Pedro,a
