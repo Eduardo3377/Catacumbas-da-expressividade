@@ -456,7 +456,6 @@ PosIndex = 1
 metadata/_edit_lock_ = true
 
 [node name="Mapa" parent="Mapa" unique_id=59091156 instance=ExtResource("6_3g53l")]
-modulate = Color(0.6955032, 0.6955031, 0.6955031, 1)
 metadata/_edit_lock_ = true
 
 [node name="Players" type="Node2D" parent="." unique_id=499072006]
