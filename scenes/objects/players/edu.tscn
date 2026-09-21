@@ -109,7 +109,8 @@ animations = [{
 script = ExtResource("1_fa2d3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1933073970]
-position = Vector2(0, -16)
+position = Vector2(-9, -32)
 sprite_frames = SubResource("SpriteFrames_x07q8")
 animation = &"lado"
 autoplay = "frente"
+centered = false

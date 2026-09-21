@@ -150,7 +150,8 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_c1073")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=887271464]
-position = Vector2(0, -16)
+position = Vector2(-9, -32)
 sprite_frames = SubResource("SpriteFrames_pmg6p")
 animation = &"tras"
 autoplay = "capuz"
+centered = false

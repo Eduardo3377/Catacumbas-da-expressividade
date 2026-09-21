@@ -16,3 +16,4 @@ func _physics_process(_delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, SPEED)
 		GameManager.IsMoving(false)
 	move_and_slide()
+	

@@ -17,8 +17,9 @@ position = Vector2(-1, -7)
 shape = SubResource("CircleShape2D_cvc2j")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1134510352]
-position = Vector2(0, -28)
+position = Vector2(-31, -60)
 texture = ExtResource("3_ion0l")
+centered = false
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=141045748]
 process_callback = 0
