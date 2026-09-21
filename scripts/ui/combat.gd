@@ -1,22 +1,31 @@
 extends Control
+var idAtual
+var csv: Array = []
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	var file = FileAccess.open("res://data/combat/TCC CDE - Combat.csv", FileAccess.READ)
+	while not file.eof_reached():
+		var linha = file.get_csv_line()
+		csv.append(linha)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 	
-func combat() -> void:
-	var file = FileAccess.open("res://data/combat/TCC CDE - Combat.csv", FileAccess.READ)
-	var data := {}
-	file.get_csv_line()
-	
-	while not file.eof_reached():
-		var linha = file.get_csv_line()
-	
+func combat(id) -> void:
+	idAtual = id
+	print(id)
+	if idAtual < csv.size():
+		var linha = csv[id]
+		if linha[0].strip_edges() == "":
+			hide()
+		else: 
+#			nome.text = linha[0].strip_edges() + ":"
+#			texto.text = linha[1].strip_edges()
+			print(linha)
+	else: 
+		hide()
+	pass
 	
 func _on_sair_pressed() -> void:
 	print("saiu")
