@@ -5,6 +5,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	show()
 	for child in get_children():
 		child.hide()
 	menu.show()

@@ -1,21 +1,20 @@
 [gd_scene format=3 uid="uid://cnuln0rjg3b5g"]
 
 [ext_resource type="Script" uid="uid://d1kqt01al3u74" path="res://scripts/managers/ui_manager.gd" id="1_upjpn"]
-[ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://NAOSEI.tres" id="2_qxu4n"]
-[ext_resource type="Script" uid="uid://capfm5afmq3ob" path="res://scenes/menus/dialogo.gd" id="3_3g53l"]
+[ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://assets/theme/NAOSEI.tres" id="2_qxu4n"]
+[ext_resource type="Script" uid="uid://capfm5afmq3ob" path="res://scripts/ui/dialogo.gd" id="3_3g53l"]
 [ext_resource type="Texture2D" uid="uid://ck4dxo1433an5" path="res://assets/sprites/ui/Texturelabs_Paper_138S.png" id="4_c456e"]
 [ext_resource type="Script" uid="uid://rpnf8qf8ru2f" path="res://scripts/ui/menu.gd" id="4_vigns"]
 [ext_resource type="Texture2D" uid="uid://tt04phtopwvd" path="res://assets/sprites/ui/fullbook.png" id="5_c456e"]
-[ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/test_room.tscn" id="6_3g53l"]
+[ext_resource type="PackedScene" uid="uid://cjtogc2y0pddc" path="res://scenes/rooms/mapa.tscn" id="6_3g53l"]
 [ext_resource type="Texture2D" uid="uid://d37bnrtd8mahs" path="res://assets/sprites/ui/Texturelabs_Paper_206S.jpg" id="6_c456e"]
 [ext_resource type="Script" uid="uid://bhsr631mk5yoa" path="res://scripts/ui/combat.gd" id="6_j4x4q"]
 [ext_resource type="PackedScene" uid="uid://bp3rlfwxku68w" path="res://scenes/objects/players/pedro.tscn" id="8_c456e"]
 [ext_resource type="Texture2D" uid="uid://cuog0ma42t077" path="res://assets/sprites/ui/Texturelabs_Paper_204S.jpg" id="9_c456e"]
 [ext_resource type="PackedScene" uid="uid://b1n156nwwqnqq" path="res://scenes/objects/players/vini.tscn" id="9_j4x4q"]
 [ext_resource type="PackedScene" uid="uid://bjtiequkylufh" path="res://scenes/objects/players/FoxPlayer.tscn" id="10_p6fov"]
+[ext_resource type="PackedScene" uid="uid://c04y0e34jrmaf" path="res://scenes/objects/background.tscn" id="10_vigns"]
 [ext_resource type="PackedScene" uid="uid://cgvata4tj8171" path="res://scenes/objects/players/edu.tscn" id="11_ll2y6"]
-[ext_resource type="AudioStream" uid="uid://clbvsl0fj3sje" path="res://assets/audio/music/Tobu_-_Candyland_NCS_Release-190269240.mp3" id="11_mim0e"]
-[ext_resource type="PackedScene" uid="uid://barvi3txwhx3" path="res://scenes/objects/fala.tscn" id="15_3g53l"]
 
 [sub_resource type="GDScript" id="GDScript_ll2y6"]
 script/source = "extends Node
@@ -36,7 +35,6 @@ func _process(_delta):
 
 [node name="UI" type="Control" parent="Canvas" unique_id=1843753042]
 unique_name_in_owner = true
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -312,7 +310,7 @@ theme = ExtResource("2_qxu4n")
 script = ExtResource("6_j4x4q")
 
 [node name="ColorRect" type="TextureRect" parent="Canvas/UI/combat" unique_id=1111096347]
-modulate = Color(0.8623745, 0.86822885, 0.79832965, 1)
+modulate = Color(0.5187347, 0.52347547, 0.41380182, 1)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -449,35 +447,38 @@ text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 fit_content = true
 
 [node name="Mapa" type="Node2D" parent="." unique_id=285224400]
+metadata/_edit_lock_ = true
 
-[node name="TestRoom" parent="Mapa" unique_id=59091156 instance=ExtResource("6_3g53l")]
-position = Vector2(-12, -2)
+[node name="background" parent="Mapa" unique_id=1011117589 instance=ExtResource("10_vigns")]
+z_index = -1000
+position = Vector2(192, 108)
+PosIndex = 1
+metadata/_edit_lock_ = true
 
-[node name="fala" parent="Mapa" unique_id=244818867 instance=ExtResource("15_3g53l")]
-position = Vector2(319, 460)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Mapa" unique_id=57257390]
-stream = ExtResource("11_mim0e")
-pitch_scale = 0.55
-autoplay = true
-parameters/looping = true
+[node name="Mapa" parent="Mapa" unique_id=59091156 instance=ExtResource("6_3g53l")]
+modulate = Color(0.6955032, 0.6955031, 0.6955031, 1)
+metadata/_edit_lock_ = true
 
 [node name="Players" type="Node2D" parent="." unique_id=499072006]
 script = SubResource("GDScript_ll2y6")
 
 [node name="Vini" parent="Players" unique_id=1937835004 instance=ExtResource("9_j4x4q")]
-position = Vector2(192, 300)
+position = Vector2(192, 108)
+metadata/_edit_lock_ = true
 
 [node name="Pedro" parent="Players" unique_id=883880857 instance=ExtResource("8_c456e")]
-position = Vector2(192, 300)
-
-[node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]
-visible = false
-position = Vector2(192, 300)
+position = Vector2(192, 108)
+metadata/_edit_lock_ = true
 
 [node name="Edu" parent="Players" unique_id=531438909 instance=ExtResource("11_ll2y6")]
-position = Vector2(195, 298)
+visible = false
+position = Vector2(192, 108)
 PosIndex = 1
+metadata/_edit_lock_ = true
+
+[node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]
+position = Vector2(192, 108)
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Jogar" to="Canvas/UI/menu" method="_on_jogar_pressed"]
 [connection signal="pressed" from="Canvas/UI/menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Opcoes" to="Canvas/UI/menu" method="_on_opcoes_pressed"]

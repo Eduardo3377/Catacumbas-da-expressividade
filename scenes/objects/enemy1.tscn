@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bfis7btgelswh"]
 
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/objects/Fox.png" id="1_58c3k"]
-[ext_resource type="Script" uid="uid://b1hq1qi30minh" path="res://scripts/Enemy.gd" id="1_t3eek"]
-[ext_resource type="Shader" uid="uid://c70wfohph1tf8" path="res://shaders/green.gdshader" id="2_bbvfq"]
+[ext_resource type="Script" uid="uid://b1hq1qi30minh" path="res://scripts/objects/Enemy.gd" id="1_t3eek"]
+[ext_resource type="Shader" uid="uid://c70wfohph1tf8" path="res://assets/shaders/green.gdshader" id="2_bbvfq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bbvfq"]
 shader = ExtResource("2_bbvfq")
@@ -12,18 +12,16 @@ shader_parameter/speed = 20.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_t3eek"]
 radius = 14.0
 
-[node name="Enemy1" type="Node2D" unique_id=1263972995]
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1211658649]
-position = Vector2(-1, -29)
+[node name="Enemy" type="Area2D" unique_id=1211658649]
 script = ExtResource("1_t3eek")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=700937002]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=700937002]
 material = SubResource("ShaderMaterial_bbvfq")
+position = Vector2(0, -28)
 texture = ExtResource("1_58c3k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=735701073]
-position = Vector2(0, 19)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735701073]
+position = Vector2(0, -9)
 shape = SubResource("CircleShape2D_t3eek")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

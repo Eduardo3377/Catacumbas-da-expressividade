@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://c04y0e34jrmaf"]
 
-[ext_resource type="Script" uid="uid://blynasfhmwbhr" path="res://scripts/bgmove.gd" id="2_8u8tn"]
+[ext_resource type="Script" uid="uid://cbqnk7hylklw" path="res://scripts/objects/followplayer.gd" id="1_n3rws"]
+[ext_resource type="Script" uid="uid://blynasfhmwbhr" path="res://scripts/objects/bgmove.gd" id="2_8u8tn"]
+[ext_resource type="Texture2D" uid="uid://4nmmeyimt3lg" path="res://assets/sprites/ui/Texturelabs_Paper_288S.jpg" id="2_bm1v5"]
 [ext_resource type="Texture2D" uid="uid://bfcqlw0ausyqb" path="res://assets/sprites/objects/cdabg.png" id="2_ruc3x"]
-[ext_resource type="Texture2D" uid="uid://j0ov36l1txlj" path="res://assets/sprites/objects/cdabg2.png" id="4_n3rws"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4bum4"]
 
 [node name="background" type="Node2D" unique_id=1011117589]
+script = ExtResource("1_n3rws")
+Animated = 0
 
 [node name="Layer1" type="Sprite2D" parent="." unique_id=1508591302]
+modulate = Color(0.31061712, 0.31061712, 0.3106171, 1)
 texture_repeat = 2
-texture = ExtResource("2_ruc3x")
+scale = Vector2(0.608, 0.6)
+texture = ExtResource("2_bm1v5")
 region_enabled = true
 region_rect = Rect2(0, 0, 758, 426.375)
 script = ExtResource("2_8u8tn")
@@ -16,9 +23,11 @@ MoveX = -0.19999999999999996
 MoveY = 0.19999999999999996
 
 [node name="Layer2" type="Sprite2D" parent="." unique_id=851100703]
-modulate = Color(0, 0, 0, 1)
+modulate = Color(1, 1, 1, 0.120000005)
 texture_repeat = 2
-texture = ExtResource("4_n3rws")
+material = SubResource("ShaderMaterial_4bum4")
+scale = Vector2(0.608, 0.6)
+texture = ExtResource("2_ruc3x")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 0, 757.18164, 425.91467)

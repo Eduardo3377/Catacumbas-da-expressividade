@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1n156nwwqnqq"]
 
-[ext_resource type="Script" uid="uid://cbqnk7hylklw" path="res://scripts/followplayer.gd" id="1_2xalk"]
+[ext_resource type="Script" uid="uid://cbqnk7hylklw" path="res://scripts/objects/followplayer.gd" id="1_2xalk"]
 [ext_resource type="Texture2D" uid="uid://bckulkpke54ga" path="res://assets/sprites/players/Figura de capuz.png" id="1_c1073"]
 [ext_resource type="Texture2D" uid="uid://da8j0bespjje" path="res://assets/sprites/players/protagonistas.png" id="3_inywm"]
 
