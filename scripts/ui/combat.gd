@@ -9,6 +9,16 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 	
+func combat() -> void:
+	var file = FileAccess.open("res://data/combat/TCC CDE - Combat.csv", FileAccess.READ)
+	var data := {}
+	file.get_csv_line()
+	
+	while not file.eof_reached():
+		var linha = file.get_csv_line()
+	
+	
 func _on_sair_pressed() -> void:
 	print("saiu")
+	get_tree().paused = false
 	hide()

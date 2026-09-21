@@ -13,6 +13,13 @@ func _process(_delta: float) -> void:
 	pass
 
 func dialogo(_id):
-	nome.text = "Edu" + ":" 
-	texto.text = "AAAAAAAAAAAAAAAAA"
+	var file = FileAccess.open("res://data/roteiro/TCC CDE - Roteiro.csv", FileAccess.READ)
+	var data := {}
+	file.get_csv_line()
+	
+	while not file.eof_reached():
+		var linha = file.get_csv_line()
+		nome.text = "Edu" + ":" 
+		texto.text = "AAAAAAAAAAAAAAAAA"
+
 	pass

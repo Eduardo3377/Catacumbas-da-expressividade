@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://j3stjdpsqegy"
+
+[deps]
+
+files=["res://data/combat/TCC CDE - Combat.color.translation", "res://data/combat/TCC CDE - Combat.hp.translation", "res://data/combat/TCC CDE - Combat.atk1.translation", "res://data/combat/TCC CDE - Combat.atk1name.translation", "res://data/combat/TCC CDE - Combat.atk2.translation", "res://data/combat/TCC CDE - Combat.atk2name.translation", "res://data/combat/TCC CDE - Combat.atk3.translation", "res://data/combat/TCC CDE - Combat.atk3name.translation"]
+
+source_file="res://data/combat/TCC CDE - Combat.csv"
+dest_files=["res://data/combat/TCC CDE - Combat.color.translation", "res://data/combat/TCC CDE - Combat.hp.translation", "res://data/combat/TCC CDE - Combat.atk1.translation", "res://data/combat/TCC CDE - Combat.atk1name.translation", "res://data/combat/TCC CDE - Combat.atk2.translation", "res://data/combat/TCC CDE - Combat.atk2name.translation", "res://data/combat/TCC CDE - Combat.atk3.translation", "res://data/combat/TCC CDE - Combat.atk3name.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

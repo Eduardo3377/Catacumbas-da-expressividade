@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://p5sai1ya67hj"
+
+[deps]
+
+files=["res://data/roteiro/TCC CDE - Roteiro.name.translation", "res://data/roteiro/TCC CDE - Roteiro.text.translation"]
+
+source_file="res://data/roteiro/TCC CDE - Roteiro.csv"
+dest_files=["res://data/roteiro/TCC CDE - Roteiro.name.translation", "res://data/roteiro/TCC CDE - Roteiro.text.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -31,7 +31,7 @@ func _process(_delta):
 
 [node name="MainGame" type="Node" unique_id=899266031]
 
-[node name="Canvas" type="CanvasLayer" parent="." unique_id=1860841989]
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=70310488]
 
 [node name="UI" type="Control" parent="Canvas" unique_id=1843753042]
 unique_name_in_owner = true
@@ -107,6 +107,7 @@ text = "oi"
 
 [node name="combat" type="Control" parent="Canvas/UI" unique_id=1368979020]
 unique_name_in_owner = true
+process_mode = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -251,6 +252,7 @@ fit_content = true
 
 [node name="menu" type="Control" parent="Canvas/UI" unique_id=2121695693]
 unique_name_in_owner = true
+process_mode = 3
 visible = false
 layout_mode = 1
 anchors_preset = 15

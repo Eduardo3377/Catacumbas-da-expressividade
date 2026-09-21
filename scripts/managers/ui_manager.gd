@@ -22,6 +22,9 @@ func _process(_delta: float) -> void:
 func combatstart(_enemy):
 	print("comecando combate")
 	combat.show()
+	get_tree().paused = true
+
+		
 
 func dialogoo(id):
 	dialogo.dialogo(id)
