@@ -6,10 +6,10 @@ uid="uid://p5sai1ya67hj"
 
 [deps]
 
-files=["res://data/roteiro/TCC CDE - Roteiro.text.translation"]
+files=["res://data/roteiro/TCC CDE - Roteiro.texto.translation"]
 
 source_file="res://data/roteiro/TCC CDE - Roteiro.csv"
-dest_files=["res://data/roteiro/TCC CDE - Roteiro.text.translation"]
+dest_files=["res://data/roteiro/TCC CDE - Roteiro.texto.translation"]
 
 [params]
 

@@ -1,4 +1,4 @@
-name,text
+nome,texto
 Edu,A
 Edu,AAAAAAAA
 Edu,os dialogos sobem um por um
@@ -8,3 +8,9 @@ Edu ,novo dialogo
 Edu,six
 Edu,Seven
 Pedro,a
+Edu,exemplo
+Vini,Olá 
+Edu,oi
+,
+Vini,Tudo bem ?
+Edu ,"Sim, e voce?"
