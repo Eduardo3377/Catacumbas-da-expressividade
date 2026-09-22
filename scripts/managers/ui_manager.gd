@@ -19,9 +19,10 @@ func _process(_delta: float) -> void:
 #	var current = get(menu)
 #	current.show()
 	
-func combatstart(_enemy):
+func combatstart(InimigoId):
 	print("comecando combate")
 	combat.show()
+	combat.combat(InimigoId)
 	get_tree().paused = true
 
 		

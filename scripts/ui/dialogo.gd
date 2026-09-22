@@ -18,6 +18,7 @@ func dialogo(id):
 		var linha = csv[id]
 		if linha[0].strip_edges() == "":
 			hide()
+			
 		else: 
 			nome.text = linha[0].strip_edges() + ":"
 			texto.text = linha[1].strip_edges()
@@ -27,5 +28,5 @@ func dialogo(id):
 
 		
 func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		dialogo(idAtual + 1)
+	if event.is_action_pressed("ui_accept") and visible:
+			dialogo(idAtual + 1)
