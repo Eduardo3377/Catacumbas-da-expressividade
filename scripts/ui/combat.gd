@@ -11,7 +11,16 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
-	
+
+#le o csv 
+#pega o id do(s) inimigo(s)
+#coloca os integrantes da batalha em dois Arrays, player/inimigos
+#func rodada:
+#while inimigos !== morto: 
+#	turno players 
+#	turno inimigos
+
+
 func combat(id) -> void:
 	idAtual = id
 	print(id)

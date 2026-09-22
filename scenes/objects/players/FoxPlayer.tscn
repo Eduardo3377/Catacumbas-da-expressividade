@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/objects/Fox.png" id="3_ion0l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvc2j"]
-radius = 7.5
+radius = 7.0
 
 [node name="fox" type="Node2D" unique_id=1629078187]
 
