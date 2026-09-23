@@ -11,8 +11,9 @@ var batalha_ativa = false
 @onready var player_1: Label = %Player1
 @onready var player_2: Label = %Player2
 @onready var player_3: Label = %Player3
-@onready var inimigo: Label = $inimigo
+@onready var inimigo: Label = %inimigo
 @onready var inimigodesc: RichTextLabel = %inimigodesc
+@export var historico: Label
 
 @onready var atk: Label = %Atk
 @onready var atk_1: Button = %atk1
@@ -38,9 +39,9 @@ func _ready() -> void:
 func combat(inimigo_id) -> void:
 	jogadores.clear()
 	inimigos.clear()
-
+	historico.text = ""
 	jogadores.append(ler_csv(1))
-	jogadores.append(ler_csv(2))
+	jogadores.append(ler_csv(4))
 	jogadores.append(ler_csv(3))
 
 	inimigos.append(ler_csv(inimigo_id))
@@ -63,16 +64,7 @@ func atacar(ataque_id: int) -> void:
 	alvo["hp"] -= ataque["dano"]
 	alvo["hp"] = max(alvo["hp"], 0)
 
-	print(
-		jogador["nome"],
-		" usou ",
-		ataque["nome"],
-		" em ",
-		alvo["nome"],
-		" causando ",
-		ataque["dano"],
-		" de dano"
-	)
+	historico.text = ( jogador["nome"] + " usou " + ataque["nome"] + " em " + alvo["nome"] + " causando " + str(ataque["dano"]) + " de dano")
 
 	if alvo["hp"] <= 0:
 		fim(1)
@@ -98,16 +90,7 @@ func inimigo_atacar() -> void:
 	if alvo["hp"] <= 0:
 		alvo["hp"] = 0
 
-	print(
-		inimig["nome"],
-		" usou ",
-		ataque["nome"],
-		" em ",
-		alvo["nome"],
-		" causando ",
-		ataque["dano"],
-		" de dano"
-	)
+	historico.text = ( inimig["nome"] + " usou " + ataque["nome"] + " em " + alvo["nome"] + " causando " + str(ataque["dano"]) + " de dano")
 
 	if jogadores_vivos().is_empty():
 		fim(0)

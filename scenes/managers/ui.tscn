@@ -19,7 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_37hbj")
 
-[node name="combat" type="Control" parent="." unique_id=1810204815]
+[node name="combat" type="Control" parent="." unique_id=1810204815 node_paths=PackedStringArray("historico")]
 unique_name_in_owner = true
 process_mode = 2
 layout_mode = 1
@@ -31,6 +31,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("2_1abot")
 script = ExtResource("3_xkqhe")
+historico = NodePath("TextureRect2/ColorRect2/VBoxContainer/historico")
 
 [node name="ColorRect" type="TextureRect" parent="combat" unique_id=1677813658]
 modulate = Color(0.5187347, 0.52347547, 0.41380182, 1)
@@ -218,13 +219,6 @@ layout_mode = 2
 text = "Voltar"
 alignment = 0
 
-[node name="inimigo" type="Label" parent="combat" unique_id=602676976]
-layout_mode = 0
-offset_left = 84.0
-offset_top = 131.0
-offset_right = 124.0
-offset_bottom = 144.0
-
 [node name="gameover" type="Control" parent="combat" unique_id=1752203555]
 unique_name_in_owner = true
 visible = false
@@ -259,6 +253,43 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Voce perdeu!"
+
+[node name="TextureRect2" type="TextureRect" parent="combat" unique_id=405754695]
+modulate = Color(0.9872399, 1, 0.9379286, 1)
+self_modulate = Color(0.8862616, 0.88626146, 0.8862615, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = -15.0
+offset_right = 388.0
+offset_bottom = 76.0
+texture = ExtResource("7_wk6if")
+expand_mode = 1
+
+[node name="ColorRect2" type="ColorRect" parent="combat/TextureRect2" unique_id=810137136]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 21.0
+offset_top = 29.0
+offset_right = -30.0
+offset_bottom = 37.0
+grow_horizontal = 2
+color = Color(0.67851543, 0.7206767, 0.73864055, 0)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="combat/TextureRect2/ColorRect2" unique_id=1154482023]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="inimigo" type="Label" parent="combat/TextureRect2/ColorRect2/VBoxContainer" unique_id=602676976]
+unique_name_in_owner = true
+layout_mode = 2
+text = "INIMIGO"
+
+[node name="historico" type="Label" parent="combat/TextureRect2/ColorRect2/VBoxContainer" unique_id=998848559]
+unique_name_in_owner = true
+layout_mode = 2
+text = "historico"
 
 [node name="Dialogo" type="Control" parent="." unique_id=396951711]
 unique_name_in_owner = true
