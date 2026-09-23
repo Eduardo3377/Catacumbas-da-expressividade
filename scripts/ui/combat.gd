@@ -173,6 +173,7 @@ func fim(status: int) -> void:
 	acoes.current_tab = 2
 	atualizar_ui()
 	get_tree().paused = false
+	hide()
 
 
 func ler_csv(id) -> Dictionary:

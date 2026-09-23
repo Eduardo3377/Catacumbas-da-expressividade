@@ -317,6 +317,10 @@ InimigoId = 4
 position = Vector2(355, 128)
 InimigoId = 5
 
+[node name="Enemy3" parent="interacao/inimigos" unique_id=1839637595 instance=ExtResource("12_w3tgf")]
+position = Vector2(608, 394)
+InimigoId = 8
+
 [node name="Particles" type="Node2D" parent="." unique_id=1359235253]
 top_level = true
 z_index = 4096

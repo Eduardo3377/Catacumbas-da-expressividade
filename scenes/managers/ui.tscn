@@ -226,6 +226,7 @@ offset_right = 124.0
 offset_bottom = 144.0
 
 [node name="Fim" type="Control" parent="combat" unique_id=1752203555]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
