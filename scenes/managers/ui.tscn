@@ -181,18 +181,22 @@ metadata/_tab_index = 2
 
 [node name="Cor" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=456391728]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="cor1" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=374352526]
 unique_name_in_owner = true
-layout_mode = 2
-
-[node name="cor2" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=912914399]
-unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="cor3" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=2007742703]
 unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="cor2" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=912914399]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="Checar" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=1657568392]
@@ -220,6 +224,23 @@ offset_left = 84.0
 offset_top = 131.0
 offset_right = 124.0
 offset_bottom = 144.0
+
+[node name="Fim" type="Control" parent="combat" unique_id=1752203555]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="combat/Fim" unique_id=1866762849]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.41568628)
 
 [node name="Dialogo" type="Control" parent="." unique_id=396951711]
 unique_name_in_owner = true
