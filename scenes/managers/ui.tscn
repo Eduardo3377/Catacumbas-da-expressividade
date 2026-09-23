@@ -1,0 +1,515 @@
+[gd_scene format=3 uid="uid://c1r45sej3pldt"]
+
+[ext_resource type="Script" uid="uid://d1kqt01al3u74" path="res://scripts/managers/ui_manager.gd" id="1_37hbj"]
+[ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://assets/theme/NAOSEI.tres" id="2_1abot"]
+[ext_resource type="Script" uid="uid://bhsr631mk5yoa" path="res://scripts/ui/combat.gd" id="3_xkqhe"]
+[ext_resource type="Texture2D" uid="uid://cuog0ma42t077" path="res://assets/sprites/ui/Texturelabs_Paper_204S.jpg" id="4_u3q1e"]
+[ext_resource type="Texture2D" uid="uid://tt04phtopwvd" path="res://assets/sprites/ui/fullbook.png" id="5_gh0ax"]
+[ext_resource type="Script" uid="uid://capfm5afmq3ob" path="res://scripts/ui/dialogo.gd" id="6_bpi5a"]
+[ext_resource type="Texture2D" uid="uid://ck4dxo1433an5" path="res://assets/sprites/ui/Texturelabs_Paper_138S.png" id="7_wk6if"]
+[ext_resource type="Script" uid="uid://rpnf8qf8ru2f" path="res://scripts/ui/menu.gd" id="8_nawgk"]
+[ext_resource type="Texture2D" uid="uid://d37bnrtd8mahs" path="res://assets/sprites/ui/Texturelabs_Paper_206S.jpg" id="9_fqwar"]
+
+[node name="UI" type="Control" unique_id=1259800541]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_37hbj")
+
+[node name="combat" type="Control" parent="." unique_id=1810204815]
+unique_name_in_owner = true
+process_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_1abot")
+script = ExtResource("3_xkqhe")
+
+[node name="ColorRect" type="TextureRect" parent="combat" unique_id=1677813658]
+modulate = Color(0.5187347, 0.52347547, 0.41380182, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_u3q1e")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="combat" unique_id=211934007]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 117.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_gh0ax")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="combat" unique_id=2080023358]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -71.0
+offset_right = 107.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="combat/HBoxContainer" unique_id=299421708]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer" unique_id=817229357]
+layout_mode = 2
+
+[node name="Integrantes" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2" unique_id=2034231346]
+layout_mode = 2
+text = "Integrantes:"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2" unique_id=1639956301]
+layout_mode = 2
+
+[node name="Player1" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=139171309]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Player2" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1607953645]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Player3" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1221464184]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="combat/HBoxContainer" unique_id=666768581]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+
+[node name="Acoes" type="TabContainer" parent="combat/HBoxContainer/MarginContainer2" unique_id=27951698]
+unique_name_in_owner = true
+layout_mode = 2
+current_tab = 0
+tabs_visible = false
+
+[node name="Acoes" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=1035721321]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Selected" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes" unique_id=1856198378]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Acoes:"
+
+[node name="opcoes" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes" unique_id=935973060]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Atk" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes" unique_id=1633816248]
+layout_mode = 2
+text = "Ataque
+"
+alignment = 0
+
+[node name="Checar" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes" unique_id=2007008064]
+layout_mode = 2
+text = "Checar"
+alignment = 0
+
+[node name="Cor" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes" unique_id=1411505944]
+visible = false
+layout_mode = 2
+text = "Magia"
+alignment = 0
+
+[node name="sair" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes" unique_id=936987003]
+layout_mode = 2
+text = "Fugir
+"
+alignment = 0
+
+[node name="Ataque" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=1555570833]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Atk" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=809608319]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ataque:"
+
+[node name="atk1" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=171156962]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 0
+
+[node name="atk2" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=681614852]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 0
+
+[node name="Voltar" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=955086787]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 2
+text = "Voltar"
+alignment = 0
+
+[node name="Cor" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=939566289]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Cor" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=456391728]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="cor1" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=374352526]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="cor2" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=912914399]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="cor3" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=2007742703]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Checar" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=1657568392]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Checar" unique_id=1179169144]
+layout_mode = 2
+text = "Checar:"
+
+[node name="inimigodesc" type="RichTextLabel" parent="combat/HBoxContainer/MarginContainer2/Acoes/Checar" unique_id=2004470190]
+unique_name_in_owner = true
+layout_mode = 2
+fit_content = true
+
+[node name="Voltar2" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Checar" unique_id=1690221941]
+layout_mode = 2
+text = "Voltar"
+alignment = 0
+
+[node name="inimigo" type="Label" parent="combat" unique_id=602676976]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 131.0
+offset_right = 124.0
+offset_bottom = 144.0
+
+[node name="Dialogo" type="Control" parent="." unique_id=396951711]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1abot")
+script = ExtResource("6_bpi5a")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogo" unique_id=376388993]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="ColorRect" type="ColorRect" parent="Dialogo/MarginContainer" unique_id=330546379]
+clip_contents = true
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Dialogo/MarginContainer/ColorRect" unique_id=1118936006]
+modulate = Color(0.9872399, 1, 0.9379286, 1)
+self_modulate = Color(0.8862616, 0.88626146, 0.8862615, 1)
+layout_mode = 0
+offset_left = -13.0
+offset_top = -21.0
+offset_right = 374.0
+offset_bottom = 70.0
+texture = ExtResource("7_wk6if")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialogo/MarginContainer" unique_id=964020341]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogo/MarginContainer/MarginContainer" unique_id=1760263376]
+layout_mode = 2
+
+[node name="Nome" type="Label" parent="Dialogo/MarginContainer/MarginContainer/VBoxContainer" unique_id=521405178]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Edu:"
+
+[node name="Texto" type="RichTextLabel" parent="Dialogo/MarginContainer/MarginContainer/VBoxContainer" unique_id=375938219]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "oi"
+
+[node name="menu" type="Control" parent="." unique_id=105794058]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1abot")
+script = ExtResource("8_nawgk")
+
+[node name="ColorRect" type="TextureRect" parent="menu" unique_id=1825907668]
+modulate = Color(0.8007072, 0.8200692, 0.7429809, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_fqwar")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="menu" unique_id=289720867]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_gh0ax")
+
+[node name="MarginContainer" type="MarginContainer" parent="menu" unique_id=2062307064]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = 28.0
+offset_right = 106.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu/MarginContainer" unique_id=1231005792]
+propagate_maximum_size = false
+clip_contents = true
+layout_mode = 2
+alignment = 1
+
+[node name="1" type="Control" parent="menu/MarginContainer/HBoxContainer" unique_id=1382170787]
+layout_mode = 2
+
+[node name="page1" type="TabContainer" parent="menu/MarginContainer/HBoxContainer/1" unique_id=834305736]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -103.0
+offset_right = -10.0
+offset_bottom = 161.0
+size_flags_horizontal = 3
+current_tab = 0
+tabs_visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/MarginContainer/HBoxContainer/1/page1" unique_id=823810259]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=777348662]
+layout_mode = 2
+text = "Catacumbas 
+da 
+Expressivade"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer" unique_id=1179729487]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="Jogar" type="Button" parent="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=1803041874]
+layout_mode = 2
+text = "Jogar"
+
+[node name="Opcoes" type="Button" parent="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=1606467898]
+layout_mode = 2
+text = "Controles"
+
+[node name="Creditos" type="Button" parent="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=604237583]
+layout_mode = 2
+text = "Creditos"
+
+[node name="Sair" type="Button" parent="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer" unique_id=2068088712]
+layout_mode = 2
+text = "Sair "
+
+[node name="2" type="Control" parent="menu/MarginContainer/HBoxContainer" unique_id=214828692]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="page2" type="TabContainer" parent="menu/MarginContainer/HBoxContainer/2" unique_id=1563757186]
+unique_name_in_owner = true
+propagate_maximum_size = false
+layout_mode = 0
+offset_left = 10.0
+offset_right = 102.0
+offset_bottom = 159.0
+size_flags_horizontal = 3
+current_tab = 0
+tabs_visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/MarginContainer/HBoxContainer/2/page2" unique_id=639148895]
+propagate_maximum_size = false
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Controles" type="VBoxContainer" parent="menu/MarginContainer/HBoxContainer/2/page2" unique_id=91838701]
+visible = false
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label2" type="Label" parent="menu/MarginContainer/HBoxContainer/2/page2/Controles" unique_id=1785158283]
+layout_mode = 2
+text = "Controles:"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="menu/MarginContainer/HBoxContainer/2/page2/Controles" unique_id=2051816309]
+layout_mode = 2
+text = "Andar: setinhas, wasd
+
+Avancar Dialogo: enter, espaco
+
+Menu: esc"
+fit_content = true
+
+[node name="Creditos" type="VBoxContainer" parent="menu/MarginContainer/HBoxContainer/2/page2" unique_id=79584523]
+visible = false
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label2" type="Label" parent="menu/MarginContainer/HBoxContainer/2/page2/Creditos" unique_id=1311721749]
+layout_mode = 2
+text = "Creditos:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="menu/MarginContainer/HBoxContainer/2/page2/Creditos" unique_id=335708801]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Eduardo:
+Programador, UI
+Pedro:
+Artista, Roteiro
+Vini:
+Roteiro, Documentacao
+
+
+Engine: Godot
+Fonte: Bitcount
+Copyright 1980 The Bitcount Project Authors
+Licenciada sob a SIL Open Font License, versão 1.1.
+https://github.com/petrvanblokland/TYPETR-Bitcount
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="menu/MarginContainer/HBoxContainer/2/page2/Creditos" unique_id=1325921444]
+layout_mode = 2
+text = "Andar: setinhas, wasd
+avancar ui: enter, espaco
+menu: esc"
+
+[node name="Conf" type="VBoxContainer" parent="menu/MarginContainer/HBoxContainer/2/page2" unique_id=1663699593]
+visible = false
+clip_contents = true
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=395054323]
+layout_mode = 2
+text = "Opcoes:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=1553996534]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="menu/MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer" unique_id=499193261]
+layout_mode = 2
+text = "Musicas"
+
+[node name="HSlider" type="HSlider" parent="menu/MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer" unique_id=1882342904]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=116082098]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="menu/MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer2" unique_id=635114603]
+layout_mode = 2
+text = "Efeitos"
+
+[node name="HSlider" type="HSlider" parent="menu/MarginContainer/HBoxContainer/2/page2/Conf/HBoxContainer2" unique_id=659180220]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="silenciar" type="Button" parent="menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=621515951]
+layout_mode = 2
+toggle_mode = true
+text = "Silenciar Jogo"
+
+[node name="fullscreen" type="Button" parent="menu/MarginContainer/HBoxContainer/2/page2/Conf" unique_id=664645957]
+layout_mode = 2
+toggle_mode = true
+text = "Fullscreen"
+
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes/Atk" to="combat" method="_on_atk_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes/Checar" to="combat" method="_on_checar_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes/Cor" to="combat" method="_on_cor_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/sair" to="combat" method="_on_sair_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Ataque/atk1" to="combat" method="_on_atk_1_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Ataque/atk2" to="combat" method="_on_atk_2_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Ataque/Voltar" to="combat" method="_on_voltar_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Checar/Voltar2" to="combat" method="_on_voltar_2_pressed"]
+[connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Jogar" to="menu" method="_on_jogar_pressed"]
+[connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Opcoes" to="menu" method="_on_opcoes_pressed"]
+[connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Creditos" to="menu" method="_on_creditos_pressed"]
+[connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Sair" to="menu" method="_on_sair_pressed"]

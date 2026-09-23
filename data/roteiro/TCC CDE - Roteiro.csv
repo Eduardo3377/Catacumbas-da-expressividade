@@ -1,16 +1,94 @@
-nome,texto
-Edu,A
-Edu,AAAAAAAA
-Edu,os dialogos sobem um por um
-Edu,a coluna vazia termina o dialogo
+nome,dialogo
+Pedro,Onde estamos? Eu tô sonhando?
+voz misteriosa,quase…
+Edu,o que foi isso? quem é você?
+voz misteriosa,vá até a porta
+Pedro,"como assim ? como posso confiar em você, eu nem te conheço!"
+Edu,eu concordo… nem deu o trabalho de falar onde a gente está.
+Voz misteriosa,"eu peço perdão, vou ser mais claro, vocês estão nas catacumbas da expressividades, a porta da terra dos sonhos e da imaginação. É daqui que as ideias vêm."
+Pedro e Edu,Que loucura..
+Voz misteriosa,"esqueci de mencionar, vocês não vão estar sozinhos. Vocês vão ter um guia…"
 ,
-Edu ,novo dialogo
-Edu,six
-Edu,Seven
-Pedro,a
-Edu,exemplo
-Vini,Olá 
-Edu,oi
+Encapuzado,"Desculpa, não reparem na bagunça…me acompanhem."
 ,
-Vini,Tudo bem ?
-Edu ,"Sim, e voce?"
+Encapuzado,"São Novos aqui, não é ?"
+Pedro,Somos..
+Edu,Como se chama ?
+Encapuzado,Eu me chamo…errr…p..pip…pet..
+Pedro,Peter ?
+Peter,Isso! Peter…esse é meu nome.(rindo de nervosismo)
+Edu,Prazer em conhecer você “Peter”
+Pedro,E Meu Nome é..
+Peter,"Pedro, não é ?"
+Edu e Pedro,??
+Peter,Eu já sei os seus nomes..
+Edu,Como você sabe ?
+Peter,A Voz me informou anteriormente…
+Edu,Ok…
+Edu,"Pedro, acho que o Peter é o Vini."
+Pedro,Também acho que é o Vini..
+Peter,Ei! Vamos acelerar o passo… Temos que salvar essa terra em apenas uma madrugada.
+Edu,só uma madrugada??
+Peter,"Sim, não temos muito tempo!"
+Pedro,"Beleza, Vini."
+Vini,…
+Vini,"Sou péssimo em mentir, não é ?"
+Pedro,Bastante.
+Edu,tá mas por onde começamos ??
+Vini,"Saindo das Catacumbas e Vamos para uma vila, não está muito longe."
+,
+Edu e Pedro,onde estamos?
+Vini,"Então…  Boa pergunta, cada sonho é diferente então…"
+mulher suspeita,"Aqui é a vila, tem uns moradores do sonho se quiser se comunicar com eles"
+Mulher,"Tem um morador que ouviu rumores sobre um circo, uns dos moradores foi para o circo e apenas um voltou para a vila. Ele foi o único a voltar inteiro."
+Vini,"Ah, obrigado…"
+mulher,"De nada, vini"
+Vini,"Encaro com surpresa, rapidamente fico triste."
+Vini,Pelo visto algumas pessoas se tornaram npcs…
+Vini,Isso me dá mais motivo para nós se apressar.
+Edu,"Com licença, você sabe sobre algum circo misterioso ?"
+Npc,"Sim, é um lugar onde suas energias são drenadas até sobrar o vazio."
+Pedro,Quantos Moradores foram para esse lugar ?
+Npc,"Foram 10, só sobrou eu.."
+Npc,Tive sorte de fugir de lá com vida.
+Vini,Qual caminho devemos trilhar para chegar ao circo ?
+Npc,"Para a Terra desolada, só seguir para o oeste mas eu não recomendo vocês irem. É muito perigoso."
+,
+Vini,A partir daqui… as coisas vão subir de nível.
+Vini,Estão prontos ?
+Edu e Pedro,Sim!
+Vini,"Certo, que a jornada para esse circo dos horrores começa."
+,
+Sub Boss,"Parem onde estão, magrelos."
+Edu,Quem é esse cara ?
+Pedro," Eu não sei, mas parece que falta dia de perna.."
+Vini,Provavelmente é algum guarda..
+Sub Boss,Você tem que passar por mim primeiro antes de falar com meu chefe.
+Vini,"Pessoal, vamos se esforçar…usem tudo que aprenderam."
+Sub Boss,"Você me subestima, acha que vocês conseguem me derrotar ?"
+Vini,"Sim, nós vamos te derrotar."
+,
+Boss, COMO ?!
+Boss,Era para eu ser invencível !
+Boss,Mas fui derrotado por humanos !?
+Boss,"Mas eu não dou a mínima, vocês são nada comparado ao meu poder."
+Boss,"eu tenho total controle desse lugar, ninguém pode me controlar."
+Boss,"Eu sou livre, posso acabar com vocês quando eu quiser."
+Vini,…
+Edu,O que a gente faz com esse cara ?
+Pedro,"Temos que eliminar, não é ?"
+Vini,…
+Vini,Ele pode ser uma grande ajuda..
+Pedro e Edu,O que ?! Por que ?!
+Edu,"Ele é muito perigoso, você tem certeza ?"
+Vini,Ele só quer se sentir como um ser humano.
+Vini,"O Jeito dele de querer sentir alguma coisa em batalha, já diz muita coisa."
+Pedro,Ele é tipo um Espartano ?
+Vini,Quase isso.
+Boss,"Garoto, vejo que teu coração, espírito e mente são fortes, seus amigos também possuem, mas…"
+Boss,"… Você parece o mais capacitado, o mais forte"
+Boss,"não vejo mais propósito em minhas habilidades e criações, nada será tão grandioso quanto a mente humana"
+Boss,"ela é tanto minha casa, quanto minha prisão, mas eu gosto daqui, eu só queria ser…"
+Boss,…  Livre
+Boss,"podem levar a energia magenta, a cognição das mentes…"
+Vini,Tudo bem… foi uma honra lutar contra você.
