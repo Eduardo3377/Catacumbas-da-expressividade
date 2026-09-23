@@ -18,6 +18,8 @@ var batalha_ativa = false
 @onready var atk_1: Button = %atk1
 @onready var atk_2: Button = %atk2
 
+@onready var gameover: Control = %gameover
+
 
 
 func _ready() -> void:
@@ -165,15 +167,16 @@ func jogadores_vivos() -> Array:
 
 func fim(status: int) -> void:
 	batalha_ativa = false
-
-	if status == 1:
-		print("VENCEU")
-	elif status == 0:
-		print("PERDEU")
 	acoes.current_tab = 2
 	atualizar_ui()
 	get_tree().paused = false
-	hide()
+	if status == 1:
+		print("VENCEU")
+		hide()
+	elif status == 0:
+		print("PERDEU")
+		gameover.show()
+		
 
 
 func ler_csv(id) -> Dictionary:
