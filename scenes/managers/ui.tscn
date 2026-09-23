@@ -102,84 +102,124 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 10
 
-[node name="TabContainer" type="TabContainer" parent="combat/HBoxContainer/MarginContainer2" unique_id=27951698]
+[node name="Acoes" type="TabContainer" parent="combat/HBoxContainer/MarginContainer2" unique_id=27951698]
+unique_name_in_owner = true
 layout_mode = 2
 current_tab = 0
 tabs_visible = false
 
-[node name="Acoes" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/TabContainer" unique_id=1035721321]
+[node name="Acoes" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=1035721321]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Label" type="Label" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Acoes" unique_id=1856198378]
+[node name="Selected" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes" unique_id=1856198378]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Acoes:"
 
-[node name="opcoes" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Acoes" unique_id=935973060]
+[node name="opcoes" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes" unique_id=935973060]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 2
 
-[node name="Atk" type="Button" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Acoes/opcoes" unique_id=1633816248]
+[node name="Atk" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes" unique_id=1633816248]
 layout_mode = 2
 text = "Ataque
 "
 alignment = 0
 
-[node name="Cor" type="Button" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Acoes/opcoes" unique_id=1411505944]
+[node name="Checar" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes" unique_id=2007008064]
+layout_mode = 2
+text = "Checar"
+alignment = 0
+
+[node name="Cor" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes" unique_id=1411505944]
+visible = false
 layout_mode = 2
 text = "Magia"
 alignment = 0
 
-[node name="sair" type="Button" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Acoes" unique_id=936987003]
+[node name="sair" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Acoes" unique_id=936987003]
 layout_mode = 2
 text = "Fugir
 "
 alignment = 0
 
-[node name="Ataque" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/TabContainer" unique_id=1555570833]
+[node name="Ataque" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=1555570833]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="Atk" type="Label" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Ataque" unique_id=809608319]
+[node name="Atk" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=809608319]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Ataque:"
 
-[node name="atk1" type="Button" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Ataque" unique_id=171156962]
+[node name="atk1" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=171156962]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 2
+alignment = 0
 
-[node name="atk2" type="Button" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Ataque" unique_id=681614852]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-
-[node name="atk3" type="Button" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Ataque" unique_id=955086787]
+[node name="atk2" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=681614852]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 2
+alignment = 0
 
-[node name="Cor" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/TabContainer" unique_id=939566289]
+[node name="Voltar" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=955086787]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 2
+text = "Voltar"
+alignment = 0
+
+[node name="Cor" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=939566289]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="Cor" type="Label" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Cor" unique_id=456391728]
+[node name="Cor" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=456391728]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="cor1" type="Button" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Cor" unique_id=374352526]
+[node name="cor1" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=374352526]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="cor2" type="Button" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Cor" unique_id=912914399]
+[node name="cor2" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=912914399]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="cor3" type="Button" parent="combat/HBoxContainer/MarginContainer2/TabContainer/Cor" unique_id=2007742703]
+[node name="cor3" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=2007742703]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="Checar" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=1657568392]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Checar" unique_id=1179169144]
+layout_mode = 2
+text = "Checar:"
+
+[node name="inimigodesc" type="RichTextLabel" parent="combat/HBoxContainer/MarginContainer2/Acoes/Checar" unique_id=2004470190]
+unique_name_in_owner = true
+layout_mode = 2
+fit_content = true
+
+[node name="Voltar2" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Checar" unique_id=1690221941]
+layout_mode = 2
+text = "Voltar"
+alignment = 0
+
+[node name="inimigo" type="Label" parent="combat" unique_id=602676976]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 131.0
+offset_right = 124.0
+offset_bottom = 144.0
 
 [node name="Dialogo" type="Control" parent="." unique_id=396951711]
 unique_name_in_owner = true
@@ -461,7 +501,14 @@ layout_mode = 2
 toggle_mode = true
 text = "Fullscreen"
 
-[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/TabContainer/Acoes/sair" to="combat" method="_on_sair_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes/Atk" to="combat" method="_on_atk_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes/Checar" to="combat" method="_on_checar_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/opcoes/Cor" to="combat" method="_on_cor_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Acoes/sair" to="combat" method="_on_sair_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Ataque/atk1" to="combat" method="_on_atk_1_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Ataque/atk2" to="combat" method="_on_atk_2_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Ataque/Voltar" to="combat" method="_on_voltar_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Checar/Voltar2" to="combat" method="_on_voltar_2_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Jogar" to="menu" method="_on_jogar_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Opcoes" to="menu" method="_on_opcoes_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Creditos" to="menu" method="_on_creditos_pressed"]
