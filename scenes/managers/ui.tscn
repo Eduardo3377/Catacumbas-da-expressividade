@@ -22,6 +22,7 @@ script = ExtResource("1_37hbj")
 [node name="combat" type="Control" parent="." unique_id=1810204815 node_paths=PackedStringArray("historico")]
 unique_name_in_owner = true
 process_mode = 2
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -357,7 +358,6 @@ text = "oi"
 [node name="menu" type="Control" parent="." unique_id=105794058]
 unique_name_in_owner = true
 process_mode = 3
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -516,16 +516,11 @@ Roteiro, Documentacao
 
 Engine: Godot
 Fonte: Bitcount
-Copyright 1980 The Bitcount Project Authors
+Copyright 1980
+The Bitcount Project Authors
 Licenciada sob a SIL Open Font License, versão 1.1.
 https://github.com/petrvanblokland/TYPETR-Bitcount
 "
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="menu/MarginContainer/HBoxContainer/2/page2/Creditos" unique_id=1325921444]
-layout_mode = 2
-text = "Andar: setinhas, wasd
-avancar ui: enter, espaco
-menu: esc"
 
 [node name="Conf" type="VBoxContainer" parent="menu/MarginContainer/HBoxContainer/2/page2" unique_id=1663699593]
 visible = false
