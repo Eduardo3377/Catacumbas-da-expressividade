@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dxf4u2ep6i5ha"
-path="res://.godot/imported/BitcountSingle_Roman-ExtraBold.ttf-b94823f90240874ac15de083daaf1acf.fontdata"
+path="res://.godot/imported/BitcountSingle_Roman-ExtraBold.ttf-b6e054c86e3b696fd35e44bac81f15f6.fontdata"
 
 [deps]
 
-source_file="res://assets/theme/fonts/Bitcount_Single/static/BitcountSingle_Roman-ExtraBold.ttf"
-dest_files=["res://.godot/imported/BitcountSingle_Roman-ExtraBold.ttf-b94823f90240874ac15de083daaf1acf.fontdata"]
+source_file="res://assets/fonts/Bitcount_Single/static/BitcountSingle_Roman-ExtraBold.ttf"
+dest_files=["res://.godot/imported/BitcountSingle_Roman-ExtraBold.ttf-b6e054c86e3b696fd35e44bac81f15f6.fontdata"]
 
 [params]
 

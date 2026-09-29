@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bij5e35kpwapc"
-path="res://.godot/imported/BitcountSingle-SemiBold.ttf-401bd4ef60ced95b27235601fcd76959.fontdata"
+path="res://.godot/imported/BitcountSingle-SemiBold.ttf-1da274cdaf3a7ca6620967806452a4df.fontdata"
 
 [deps]
 
-source_file="res://assets/theme/fonts/Bitcount_Single/static/BitcountSingle-SemiBold.ttf"
-dest_files=["res://.godot/imported/BitcountSingle-SemiBold.ttf-401bd4ef60ced95b27235601fcd76959.fontdata"]
+source_file="res://assets/fonts/Bitcount_Single/static/BitcountSingle-SemiBold.ttf"
+dest_files=["res://.godot/imported/BitcountSingle-SemiBold.ttf-1da274cdaf3a7ca6620967806452a4df.fontdata"]
 
 [params]
 

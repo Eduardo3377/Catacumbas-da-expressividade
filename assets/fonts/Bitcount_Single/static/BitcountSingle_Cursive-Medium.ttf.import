@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ctgftj2vd3di5"
-path="res://.godot/imported/BitcountSingle_Cursive-Medium.ttf-8a78064b2f725587a1b14d259c19a81f.fontdata"
+path="res://.godot/imported/BitcountSingle_Cursive-Medium.ttf-8ff1f4bf23a009b866a528db4638ed20.fontdata"
 
 [deps]
 
-source_file="res://assets/theme/fonts/Bitcount_Single/static/BitcountSingle_Cursive-Medium.ttf"
-dest_files=["res://.godot/imported/BitcountSingle_Cursive-Medium.ttf-8a78064b2f725587a1b14d259c19a81f.fontdata"]
+source_file="res://assets/fonts/Bitcount_Single/static/BitcountSingle_Cursive-Medium.ttf"
+dest_files=["res://.godot/imported/BitcountSingle_Cursive-Medium.ttf-8ff1f4bf23a009b866a528db4638ed20.fontdata"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cftpd6mkq0f5s"
-path="res://.godot/imported/Jenitor.png-96693b41d44422498b2837bb89c65e24.ctex"
+uid="uid://bkx3vle6x6pcn"
+path="res://.godot/imported/marmorita.png-6194f9f52eb3a5d35b1f8e633d0abf25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/Jenitor.png"
-dest_files=["res://.godot/imported/Jenitor.png-96693b41d44422498b2837bb89c65e24.ctex"]
+source_file="res://assets/sprites/characters/marmorita.png"
+dest_files=["res://.godot/imported/marmorita.png-6194f9f52eb3a5d35b1f8e633d0abf25.ctex"]
 
 [params]
 

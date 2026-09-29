@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://cjtogc2y0pddc"]
 
-[ext_resource type="TileSet" uid="uid://67ukk5lyle2b" path="res://assets/theme/new_tile_set.tres" id="1_tlj06"]
+[ext_resource type="TileSet" uid="uid://67ukk5lyle2b" path="res://assets/tres/new_tile_set.tres" id="1_tlj06"]
 [ext_resource type="Texture2D" uid="uid://c50w86uvq7li" path="res://assets/sprites/tilesets/hitboxes.png" id="4_nnide"]
+[ext_resource type="PackedScene" uid="uid://cuiv38vih50nv" path="res://scenes/objects/abrore.tscn" id="5_tlj06"]
 [ext_resource type="Script" uid="uid://c3f64phu03qxd" path="res://scripts/objects/autohide.gd" id="9_ekpvv"]
-[ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/objects/Polaris.png" id="9_vmham"]
 [ext_resource type="PackedScene" uid="uid://barvi3txwhx3" path="res://scenes/objects/fala.tscn" id="11_4bum4"]
 [ext_resource type="Texture2D" uid="uid://dhxgkbkmn64tb" path="res://assets/sprites/objects/tenda.png" id="12_4bum4"]
 [ext_resource type="PackedScene" uid="uid://bfis7btgelswh" path="res://scenes/objects/enemy1.tscn" id="12_w3tgf"]
@@ -173,13 +173,62 @@ metadata/_edit_lock_ = true
 
 [node name="Polaris" type="Sprite2D" parent="Props" unique_id=741568408]
 position = Vector2(137, -832)
-texture = ExtResource("9_vmham")
 centered = false
 
 [node name="Tenda" type="Sprite2D" parent="Props" unique_id=305677670]
 z_index = 4096
 position = Vector2(769, 1807)
 texture = ExtResource("12_4bum4")
+
+[node name="arvores" type="Node2D" parent="Props" unique_id=2087299503]
+
+[node name="abrore" parent="Props/arvores" unique_id=1210332972 instance=ExtResource("5_tlj06")]
+position = Vector2(736, 950)
+
+[node name="abrore2" parent="Props/arvores" unique_id=2143994244 instance=ExtResource("5_tlj06")]
+modulate = Color(0.962769, 0.9862618, 0.85698485, 1)
+position = Vector2(786, 652)
+scale = Vector2(-1, 1)
+
+[node name="abrore3" parent="Props/arvores" unique_id=1935880824 instance=ExtResource("5_tlj06")]
+modulate = Color(0.9877099, 0.93533695, 0.8113887, 1)
+position = Vector2(901, 1256)
+
+[node name="abrore4" parent="Props/arvores" unique_id=1153332625 instance=ExtResource("5_tlj06")]
+position = Vector2(756, 1420)
+
+[node name="abrore5" parent="Props/arvores" unique_id=1055330464 instance=ExtResource("5_tlj06")]
+modulate = Color(0.962769, 0.9862618, 0.85698485, 1)
+position = Vector2(672, 796)
+scale = Vector2(-1, 1)
+
+[node name="abrore6" parent="Props/arvores" unique_id=1236928978 instance=ExtResource("5_tlj06")]
+modulate = Color(0.9877099, 0.93533695, 0.8113887, 1)
+position = Vector2(967, 793)
+
+[node name="abrore7" parent="Props/arvores" unique_id=556823856 instance=ExtResource("5_tlj06")]
+position = Vector2(1034, 654)
+
+[node name="abrore8" parent="Props/arvores" unique_id=193069599 instance=ExtResource("5_tlj06")]
+modulate = Color(0.962769, 0.9862618, 0.85698485, 1)
+position = Vector2(623, 1122)
+scale = Vector2(-1, 1)
+
+[node name="abrore9" parent="Props/arvores" unique_id=1647895821 instance=ExtResource("5_tlj06")]
+modulate = Color(0.9877099, 0.93533695, 0.8113887, 1)
+position = Vector2(1413, 1108)
+
+[node name="abrore10" parent="Props/arvores" unique_id=3446602 instance=ExtResource("5_tlj06")]
+position = Vector2(1225, 871)
+
+[node name="abrore11" parent="Props/arvores" unique_id=824757371 instance=ExtResource("5_tlj06")]
+modulate = Color(0.962769, 0.9862618, 0.85698485, 1)
+position = Vector2(1150, 1132)
+scale = Vector2(-1, 1)
+
+[node name="abrore12" parent="Props/arvores" unique_id=874088825 instance=ExtResource("5_tlj06")]
+modulate = Color(0.9877099, 0.93533695, 0.8113887, 1)
+position = Vector2(465, 1078)
 
 [node name="interacao" type="Node2D" parent="." unique_id=1206674914]
 metadata/_edit_lock_ = true

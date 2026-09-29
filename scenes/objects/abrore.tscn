@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cuiv38vih50nv"]
+
+[ext_resource type="Texture2D" uid="uid://b33ahnkul4soq" path="res://assets/sprites/tilesets/folhatras.png" id="1_kft7v"]
+[ext_resource type="Texture2D" uid="uid://bv7jbfchijp58" path="res://assets/sprites/tilesets/abrovere.png" id="2_vj0c1"]
+[ext_resource type="Texture2D" uid="uid://d1x6wrlrhxuvm" path="res://assets/sprites/tilesets/folhafrente.png" id="3_02oku"]
+
+[node name="abrore" type="Node2D" unique_id=1210332972]
+
+[node name="folhatra" type="Node2D" parent="." unique_id=1732836545]
+
+[node name="Folhatras" type="Sprite2D" parent="folhatra" unique_id=1070212412]
+modulate = Color(0.9419189, 0.9784277, 0.9287139, 1)
+position = Vector2(-34, -39)
+texture = ExtResource("1_kft7v")
+flip_h = true
+
+[node name="Folhatras2" type="Sprite2D" parent="folhatra" unique_id=1014234370]
+position = Vector2(-25, -72)
+texture = ExtResource("1_kft7v")
+
+[node name="Folhatras3" type="Sprite2D" parent="folhatra" unique_id=113524642]
+modulate = Color(0.96484417, 0.99999994, 0.9996107, 1)
+position = Vector2(26, -41)
+texture = ExtResource("1_kft7v")
+
+[node name="Folhatras4" type="Sprite2D" parent="folhatra" unique_id=444998876]
+modulate = Color(1.1987407, 1.2892909, 1.1378797, 1)
+position = Vector2(15, -75)
+texture = ExtResource("1_kft7v")
+flip_h = true
+
+[node name="Abrovere" type="Sprite2D" parent="." unique_id=710174164]
+position = Vector2(-1, -40)
+texture = ExtResource("2_vj0c1")
+
+[node name="folhafrente" type="Node2D" parent="." unique_id=852619643]
+
+[node name="Folhafrente" type="Sprite2D" parent="folhafrente" unique_id=177250783]
+position = Vector2(-33, -69)
+texture = ExtResource("3_02oku")
+
+[node name="Folhafrente2" type="Sprite2D" parent="folhafrente" unique_id=375726695]
+position = Vector2(21, -74)
+texture = ExtResource("3_02oku")
+flip_h = true
+
+[node name="Folhafrente3" type="Sprite2D" parent="folhafrente" unique_id=757484259]
+modulate = Color(0.909633, 0.9255113, 0.87190735, 1)
+position = Vector2(-31, -41)
+texture = ExtResource("3_02oku")
+flip_h = true
+
+[node name="Folhafrente4" type="Sprite2D" parent="folhafrente" unique_id=1840572577]
+modulate = Color(0.8535003, 0.94108415, 0.90762174, 1)
+position = Vector2(30, -41)
+texture = ExtResource("3_02oku")

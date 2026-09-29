@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bvsocoyxwoby1"
-path="res://.godot/imported/BitcountSingle_Cursive-SemiBold.ttf-ba9e011c86537435c5b5fe02298f4cdb.fontdata"
+path="res://.godot/imported/BitcountSingle_Cursive-SemiBold.ttf-d112214a24f454b9547ce87600fa873c.fontdata"
 
 [deps]
 
-source_file="res://assets/theme/fonts/Bitcount_Single/static/BitcountSingle_Cursive-SemiBold.ttf"
-dest_files=["res://.godot/imported/BitcountSingle_Cursive-SemiBold.ttf-ba9e011c86537435c5b5fe02298f4cdb.fontdata"]
+source_file="res://assets/fonts/Bitcount_Single/static/BitcountSingle_Cursive-SemiBold.ttf"
+dest_files=["res://.godot/imported/BitcountSingle_Cursive-SemiBold.ttf-d112214a24f454b9547ce87600fa873c.fontdata"]
 
 [params]
 

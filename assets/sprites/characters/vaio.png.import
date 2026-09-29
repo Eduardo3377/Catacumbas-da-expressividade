@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cftpd6mkq0f5s"
-path="res://.godot/imported/Jenitor.png-96693b41d44422498b2837bb89c65e24.ctex"
+uid="uid://buwdgoc35entq"
+path="res://.godot/imported/vaio.png-6dab5e778251d7cfec5284d368cb65ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/Jenitor.png"
-dest_files=["res://.godot/imported/Jenitor.png-96693b41d44422498b2837bb89c65e24.ctex"]
+source_file="res://assets/sprites/characters/vaio.png"
+dest_files=["res://.godot/imported/vaio.png-6dab5e778251d7cfec5284d368cb65ea.ctex"]
 
 [params]
 
