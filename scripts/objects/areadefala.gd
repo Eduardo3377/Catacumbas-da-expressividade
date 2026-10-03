@@ -1,6 +1,6 @@
 extends Area2D
 @export_range(1, 200) var FalaId = 1
-
+@export var Repete = false
 
 func _ready():
 	pass
@@ -12,6 +12,6 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		print("FALA ALGO")
 		GameManager.Dialogo(FalaId)
-		set_deferred("monitoring", false)
-		
+		if !Repete:
+			set_deferred("monitoring", false)		
 	pass

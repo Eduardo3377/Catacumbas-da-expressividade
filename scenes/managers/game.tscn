@@ -22,6 +22,7 @@ func _process(_delta):
 "
 
 [node name="MainGame" type="Node" unique_id=899266031]
+metadata/_edit_vertical_guides_ = [836.0]
 
 [node name="Canvas" type="CanvasLayer" parent="." unique_id=70310488]
 

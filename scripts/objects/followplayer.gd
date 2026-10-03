@@ -1,6 +1,6 @@
 extends Node2D
 @export_range(0, 1000) var PosIndex = 100
-@export_range(0, 1) var Animated = 1
+@export var Animated = true
 var ArraySize = 0
 var Next_pos: Vector2
 
@@ -20,7 +20,7 @@ func _physics_process(_delta: float) -> void:
 			
 			
 			
-	if Animated == 1:
+	if Animated:
 		if Next_pos.y < global_position.y:
 			$AnimatedSprite2D.play("frente")
 		elif Next_pos.y > global_position.y:
