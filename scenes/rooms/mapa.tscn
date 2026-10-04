@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://67ukk5lyle2b" path="res://assets/tres/new_tile_set.tres" id="1_tlj06"]
 [ext_resource type="Texture2D" uid="uid://c50w86uvq7li" path="res://assets/sprites/tilesets/hitboxes.png" id="4_nnide"]
 [ext_resource type="Script" uid="uid://c3f64phu03qxd" path="res://scripts/objects/autohide.gd" id="9_ekpvv"]
-[ext_resource type="PackedScene" uid="uid://barvi3txwhx3" path="res://scenes/objects/fala.tscn" id="11_4bum4"]
+[ext_resource type="PackedScene" uid="uid://barvi3txwhx3" path="res://scenes/objects/trigger.tscn" id="11_4bum4"]
 [ext_resource type="Texture2D" uid="uid://dhxgkbkmn64tb" path="res://assets/sprites/objects/tenda.png" id="12_4bum4"]
 [ext_resource type="PackedScene" uid="uid://bfis7btgelswh" path="res://scenes/objects/enemy1.tscn" id="12_w3tgf"]
 
@@ -185,26 +185,55 @@ texture = ExtResource("12_4bum4")
 [node name="interacao" type="Node2D" parent="." unique_id=1206674914]
 metadata/_edit_lock_ = true
 
-[node name="falas" type="Node2D" parent="interacao" unique_id=440362974]
+[node name="triggers" type="Node2D" parent="interacao" unique_id=440362974]
 
-[node name="fala5" parent="interacao/falas" unique_id=221709484 instance=ExtResource("11_4bum4")]
+[node name="fala5" parent="interacao/triggers" unique_id=221709484 instance=ExtResource("11_4bum4")]
 position = Vector2(778, 1834)
 FalaId = 56
 
-[node name="fala4" parent="interacao/falas" unique_id=523880802 instance=ExtResource("11_4bum4")]
+[node name="fala4" parent="interacao/triggers" unique_id=523880802 instance=ExtResource("11_4bum4")]
 position = Vector2(738, 1305)
 FalaId = 39
 
-[node name="fala3" parent="interacao/falas" unique_id=464653775 instance=ExtResource("11_4bum4")]
+[node name="fala3" parent="interacao/triggers" unique_id=464653775 instance=ExtResource("11_4bum4")]
 position = Vector2(813, 955)
 FalaId = 13
 
-[node name="fala2" parent="interacao/falas" unique_id=1234526479 instance=ExtResource("11_4bum4")]
+[node name="fala2" parent="interacao/triggers" unique_id=1234526479 instance=ExtResource("11_4bum4")]
 position = Vector2(897, 572)
 FalaId = 11
 
-[node name="fala" parent="interacao/falas" unique_id=1549854913 instance=ExtResource("11_4bum4")]
+[node name="fala" parent="interacao/triggers" unique_id=1549854913 instance=ExtResource("11_4bum4")]
 position = Vector2(665, 665)
+
+[node name="bg1" parent="interacao/triggers" unique_id=644664611 instance=ExtResource("11_4bum4")]
+position = Vector2(200, 273)
+Repete = true
+Fundo = true
+
+[node name="bg2" parent="interacao/triggers" unique_id=1515216873 instance=ExtResource("11_4bum4")]
+position = Vector2(227, 312)
+Repete = true
+Fundo = true
+TexturaFundo = "1"
+
+[node name="bg3" parent="interacao/triggers" unique_id=930719904 instance=ExtResource("11_4bum4")]
+position = Vector2(274, 298)
+Repete = true
+Fundo = true
+TexturaFundo = "2"
+
+[node name="bg4" parent="interacao/triggers" unique_id=2077652013 instance=ExtResource("11_4bum4")]
+position = Vector2(263, 251)
+Repete = true
+Fundo = true
+TexturaFundo = "3"
+
+[node name="bg5" parent="interacao/triggers" unique_id=1271814997 instance=ExtResource("11_4bum4")]
+position = Vector2(334, 274)
+Repete = true
+Fundo = true
+TexturaFundo = "4"
 
 [node name="inimigos" type="Node2D" parent="interacao" unique_id=1741374380]
 

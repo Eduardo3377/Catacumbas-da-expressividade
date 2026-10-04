@@ -3,6 +3,7 @@ extends Node
 var PlayerPosition = []
 var PlayerMoving: bool
 @onready var ui = get_tree().root.get_node("MainGame/Canvas/UI")
+signal bgchange 
 func _ready():
 	pass
 	
@@ -29,6 +30,10 @@ func Dialogo(Id):
 	ui.dialogoo(Id)
 	pass
 	
+func bgchanged(textura):
+	bgchange.emit(textura)
+	pass	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass

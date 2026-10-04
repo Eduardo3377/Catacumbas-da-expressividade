@@ -36,7 +36,6 @@ metadata/_edit_lock_ = true
 [node name="background" parent="Mapa" unique_id=1011117589 instance=ExtResource("10_vigns")]
 z_index = -1000
 position = Vector2(192, 108)
-PosIndex = 1
 metadata/_edit_lock_ = true
 
 [node name="Mapa" parent="Mapa" unique_id=59091156 instance=ExtResource("6_3g53l")]
@@ -46,16 +45,18 @@ script = SubResource("GDScript_ll2y6")
 
 [node name="Vini" parent="Players" unique_id=1937835004 instance=ExtResource("9_j4x4q")]
 position = Vector2(192, 108)
+Index = 50
 metadata/_edit_lock_ = true
 
 [node name="Pedro" parent="Players" unique_id=883880857 instance=ExtResource("8_c456e")]
 position = Vector2(192, 108)
+Index = 25
 metadata/_edit_lock_ = true
 
 [node name="Edu" parent="Players" unique_id=531438909 instance=ExtResource("11_ll2y6")]
 visible = false
 position = Vector2(192, 108)
-PosIndex = 1
+Index = 1
 metadata/_edit_lock_ = true
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]
