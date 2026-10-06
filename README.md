@@ -1,19 +1,25 @@
-# Catacumbas-da-expressividade
-Catacumbas da expressividade é um jogo 2D topdown do gênero RPG 
-Foi desenvolvido por tres alunos para um TCC (Trabalho de Conclusao de curso) usando a Engine Godot
+# Intro
+Catacumbas da expressividade é um jogo 2D do gênero RPG feito usando a Engine Godot
+Foi desenvolvido por três alunos para o TCC (Trabalho de Conclusão de curso) de 2026 de DSIS 
 
-## Integrantes
+Explore as ruinas da Terra dos Sonhos, derrote inimigos e colete os cartuchos de tinta para derrubar o reinado da BR.IA.14
+
+## Créditos
 **Eduardo:**
-Programador, Design de UX/UI, Artista secundário
+Programador, Design de UI, Arte
 
 **Pedro:**
-Arte, Sound Design, Balanceamento 
+Arte, Balanceamento 
 
 **Vinícius:**
-Documentação, Roteiro, Controle de Qualidade
+Roteiro, Controle de Qualidade
 
 
-Fonte utilizada: Bitcount
+**Fonte utilizada: Bitcount**
+
 Copyright 1980 The Bitcount Project Authors
+
 Licenciada sob a SIL Open Font License, versão 1.1.
+
 https://github.com/petrvanblokland/TYPETR-Bitcount
+
