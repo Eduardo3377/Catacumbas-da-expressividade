@@ -12,18 +12,20 @@ func _ready() -> void:
 
 func dialogo(id):
 	show()
+	GameManager.PararAndar = true
 	idAtual = id
 	print(id)
 	if idAtual < csv.size():
 		var linha = csv[id]
 		if linha[0].strip_edges() == "":
 			hide()
-			
+			GameManager.PararAndar = false
 		else: 
 			nome.text = linha[0].strip_edges() + ":"
 			texto.text = linha[1].strip_edges()
 			print(linha)
 	else: 
+		GameManager.PararAndar = false
 		hide()
 
 		

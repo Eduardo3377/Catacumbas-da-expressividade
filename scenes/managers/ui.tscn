@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1r45sej3pldt"]
 
 [ext_resource type="Script" uid="uid://d1kqt01al3u74" path="res://scripts/managers/ui_manager.gd" id="1_37hbj"]
-[ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://assets/theme/NAOSEI.tres" id="2_1abot"]
+[ext_resource type="Theme" uid="uid://ce3o1iyt63h7k" path="res://assets/tres/NAOSEI.tres" id="2_1abot"]
 [ext_resource type="Script" uid="uid://bhsr631mk5yoa" path="res://scripts/ui/combat.gd" id="3_xkqhe"]
 [ext_resource type="Texture2D" uid="uid://cuog0ma42t077" path="res://assets/sprites/ui/Texturelabs_Paper_204S.jpg" id="4_u3q1e"]
 [ext_resource type="Texture2D" uid="uid://tt04phtopwvd" path="res://assets/sprites/ui/fullbook.png" id="5_gh0ax"]
@@ -21,7 +21,7 @@ script = ExtResource("1_37hbj")
 
 [node name="combat" type="Control" parent="." unique_id=1810204815 node_paths=PackedStringArray("historico")]
 unique_name_in_owner = true
-process_mode = 2
+process_mode = 3
 visible = false
 layout_mode = 1
 anchors_preset = 15

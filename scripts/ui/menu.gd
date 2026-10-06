@@ -15,9 +15,11 @@ func _process(_delta: float) -> void:
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		show()
+		GameManager.PararAndar = true
 
 func _on_jogar_pressed() -> void:
 	hide()
+	GameManager.PararAndar = false
 	$"MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Jogar".text = "Continuar"
 	pass # Replace with function body.
 

@@ -23,7 +23,6 @@ func combatstart(InimigoId):
 	print("comecando combate")
 	combat.show()
 	combat.combat(InimigoId)
-	get_tree().paused = true
 
 		
 

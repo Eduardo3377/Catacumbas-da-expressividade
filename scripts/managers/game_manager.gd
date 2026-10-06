@@ -1,7 +1,7 @@
 extends Node
 var PlayerPosition = []
 var PlayerMoving: bool
-var PararAndar: false
+var PararAndar = false
 @onready var ui = get_tree().root.get_node("MainGame/Canvas/UI")
 signal bgchange 
 func _ready():

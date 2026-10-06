@@ -152,7 +152,7 @@ func fim(status: int) -> void:
 	batalha_ativa = false
 	acoes.current_tab = 2
 	atualizar_ui()
-	get_tree().paused = false
+	GameManager.PararAndar = true
 	if status == 1:
 		print("VENCEU")
 		hide()
@@ -220,7 +220,7 @@ func texto_dano(personagem: Dictionary, num_atk: int) -> String:
 
 
 func _on_sair_pressed() -> void:
-	get_tree().paused = false
+	GameManager.PararAndar = false
 	hide()
 
 
