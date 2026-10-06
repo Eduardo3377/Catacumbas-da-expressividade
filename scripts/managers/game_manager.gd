@@ -1,19 +1,13 @@
 extends Node
-# signal level_change
 var PlayerPosition = []
 var PlayerMoving: bool
+var PararAndar: false
 @onready var ui = get_tree().root.get_node("MainGame/Canvas/UI")
 signal bgchange 
 func _ready():
 	pass
 	
-# func levelchange(room):
-#	print("Helllooooooo")
-#	level_change.emit(room)
-#	# falar com o level manager OU não usar teleporters no jogo 
-#  # que teleporters se fodam
-#	pass 
-	
+
 func combatstart():
 	ui.on_combatstart()
 	
@@ -33,6 +27,9 @@ func Dialogo(Id):
 func bgchanged(textura):
 	bgchange.emit(textura)
 	pass	
+
+func pararandar(estado):
+	PararAndar = estado
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
