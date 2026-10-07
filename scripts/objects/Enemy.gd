@@ -1,5 +1,5 @@
 extends Area2D
-@export_range(1, 200) var InimigoId = 1
+@export var InimigoId: Array[int] = [4, 0, 0]
 func _ready():
 	pass
 func _on_body_entered(body: Node2D) -> void:

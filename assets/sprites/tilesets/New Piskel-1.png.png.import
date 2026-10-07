@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biu3ki0leswr8"
-path="res://.godot/imported/cartucho.png-f1734fcd23a5be3cd24bbeb005259d48.ctex"
+uid="uid://73a4l4h76535"
+path="res://.godot/imported/New Piskel-1.png.png-9b8edb1d6f8bacfc84f4c3930dd88990.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/objects/cartucho.png"
-dest_files=["res://.godot/imported/cartucho.png-f1734fcd23a5be3cd24bbeb005259d48.ctex"]
+source_file="res://assets/sprites/tilesets/New Piskel-1.png.png"
+dest_files=["res://.godot/imported/New Piskel-1.png.png-9b8edb1d6f8bacfc84f4c3930dd88990.ctex"]
 
 [params]
 

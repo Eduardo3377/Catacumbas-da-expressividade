@@ -22,7 +22,6 @@ script = ExtResource("1_37hbj")
 [node name="combat" type="Control" parent="." unique_id=1810204815 node_paths=PackedStringArray("historico")]
 unique_name_in_owner = true
 process_mode = 3
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,13 +46,14 @@ expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="combat" unique_id=211934007]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 117.0
+offset_top = -99.0
 offset_bottom = 117.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 texture = ExtResource("5_gh0ax")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="combat" unique_id=2080023358]
@@ -258,11 +258,13 @@ text = "Voce perdeu!"
 [node name="TextureRect2" type="TextureRect" parent="combat" unique_id=405754695]
 modulate = Color(0.9872399, 1, 0.9379286, 1)
 self_modulate = Color(0.8862616, 0.88626146, 0.8862615, 1)
-layout_mode = 0
-offset_left = 1.0
-offset_top = -15.0
-offset_right = 388.0
-offset_bottom = 76.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -2.0
+offset_top = -45.0
+offset_right = 1.0
+offset_bottom = 58.0
 texture = ExtResource("7_wk6if")
 expand_mode = 1
 
@@ -282,15 +284,49 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="inimigo" type="Label" parent="combat/TextureRect2/ColorRect2/VBoxContainer" unique_id=602676976]
-unique_name_in_owner = true
-layout_mode = 2
-text = "INIMIGO"
-
 [node name="historico" type="Label" parent="combat/TextureRect2/ColorRect2/VBoxContainer" unique_id=998848559]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 10
 text = "historico"
+
+[node name="inimigos" type="Control" parent="combat" unique_id=98714692]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="inimigo1" type="Label" parent="combat/inimigos" unique_id=602676976]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 93.0
+offset_top = 89.0
+offset_right = 147.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
+text = "INIMIGO"
+horizontal_alignment = 1
+
+[node name="inimigo2" type="Label" parent="combat/inimigos" unique_id=503397023]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 164.0
+offset_top = 95.0
+offset_right = 218.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
+text = "INIMIGO"
+horizontal_alignment = 1
+
+[node name="inimigo3" type="Label" parent="combat/inimigos" unique_id=1067684751]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 240.0
+offset_top = 88.0
+offset_right = 294.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
+text = "INIMIGO"
+horizontal_alignment = 1
 
 [node name="Dialogo" type="Control" parent="." unique_id=396951711]
 unique_name_in_owner = true
@@ -358,6 +394,7 @@ text = "oi"
 [node name="menu" type="Control" parent="." unique_id=105794058]
 unique_name_in_owner = true
 process_mode = 3
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

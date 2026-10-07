@@ -6,11 +6,7 @@ var PararAndar = false
 signal bgchange 
 func _ready():
 	pass
-	
 
-func combatstart():
-	ui.on_combatstart()
-	
 	
 func PlayerPos(position):
 	PlayerPosition.insert(0, position)

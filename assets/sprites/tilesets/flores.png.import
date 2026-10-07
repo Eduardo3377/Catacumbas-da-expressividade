@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biu3ki0leswr8"
-path="res://.godot/imported/cartucho.png-f1734fcd23a5be3cd24bbeb005259d48.ctex"
+uid="uid://dnog5xdixctj7"
+path="res://.godot/imported/flores.png-70698e75d26e8a768a04730cd72283c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/objects/cartucho.png"
-dest_files=["res://.godot/imported/cartucho.png-f1734fcd23a5be3cd24bbeb005259d48.ctex"]
+source_file="res://assets/sprites/tilesets/flores.png"
+dest_files=["res://.godot/imported/flores.png-70698e75d26e8a768a04730cd72283c7.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db4afh4jv1ern"
-path="res://.godot/imported/cartuchymo.png-6b55530847e8fdabe222377c3e3ada91.ctex"
+path="res://.godot/imported/cartuchymo.png-bf2662781c618746c4fc3e52f45838c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilesets/cartuchymo.png"
-dest_files=["res://.godot/imported/cartuchymo.png-6b55530847e8fdabe222377c3e3ada91.ctex"]
+source_file="res://assets/sprites/objects/cartuchymo.png"
+dest_files=["res://.godot/imported/cartuchymo.png-bf2662781c618746c4fc3e52f45838c6.ctex"]
 
 [params]
 

@@ -11,7 +11,7 @@ var batalha_ativa = false
 @onready var player_1: Label = %Player1
 @onready var player_2: Label = %Player2
 @onready var player_3: Label = %Player3
-@onready var inimigo: Label = %inimigo
+@onready var inimigo: Label = %inimigo1
 @onready var inimigodesc: RichTextLabel = %inimigodesc
 @export var historico: Label
 
@@ -20,8 +20,6 @@ var batalha_ativa = false
 @onready var atk_2: Button = %atk2
 
 @onready var gameover: Control = %gameover
-
-
 
 func _ready() -> void:
 	var file = FileAccess.open(
@@ -32,25 +30,25 @@ func _ready() -> void:
 	while not file.eof_reached():
 		csv.append(file.get_csv_line())
 
-
-
-
-
 func combat(inimigo_id) -> void:
 	jogadores.clear()
 	inimigos.clear()
-	historico.text = ""
+
 	jogadores.append(ler_csv(1))
 	jogadores.append(ler_csv(4))
 	jogadores.append(ler_csv(3))
+	print(inimigo_id)
+	for id in inimigo_id.slice(0, 3):
+		if id == 0 || id == null:
+			continue
+		else: inimigos.append(ler_csv(id))
 
-	inimigos.append(ler_csv(inimigo_id))
-
-	turno_atual = 0
 	batalha_ativa = true
-
+	turno_atual = 0
 	acoes.current_tab = 0
+	historico.text = "histórico"
 	atualizar_ui()
+
 
 
 func atacar(ataque_id: int) -> void:
@@ -152,30 +150,29 @@ func fim(status: int) -> void:
 	batalha_ativa = false
 	acoes.current_tab = 2
 	atualizar_ui()
-	GameManager.PararAndar = true
+	GameManager.PararAndar = false
 	if status == 1:
 		print("VENCEU")
 		hide()
 	elif status == 0:
 		print("PERDEU")
 		gameover.show()
-		
+
 
 
 func ler_csv(id) -> Dictionary:
-	var linha = csv[id]
-
-	if linha[0].strip_edges() == "":
-		linha = csv[4]
-
-	return {
-		"nome": linha[0].strip_edges(),
-		"cor": linha[1].strip_edges(),
-		"hp": int(linha[2]),
-		"max_hp": int(linha[2]),
+	var coluna = csv[id]
+	if id == 0 || coluna[0].strip_edges() == "":
+		return {}
+		
+	else: return {
+		"nome": coluna[0].strip_edges(),
+		"cor": coluna[1].strip_edges(),
+		"hp": int(coluna[2]),
+		"max_hp": int(coluna[2]),
 		"ataques": [
-			{"nome": linha[4].strip_edges(), "dano": int(linha[3])},
-			{"nome": linha[6].strip_edges(), "dano": int(linha[5])
+			{"nome": coluna[4].strip_edges(), "dano": int(coluna[3])},
+			{"nome": coluna[6].strip_edges(), "dano": int(coluna[5])
 			}
 		]
 	}
@@ -204,13 +201,11 @@ func atualizar_ui() -> void:
 		str(inimigos[0]["ataques"][1]["dano"]) + " dano\n"
 	)
 
-
 func texto_hp(personagem: Dictionary) -> String:
 	return (
 		personagem["nome"] + " " +
 		str(personagem["hp"]) + "/" + str(personagem["max_hp"])
 	)
-
 
 func texto_dano(personagem: Dictionary, num_atk: int) -> String:
 	return (
@@ -223,30 +218,23 @@ func _on_sair_pressed() -> void:
 	GameManager.PararAndar = false
 	hide()
 
-
 func _on_atk_pressed() -> void:
 	acoes.current_tab = 1
-
 
 func _on_cor_pressed() -> void:
 	acoes.current_tab = 2
 
-
 func _on_checar_pressed() -> void:
 	acoes.current_tab = 3
-
 
 func _on_voltar_pressed() -> void:
 	acoes.current_tab = 0
 
-
 func _on_voltar_2_pressed() -> void:
 	acoes.current_tab = 0
 
-
 func _on_atk_1_pressed() -> void:
 	atacar(0)
-
 
 func _on_atk_2_pressed() -> void:
 	atacar(1)

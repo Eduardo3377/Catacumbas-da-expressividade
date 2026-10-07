@@ -341,15 +341,14 @@ TexturaFundo = "4"
 
 [node name="Enemy" parent="interacao/inimigos" unique_id=1211658649 instance=ExtResource("12_w3tgf")]
 position = Vector2(259, -10)
-InimigoId = 4
 
 [node name="Enemy2" parent="interacao/inimigos" unique_id=513609544 instance=ExtResource("12_w3tgf")]
 position = Vector2(327, 22)
-InimigoId = 4
+InimigoId = Array[int]([4, 4, 0])
 
 [node name="Enemy3" parent="interacao/inimigos" unique_id=1839637595 instance=ExtResource("12_w3tgf")]
 position = Vector2(393, 63)
-InimigoId = 7
+InimigoId = Array[int]([4, 1, 4])
 
 [node name="Particles" type="Node2D" parent="." unique_id=1359235253]
 top_level = true
