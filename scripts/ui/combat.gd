@@ -21,6 +21,7 @@ var batalha_ativa = false
 
 @onready var gameover: Control = %gameover
 
+# abrir e ler o csv 
 func _ready() -> void:
 	var file = FileAccess.open(
 		"res://data/combat/TCC CDE - Combat.csv",
@@ -30,13 +31,34 @@ func _ready() -> void:
 	while not file.eof_reached():
 		csv.append(file.get_csv_line())
 
+func ler_csv(id) -> Dictionary:
+	var coluna = csv[id]
+	if id == 0 || coluna[0].strip_edges() == "":
+		return {}
+		
+	else: return {
+		"nome": coluna[0].strip_edges(),
+		"cor": coluna[1].strip_edges(),
+		"hp": int(coluna[2]),
+		"max_hp": int(coluna[2]),
+		"ataques": [
+			{"nome": coluna[4].strip_edges(), "dano": int(coluna[3])},
+			{"nome": coluna[6].strip_edges(), "dano": int(coluna[5])
+			}
+		]
+	}
+
+# setup do combate e variaveis
 func combat(inimigo_id) -> void:
 	jogadores.clear()
 	inimigos.clear()
-
+	historico.text = "histórico"
+	
+	# time do player
 	jogadores.append(ler_csv(1))
 	jogadores.append(ler_csv(4))
 	jogadores.append(ler_csv(3))
+	# time inimigo
 	print(inimigo_id)
 	for id in inimigo_id.slice(0, 3):
 		if id == 0 || id == null:
@@ -46,10 +68,7 @@ func combat(inimigo_id) -> void:
 	batalha_ativa = true
 	turno_atual = 0
 	acoes.current_tab = 0
-	historico.text = "histórico"
 	atualizar_ui()
-
-
 
 func atacar(ataque_id: int) -> void:
 	if not batalha_ativa:
@@ -76,7 +95,7 @@ func inimigo_atacar() -> void:
 		return
 
 	var inimig = inimigos[0]
-	var vivos = jogadores_vivos()
+	var vivos = personagems_vivos(jogadores)
 	if vivos.is_empty():
 		fim(0)
 		return
@@ -90,21 +109,39 @@ func inimigo_atacar() -> void:
 
 	historico.text = ( inimig["nome"] + " usou " + ataque["nome"] + " em " + alvo["nome"] + " causando " + str(ataque["dano"]) + " de dano")
 
-	if jogadores_vivos().is_empty():
+	if personagems_vivos(jogadores).is_empty():
 		fim(0)
 		return
 
-	turno_atual = primeiro_jogador_vivo()
+	turno_atual = primeiro_vivo(jogadores)
 
 	atualizar_ui()
 
+func ataquer(atacante: Dictionary, ataque_id: int, alvo: Dictionary) -> void:
+	var ataque = atacante["ataques"][ataque_id]
+
+	alvo["hp"] = max(alvo["hp"] - ataque["dano"], 0)
+
+	historico.text = (
+		atacante["nome"] + " usou " +
+		ataque["nome"] + " em " +
+		alvo["nome"] + " causando " +
+		str(ataque["dano"]) + " de dano"
+	)
+	if personagems_vivos(jogadores).is_empty():
+		fim(0)
+	if personagems_vivos(inimigos).is_empty():
+		fim(1)
+
+	turno_atual = primeiro_vivo(jogadores)
+	atualizar_ui()
 
 func proximo_turno() -> void:
 	if not batalha_ativa:
 		return
 	acoes.current_tab = 0
 	
-	var proximo = proximo_jogador_vivo()
+	var proximo = proximo_vivo(jogadores)
 
 	if proximo == -1:
 		fim(0)
@@ -112,40 +149,40 @@ func proximo_turno() -> void:
 
 	turno_atual = proximo
 
-	if turno_atual == primeiro_jogador_vivo():
+	if turno_atual == primeiro_vivo(jogadores):
 		inimigo_atacar()
 		return
 
 	atualizar_ui()
 
 
-func proximo_jogador_vivo() -> int:
-	for i in range(1, jogadores.size() + 1):
-		var indice = (turno_atual + i) % jogadores.size()
+func proximo_vivo(time) -> int:
+	for i in range(1, time.size() + 1):
+		var indice = (turno_atual + i) % time.size()
 
-		if jogadores[indice]["hp"] > 0:
+		if time[indice]["hp"] > 0:
 			return indice
 
 	return -1
 
 
-func primeiro_jogador_vivo() -> int:
-	for i in range(jogadores.size()):
-		if jogadores[i]["hp"] > 0:
+func primeiro_vivo(time) -> int:
+	for i in range(time.size()):
+		if time[i]["hp"] > 0:
 			return i
 
 	return -1
 
 
-func jogadores_vivos() -> Array:
+func personagems_vivos(time) -> Array:
 	var vivos: Array = []
 
-	for jogador in jogadores:
-		if jogador["hp"] > 0:
-			vivos.append(jogador)
+	for personagem in time:
+		if personagem["hp"] > 0:
+			vivos.append(personagem)
 
 	return vivos
-
+	
 func fim(status: int) -> void:
 	batalha_ativa = false
 	acoes.current_tab = 2
@@ -160,24 +197,7 @@ func fim(status: int) -> void:
 
 
 
-func ler_csv(id) -> Dictionary:
-	var coluna = csv[id]
-	if id == 0 || coluna[0].strip_edges() == "":
-		return {}
-		
-	else: return {
-		"nome": coluna[0].strip_edges(),
-		"cor": coluna[1].strip_edges(),
-		"hp": int(coluna[2]),
-		"max_hp": int(coluna[2]),
-		"ataques": [
-			{"nome": coluna[4].strip_edges(), "dano": int(coluna[3])},
-			{"nome": coluna[6].strip_edges(), "dano": int(coluna[5])
-			}
-		]
-	}
-
-
+# ui
 func atualizar_ui() -> void:
 	player_1.text = texto_hp(jogadores[0])
 	player_2.text = texto_hp(jogadores[1])
@@ -214,6 +234,7 @@ func texto_dano(personagem: Dictionary, num_atk: int) -> String:
 	)
 
 
+# botoes
 func _on_sair_pressed() -> void:
 	GameManager.PararAndar = false
 	hide()
