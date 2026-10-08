@@ -69,7 +69,8 @@ func combat(inimigo_id) -> void:
 	turno_atual = 0
 	acoes.current_tab = 0
 	atualizar_ui()
-
+	
+# antigo ataque de player, ainda em uso
 func player_atacar(ataque_id: int) -> void:
 	if not batalha_ativa:
 		return
@@ -89,7 +90,7 @@ func player_atacar(ataque_id: int) -> void:
 
 	proximo_turno()
 
-
+# antigo ataque de inimigo, ainda em uso
 func inimigo_atacar() -> void:
 	if not batalha_ativa:
 		return
@@ -116,7 +117,8 @@ func inimigo_atacar() -> void:
 	turno_atual = primeiro_vivo(jogadores)
 
 	atualizar_ui()
-
+	
+# o que atacar deveria ser, só falta implementar mesmo kakak
 func atacar(atacante: Dictionary, ataque_id: int, alvo: Dictionary) -> void:
 	var ataque = atacante["ataques"][ataque_id]
 
