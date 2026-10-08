@@ -70,7 +70,7 @@ func combat(inimigo_id) -> void:
 	acoes.current_tab = 0
 	atualizar_ui()
 
-func atacar(ataque_id: int) -> void:
+func player_atacar(ataque_id: int) -> void:
 	if not batalha_ativa:
 		return
 
@@ -117,7 +117,7 @@ func inimigo_atacar() -> void:
 
 	atualizar_ui()
 
-func ataquer(atacante: Dictionary, ataque_id: int, alvo: Dictionary) -> void:
+func atacar(atacante: Dictionary, ataque_id: int, alvo: Dictionary) -> void:
 	var ataque = atacante["ataques"][ataque_id]
 
 	alvo["hp"] = max(alvo["hp"] - ataque["dano"], 0)
@@ -255,7 +255,7 @@ func _on_voltar_2_pressed() -> void:
 	acoes.current_tab = 0
 
 func _on_atk_1_pressed() -> void:
-	atacar(0)
+	player_atacar(0)
 
 func _on_atk_2_pressed() -> void:
-	atacar(1)
+	player_atacar(1)
