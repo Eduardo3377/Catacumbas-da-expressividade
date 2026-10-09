@@ -17,8 +17,14 @@ var batalha_ativa = false
 @onready var sprite_1: TextureRect = %sprite1
 @onready var sprite_2: TextureRect = %sprite2
 @onready var sprite_3: TextureRect = %sprite3
+
 @onready var inimigodesc: RichTextLabel = %inimigodesc
-@export var historico: Label
+@onready var historico: Label = %historico
+
+@onready var selecao: Label = %Selecao
+@onready var cor_1: Button = %cor1
+@onready var cor_3: Button = %cor3
+@onready var cor_2: Button = %cor2
 
 @onready var atk: Label = %Atk
 @onready var atk_1: Button = %atk1
@@ -26,12 +32,11 @@ var batalha_ativa = false
 
 @onready var gameover: Control = %gameover
 
-# abrir e ler o csv 
+################################################################################
+# CSV
+################################################################################
 func _ready() -> void:
-	var file = FileAccess.open(
-		"res://data/combat/TCC CDE - Combat.csv",
-		FileAccess.READ
-	)
+	var file = FileAccess.open("res://data/combat/TCC CDE - Combat.csv", FileAccess.READ)
 
 	while not file.eof_reached():
 		csv.append(file.get_csv_line())
@@ -54,8 +59,12 @@ func ler_csv(id) -> Dictionary:
 		"sprite": coluna[7].strip_edges()
 	}
 
+################################################################################
+# Comabate
+################################################################################
 # setup do combate e variaveis
 func combat(inimigo_id) -> void:
+	
 	jogadores.clear()
 	inimigos.clear()
 	resetar_ui()
@@ -76,22 +85,6 @@ func combat(inimigo_id) -> void:
 	acoes.current_tab = 0
 	atualizar_ui()
 
-func resetar_ui() -> void:
-	player_1.text = ""
-	player_2.text = ""
-	player_3.text = ""
-
-	inimigo_1.text = ""
-	inimigo_2.text = ""
-	inimigo_3.text = ""
-	
-	sprite_1.texture = null
-	sprite_2.texture = null
-	sprite_3.texture = null
-
-	historico.text = "histórico"
-
-	
 # antigo ataque de player, ainda em uso
 func player_atacar(ataque_id: int) -> void:
 	if not batalha_ativa:
@@ -222,8 +215,9 @@ func fim(status: int) -> void:
 		gameover.show()
 
 
-
-# ui
+################################################################################
+# UI
+################################################################################
 func atualizar_ui() -> void:
 	player_1.text = texto_hp(jogadores[0])
 	player_2.text = texto_hp(jogadores[1])
@@ -242,15 +236,28 @@ func atualizar_ui() -> void:
 
 	atk_1.text = texto_dano(jogador, 0)
 	atk_2.text = texto_dano(jogador, 1)
-
+	
 	inimigodesc.text = (
-		texto_hp(inimigos[0]) + "\n" +
-		inimigos[0]["ataques"][0]["nome"] + " - " +
-		str(inimigos[0]["ataques"][0]["dano"]) + " dano\n" +
-		inimigos[0]["ataques"][1]["nome"] + " - " +
-		str(inimigos[0]["ataques"][1]["dano"]) + " dano\n"
+	texto_hp(inimigos[0]) + "\n" +
+	texto_dano(inimigos[0], 0)+ "\n" +
+	texto_dano(inimigos[0], 1) + "\n"
 	)
 
+func resetar_ui() -> void:
+	player_1.text = ""
+	player_2.text = ""
+	player_3.text = ""
+
+	inimigo_1.text = ""
+	inimigo_2.text = ""
+	inimigo_3.text = ""
+	
+	sprite_1.texture = null
+	sprite_2.texture = null
+	sprite_3.texture = null
+
+	historico.text = "histórico"
+	
 func carregar_sprite(nome: String) -> Texture2D:
 	var textura = load("res://assets/sprites/characters/" + nome + ".png")
 	return textura
@@ -267,8 +274,17 @@ func texto_dano(personagem: Dictionary, num_atk: int) -> String:
 		str(personagem["ataques"][num_atk]["dano"]) + " dano"
 	)
 
+func checar(inimigo) -> void:
+	inimigodesc.text = (
+		texto_hp(inimigos[inimigo]) + "\n" +
+		texto_dano(inimigos[inimigo], 0)+ "\n" +
+		texto_dano(inimigos[inimigo], 1) + "\n"
+	)
+	acoes.current_tab = 3
 
+################################################################################
 # botoes
+################################################################################
 func _on_sair_pressed() -> void:
 	GameManager.PararAndar = false
 	hide()
@@ -280,6 +296,7 @@ func _on_cor_pressed() -> void:
 	acoes.current_tab = 2
 
 func _on_checar_pressed() -> void:
+	# selecionar personagem
 	acoes.current_tab = 3
 
 func _on_voltar_pressed() -> void:
