@@ -265,6 +265,7 @@ offset_left = -2.0
 offset_top = -45.0
 offset_right = 1.0
 offset_bottom = 58.0
+grow_horizontal = 2
 texture = ExtResource("7_wk6if")
 expand_mode = 1
 
@@ -295,13 +296,43 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="sprite1" type="TextureRect" parent="combat/inimigos" unique_id=1232570522]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 100.0
+offset_top = 47.0
+offset_right = 140.0
+offset_bottom = 87.0
+expand_mode = 1
+stretch_mode = 3
+
+[node name="sprite2" type="TextureRect" parent="combat/inimigos" unique_id=1534845786]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 170.0
+offset_top = 54.0
+offset_right = 210.0
+offset_bottom = 94.0
+expand_mode = 1
+stretch_mode = 3
+
+[node name="sprite3" type="TextureRect" parent="combat/inimigos" unique_id=1979059372]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 247.0
+offset_top = 47.0
+offset_right = 287.0
+offset_bottom = 87.0
+expand_mode = 1
+stretch_mode = 3
+
 [node name="inimigo1" type="Label" parent="combat/inimigos" unique_id=602676976]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 93.0
-offset_top = 89.0
+offset_top = 99.0
 offset_right = 147.0
-offset_bottom = 102.0
+offset_bottom = 112.0
 theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
 text = "INIMIGO"
 horizontal_alignment = 1
@@ -310,9 +341,9 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 164.0
-offset_top = 95.0
+offset_top = 105.0
 offset_right = 218.0
-offset_bottom = 108.0
+offset_bottom = 118.0
 theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
 text = "INIMIGO"
 horizontal_alignment = 1
@@ -321,9 +352,9 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 240.0
-offset_top = 88.0
+offset_top = 98.0
 offset_right = 294.0
-offset_bottom = 101.0
+offset_bottom = 111.0
 theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
 text = "INIMIGO"
 horizontal_alignment = 1

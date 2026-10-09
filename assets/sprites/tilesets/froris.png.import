@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crumfuv4x5le1"
-path="res://.godot/imported/Fox.png-583023fcd3b4c611545b345cd76d37c1.ctex"
+uid="uid://dti3o48fwp7pw"
+path="res://.godot/imported/froris.png-9f2899f453dde12530e639c2c41601b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/objects/Fox.png"
-dest_files=["res://.godot/imported/Fox.png-583023fcd3b4c611545b345cd76d37c1.ctex"]
+source_file="res://assets/sprites/tilesets/froris.png"
+dest_files=["res://.godot/imported/froris.png-9f2899f453dde12530e639c2c41601b9.ctex"]
 
 [params]
 

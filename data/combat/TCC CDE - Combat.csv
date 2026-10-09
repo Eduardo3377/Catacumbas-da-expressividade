@@ -1,12 +1,12 @@
-nome,cor,hp,atk1,atk1nome,atk2,atk2nome
-Vini,C,100,10,C1,20,C2
-Edu,M,60,20,M1,25,M2
-Pedro,Y,120,30,Y1,50,Y2
-Fox,M,60,20,M1,25,M2
-Polaris,CMYK,676767,900000,teste,1,teste2
-Slime,K,400,20,gosma,50,gosma2
-Zumbi,K,450,50,punho,60,mordida
-Esqueleto,K,250,1,Femur,111,Quebra-Ossos
-Coelho,K,500,20,mordida,50,facada
-Oithon,M,2000,20,cajado,80,furia do dragao
-Catupiry,M,1500,50,punho,50,soco
+nome,cor,hp,atk1,atk1nome,atk2,atk2nome,sprite
+Vini,C,40,7,Psypunch,12,Psyquake,
+Edu,M,30,6,Paper Cut,10,Paper fold,Fox
+Pedro,Y,60,8,Slashes,16,Behead,
+Fox,M,30,20,M1,25,M2,Fox
+Polaris,CMYK,30,900000,teste,1,teste2,Polaris
+Slime,K,30,20,gosma,50,gosma2,
+Zumbi,K,45,50,punho,60,mordida,dimo
+Esqueleto,K,30,1,Femur,111,Quebra-Ossos,
+Coelho,K,50,20,mordida,50,facada,
+Oithon,M,100,20,cajado,80,furia do dragao,
+Catupiry,M,70,50,punho,50,soco,

@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://67ukk5lyle2b" path="res://assets/tres/new_tile_set.tres" id="1_tlj06"]
 [ext_resource type="TileSet" uid="uid://cimo1pn0fo7gj" path="res://assets/tres/hitboxes.tres" id="2_7i8d3"]
-[ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/objects/Polaris.png" id="4_tlj06"]
+[ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/characters/Polaris.png" id="4_tlj06"]
 [ext_resource type="Script" uid="uid://c3f64phu03qxd" path="res://scripts/objects/autohide.gd" id="9_ekpvv"]
 [ext_resource type="PackedScene" uid="uid://barvi3txwhx3" path="res://scenes/objects/trigger.tscn" id="11_4bum4"]
 [ext_resource type="Texture2D" uid="uid://dhxgkbkmn64tb" path="res://assets/sprites/objects/tenda.png" id="12_4bum4"]
@@ -356,7 +356,7 @@ InimigoId = Array[int]([4, 4, 0])
 
 [node name="Enemy3" parent="interacao/inimigos" unique_id=1839637595 instance=ExtResource("12_w3tgf")]
 position = Vector2(393, 63)
-InimigoId = Array[int]([4, 1, 4])
+InimigoId = Array[int]([4, 5, 6])
 
 [node name="Particles" type="Node2D" parent="." unique_id=1359235253]
 top_level = true

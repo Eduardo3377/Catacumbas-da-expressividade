@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c22afptatrpj7"
-path="res://.godot/imported/Polaris.png-34b080cbb17eeb3c0b0f4a21bd4a42e7.ctex"
+uid="uid://crumfuv4x5le1"
+path="res://.godot/imported/Fox.png-88d69449a3394f56b3904c9cea545498.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/objects/Polaris.png"
-dest_files=["res://.godot/imported/Polaris.png-34b080cbb17eeb3c0b0f4a21bd4a42e7.ctex"]
+source_file="res://assets/sprites/characters/Fox.png"
+dest_files=["res://.godot/imported/Fox.png-88d69449a3394f56b3904c9cea545498.ctex"]
 
 [params]
 

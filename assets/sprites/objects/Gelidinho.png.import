@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b33ahnkul4soq"
-path="res://.godot/imported/folhatras.png-d8c34581987f07448c10c0a528bb6924.ctex"
+uid="uid://fvpscrvgkqx"
+path="res://.godot/imported/Gelidinho.png-053656f2ba7e809a20434a8ca098a2a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilesets/folhatras.png"
-dest_files=["res://.godot/imported/folhatras.png-d8c34581987f07448c10c0a528bb6924.ctex"]
+source_file="res://assets/sprites/objects/Gelidinho.png"
+dest_files=["res://.godot/imported/Gelidinho.png-053656f2ba7e809a20434a8ca098a2a8.ctex"]
 
 [params]
 

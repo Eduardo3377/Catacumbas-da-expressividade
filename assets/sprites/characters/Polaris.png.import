@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dti3o48fwp7pw"
-path="res://.godot/imported/froris.png-eadd5e2141ec764433c0342b852d2600.ctex"
+uid="uid://c22afptatrpj7"
+path="res://.godot/imported/Polaris.png-7d3be3de328e5441e57add8d230191d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/froris.png"
-dest_files=["res://.godot/imported/froris.png-eadd5e2141ec764433c0342b852d2600.ctex"]
+source_file="res://assets/sprites/characters/Polaris.png"
+dest_files=["res://.godot/imported/Polaris.png-7d3be3de328e5441e57add8d230191d4.ctex"]
 
 [params]
 

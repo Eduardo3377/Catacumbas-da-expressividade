@@ -11,7 +11,12 @@ var batalha_ativa = false
 @onready var player_1: Label = %Player1
 @onready var player_2: Label = %Player2
 @onready var player_3: Label = %Player3
-@onready var inimigo: Label = %inimigo1
+@onready var inimigo_1: Label = %inimigo1
+@onready var inimigo_2: Label = %inimigo2
+@onready var inimigo_3: Label = %inimigo3
+@onready var sprite_1: TextureRect = %sprite1
+@onready var sprite_2: TextureRect = %sprite2
+@onready var sprite_3: TextureRect = %sprite3
 @onready var inimigodesc: RichTextLabel = %inimigodesc
 @export var historico: Label
 
@@ -45,14 +50,15 @@ func ler_csv(id) -> Dictionary:
 			{"nome": coluna[4].strip_edges(), "dano": int(coluna[3])},
 			{"nome": coluna[6].strip_edges(), "dano": int(coluna[5])
 			}
-		]
+		],
+		"sprite": coluna[7].strip_edges()
 	}
 
 # setup do combate e variaveis
 func combat(inimigo_id) -> void:
 	jogadores.clear()
 	inimigos.clear()
-	historico.text = "histórico"
+	resetar_ui()
 	
 	# time do player
 	jogadores.append(ler_csv(1))
@@ -69,6 +75,22 @@ func combat(inimigo_id) -> void:
 	turno_atual = 0
 	acoes.current_tab = 0
 	atualizar_ui()
+
+func resetar_ui() -> void:
+	player_1.text = ""
+	player_2.text = ""
+	player_3.text = ""
+
+	inimigo_1.text = ""
+	inimigo_2.text = ""
+	inimigo_3.text = ""
+	
+	sprite_1.texture = null
+	sprite_2.texture = null
+	sprite_3.texture = null
+
+	historico.text = "histórico"
+
 	
 # antigo ataque de player, ainda em uso
 func player_atacar(ataque_id: int) -> void:
@@ -132,8 +154,10 @@ func atacar(atacante: Dictionary, ataque_id: int, alvo: Dictionary) -> void:
 	)
 	if personagems_vivos(jogadores).is_empty():
 		fim(0)
+		return
 	if personagems_vivos(inimigos).is_empty():
 		fim(1)
+		return
 
 	turno_atual = primeiro_vivo(jogadores)
 	atualizar_ui()
@@ -204,9 +228,13 @@ func atualizar_ui() -> void:
 	player_1.text = texto_hp(jogadores[0])
 	player_2.text = texto_hp(jogadores[1])
 	player_3.text = texto_hp(jogadores[2])
-
-	inimigo.text = texto_hp(inimigos[0])
-
+	
+	for i in inimigos.size():
+		var inimigo = [inimigo_1, inimigo_2, inimigo_3]
+		var sprites = [sprite_1, sprite_2, sprite_3]
+		inimigo[i].text = texto_hp(inimigos[i])
+		sprites[i].texture = carregar_sprite(inimigos[i]["sprite"])
+		
 	var jogador = jogadores[turno_atual]
 
 	selected.text = jogador["nome"]
@@ -222,6 +250,10 @@ func atualizar_ui() -> void:
 		inimigos[0]["ataques"][1]["nome"] + " - " +
 		str(inimigos[0]["ataques"][1]["dano"]) + " dano\n"
 	)
+
+func carregar_sprite(nome: String) -> Texture2D:
+	var textura = load("res://assets/sprites/characters/" + nome + ".png")
+	return textura
 
 func texto_hp(personagem: Dictionary) -> String:
 	return (

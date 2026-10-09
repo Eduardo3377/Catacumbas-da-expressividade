@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fvpscrvgkqx"
-path="res://.godot/imported/Gelidinho.png-3ea6e955d4826192910d9243bde7dbc5.ctex"
+uid="uid://d1x6wrlrhxuvm"
+path="res://.godot/imported/folhafrente.png-7140ff272b56804fcd5bd0cc7f1915c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/Gelidinho.png"
-dest_files=["res://.godot/imported/Gelidinho.png-3ea6e955d4826192910d9243bde7dbc5.ctex"]
+source_file="res://assets/sprites/folhafrente.png"
+dest_files=["res://.godot/imported/folhafrente.png-7140ff272b56804fcd5bd0cc7f1915c2.ctex"]
 
 [params]
 

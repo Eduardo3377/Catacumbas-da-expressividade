@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cuiv38vih50nv"]
 
-[ext_resource type="Texture2D" uid="uid://b33ahnkul4soq" path="res://assets/sprites/tilesets/folhatras.png" id="1_kft7v"]
-[ext_resource type="Texture2D" uid="uid://bv7jbfchijp58" path="res://assets/sprites/tilesets/abrovere.png" id="2_vj0c1"]
-[ext_resource type="Texture2D" uid="uid://d1x6wrlrhxuvm" path="res://assets/sprites/tilesets/folhafrente.png" id="3_02oku"]
+[ext_resource type="Texture2D" uid="uid://b33ahnkul4soq" path="res://assets/sprites/folhatras.png" id="1_kft7v"]
+[ext_resource type="Texture2D" uid="uid://bv7jbfchijp58" path="res://assets/sprites/objects/abrovere.png" id="2_vj0c1"]
+[ext_resource type="Texture2D" uid="uid://d1x6wrlrhxuvm" path="res://assets/sprites/folhafrente.png" id="3_02oku"]
 
 [node name="abrore" type="Node2D" unique_id=1210332972]
 

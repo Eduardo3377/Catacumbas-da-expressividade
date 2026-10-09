@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1x6wrlrhxuvm"
-path="res://.godot/imported/folhafrente.png-54737a5dacce7db96e6c2060557440ee.ctex"
+uid="uid://b33ahnkul4soq"
+path="res://.godot/imported/folhatras.png-65170a6f2dd17d78c5a221cb43903f64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilesets/folhafrente.png"
-dest_files=["res://.godot/imported/folhafrente.png-54737a5dacce7db96e6c2060557440ee.ctex"]
+source_file="res://assets/sprites/folhatras.png"
+dest_files=["res://.godot/imported/folhatras.png-65170a6f2dd17d78c5a221cb43903f64.ctex"]
 
 [params]
 

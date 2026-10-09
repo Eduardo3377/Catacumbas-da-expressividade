@@ -6,10 +6,10 @@ uid="uid://j3stjdpsqegy"
 
 [deps]
 
-files=["res://data/combat/TCC CDE - Combat.cor.translation", "res://data/combat/TCC CDE - Combat.hp.translation", "res://data/combat/TCC CDE - Combat.atk1.translation", "res://data/combat/TCC CDE - Combat.atk1nome.translation", "res://data/combat/TCC CDE - Combat.atk2.translation", "res://data/combat/TCC CDE - Combat.atk2nome.translation"]
+files=["res://data/combat/TCC CDE - Combat.cor.translation", "res://data/combat/TCC CDE - Combat.hp.translation", "res://data/combat/TCC CDE - Combat.atk1.translation", "res://data/combat/TCC CDE - Combat.atk1nome.translation", "res://data/combat/TCC CDE - Combat.atk2.translation", "res://data/combat/TCC CDE - Combat.atk2nome.translation", "res://data/combat/TCC CDE - Combat.sprite.translation"]
 
 source_file="res://data/combat/TCC CDE - Combat.csv"
-dest_files=["res://data/combat/TCC CDE - Combat.cor.translation", "res://data/combat/TCC CDE - Combat.hp.translation", "res://data/combat/TCC CDE - Combat.atk1.translation", "res://data/combat/TCC CDE - Combat.atk1nome.translation", "res://data/combat/TCC CDE - Combat.atk2.translation", "res://data/combat/TCC CDE - Combat.atk2nome.translation"]
+dest_files=["res://data/combat/TCC CDE - Combat.cor.translation", "res://data/combat/TCC CDE - Combat.hp.translation", "res://data/combat/TCC CDE - Combat.atk1.translation", "res://data/combat/TCC CDE - Combat.atk1nome.translation", "res://data/combat/TCC CDE - Combat.atk2.translation", "res://data/combat/TCC CDE - Combat.atk2nome.translation", "res://data/combat/TCC CDE - Combat.sprite.translation"]
 
 [params]
 
