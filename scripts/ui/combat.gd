@@ -21,7 +21,6 @@ var batalha_ativa = false
 @onready var inimigodesc: RichTextLabel = %inimigodesc
 @onready var historico: Label = %historico
 
-@onready var selecao: Label = %Selecao
 @onready var cor_1: Button = %cor1
 @onready var cor_3: Button = %cor3
 @onready var cor_2: Button = %cor2
@@ -64,7 +63,7 @@ func ler_csv(id) -> Dictionary:
 ################################################################################
 # setup do combate e variaveis
 func combat(inimigo_id) -> void:
-	
+	GameManager.PararAndar = true
 	jogadores.clear()
 	inimigos.clear()
 	resetar_ui()
@@ -145,13 +144,14 @@ func atacar(atacante: Dictionary, ataque_id: int, alvo: Dictionary) -> void:
 		alvo["nome"] + " causando " +
 		str(ataque["dano"]) + " de dano"
 	)
+		
+	# proximo turno
 	if personagems_vivos(jogadores).is_empty():
 		fim(0)
 		return
 	if personagems_vivos(inimigos).is_empty():
 		fim(1)
 		return
-
 	turno_atual = primeiro_vivo(jogadores)
 	atualizar_ui()
 
@@ -259,6 +259,8 @@ func resetar_ui() -> void:
 	historico.text = "histórico"
 	
 func carregar_sprite(nome: String) -> Texture2D:
+	if nome.is_empty():
+		return null
 	var textura = load("res://assets/sprites/characters/" + nome + ".png")
 	return textura
 
@@ -281,6 +283,11 @@ func checar(inimigo) -> void:
 		texto_dano(inimigos[inimigo], 1) + "\n"
 	)
 	acoes.current_tab = 3
+	
+func selecionar_alvo(time):
+	acoes.current_tab = 4
+	
+	pass
 
 ################################################################################
 # botoes
