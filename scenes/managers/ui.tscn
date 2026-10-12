@@ -184,16 +184,16 @@ metadata/_tab_index = 2
 layout_mode = 2
 text = "alvo:"
 
-[node name="cor1" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=374352526]
-unique_name_in_owner = true
-layout_mode = 2
-text = "alvo1"
-alignment = 0
-
 [node name="cor2" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=912914399]
 unique_name_in_owner = true
 layout_mode = 2
 text = "alvp2"
+alignment = 0
+
+[node name="cor1" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=374352526]
+unique_name_in_owner = true
+layout_mode = 2
+text = "alvo1"
 alignment = 0
 
 [node name="cor3" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Cor" unique_id=2007742703]
@@ -305,20 +305,20 @@ offset_bottom = 40.0
 [node name="sprite1" type="TextureRect" parent="combat/inimigos" unique_id=1232570522]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 100.0
-offset_top = 47.0
-offset_right = 140.0
-offset_bottom = 87.0
+offset_left = 171.0
+offset_top = 49.0
+offset_right = 211.0
+offset_bottom = 89.0
 expand_mode = 1
 stretch_mode = 3
 
 [node name="sprite2" type="TextureRect" parent="combat/inimigos" unique_id=1534845786]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 170.0
-offset_top = 54.0
-offset_right = 210.0
-offset_bottom = 94.0
+offset_left = 92.0
+offset_top = 48.0
+offset_right = 132.0
+offset_bottom = 88.0
 expand_mode = 1
 stretch_mode = 3
 
@@ -335,10 +335,10 @@ stretch_mode = 3
 [node name="inimigo1" type="Label" parent="combat/inimigos" unique_id=602676976]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 93.0
-offset_top = 99.0
-offset_right = 147.0
-offset_bottom = 112.0
+offset_left = 164.0
+offset_top = 101.0
+offset_right = 218.0
+offset_bottom = 114.0
 theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
 text = "INIMIGO"
 horizontal_alignment = 1
@@ -346,10 +346,10 @@ horizontal_alignment = 1
 [node name="inimigo2" type="Label" parent="combat/inimigos" unique_id=503397023]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 164.0
-offset_top = 105.0
-offset_right = 218.0
-offset_bottom = 118.0
+offset_left = 86.0
+offset_top = 99.0
+offset_right = 140.0
+offset_bottom = 112.0
 theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
 text = "INIMIGO"
 horizontal_alignment = 1
@@ -647,8 +647,8 @@ text = "Fullscreen"
 [connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Ataque/atk1" to="combat" method="_on_atk_1_pressed"]
 [connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Ataque/atk2" to="combat" method="_on_atk_2_pressed"]
 [connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Ataque/Voltar" to="combat" method="_on_voltar_pressed"]
-[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Cor/cor1" to="combat" method="_on_cor_1_pressed"]
 [connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Cor/cor2" to="combat" method="_on_cor_2_pressed"]
+[connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Cor/cor1" to="combat" method="_on_cor_1_pressed"]
 [connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Cor/cor3" to="combat" method="_on_cor_3_pressed"]
 [connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Checar/Voltar2" to="combat" method="_on_voltar_2_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Jogar" to="menu" method="_on_jogar_pressed"]
