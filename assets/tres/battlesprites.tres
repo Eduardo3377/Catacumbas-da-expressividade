@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwtdijcuerg4f" path="res://assets/sprites/characters/catupiry.png" id="1_4qgnw"]
 [ext_resource type="Texture2D" uid="uid://3murmp0bv45v" path="res://assets/sprites/characters/Coelho_do_mal_girando_faca.png" id="2_lp6wr"]
+[ext_resource type="Texture2D" uid="uid://da8j0bespjje" path="res://assets/sprites/players/protagonistas.png" id="3_h52qc"]
 [ext_resource type="Texture2D" uid="uid://ouyvw0yxcp50" path="res://assets/sprites/characters/skeleton.png" id="3_p1wm5"]
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/characters/Fox.png" id="4_h52qc"]
 [ext_resource type="Texture2D" uid="uid://2258d6q7agj3" path="res://assets/sprites/characters/The manager.png" id="5_lp6wr"]
@@ -9,6 +10,22 @@
 [ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/characters/Polaris.png" id="6_kg6bl"]
 [ext_resource type="Texture2D" uid="uid://dagmngfx086b7" path="res://assets/sprites/characters/slime.png" id="7_lh5w0"]
 [ext_resource type="Texture2D" uid="uid://p66qwmjdfpaf" path="res://assets/sprites/characters/zumbus.png" id="8_1342q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r46hx"]
+atlas = ExtResource("3_h52qc")
+region = Rect2(0, 32, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg6bl"]
+atlas = ExtResource("3_h52qc")
+region = Rect2(19, 32, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh5w0"]
+atlas = ExtResource("3_h52qc")
+region = Rect2(38, 32, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1342q"]
+atlas = ExtResource("3_h52qc")
+region = Rect2(57, 32, 19, 32)
 
 [resource]
 animations = [{
@@ -26,6 +43,23 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Coelho",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r46hx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg6bl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh5w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1342q")
+}],
+"loop": 1,
+"name": &"Edu",
 "speed": 5.0
 }, {
 "frames": [{

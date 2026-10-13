@@ -2,8 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/characters/Fox.png" id="1_58c3k"]
 [ext_resource type="Script" uid="uid://b1hq1qi30minh" path="res://scripts/objects/Enemy.gd" id="1_t3eek"]
+[ext_resource type="Texture2D" uid="uid://c3754a6a7ad05" path="res://assets/sprites/characters/coelho_small.png" id="2_jsntr"]
 [ext_resource type="Texture2D" uid="uid://b2giiy0jjsql4" path="res://assets/sprites/objects/tiny_bosses.png" id="3_6ipsb"]
+[ext_resource type="Texture2D" uid="uid://cegy53rsanwgi" path="res://assets/sprites/characters/skeleton_small.png" id="3_w0bdi"]
 [ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/characters/Polaris.png" id="4_uiui7"]
+[ext_resource type="Texture2D" uid="uid://dwa260amcjj0s" path="res://assets/sprites/characters/slime_small.png" id="7_eftcs"]
+[ext_resource type="Texture2D" uid="uid://bqx3ikhtklypw" path="res://assets/sprites/characters/zumbu_small.png" id="8_qosbx"]
+[ext_resource type="Texture2D" uid="uid://fvpscrvgkqx" path="res://assets/sprites/objects/Gelidinho.png" id="9_w0bdi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8kq1"]
 atlas = ExtResource("3_6ipsb")
@@ -17,8 +22,40 @@ region = Rect2(19, 0, 19, 32)
 atlas = ExtResource("3_6ipsb")
 region = Rect2(0, 32, 19, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_eftcs"]
+atlas = ExtResource("9_w0bdi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qosbx"]
+atlas = ExtResource("9_w0bdi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jc0b"]
+atlas = ExtResource("9_w0bdi")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51esu"]
+atlas = ExtResource("9_w0bdi")
+region = Rect2(16, 16, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_pmg6p"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jsntr")
+}],
+"loop": 1,
+"name": &"Coelho",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w0bdi")
+}],
+"loop": 1,
+"name": &"Esqueleto",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_58c3k")
@@ -53,13 +90,41 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("7_eftcs")
+}],
+"loop": 1,
+"name": &"Slime",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_jsntr")
 }],
 "loop": 1,
 "name": &"Vunerona",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_qosbx")
+}],
+"loop": 1,
+"name": &"Zumbi",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eftcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qosbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jc0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51esu")
+}],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
@@ -77,6 +142,7 @@ unique_name_in_owner = true
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_pmg6p")
 autoplay = "default"
+frame_progress = 0.76298845
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735701073]
 position = Vector2(0, -9)
