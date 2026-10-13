@@ -5,6 +5,7 @@ extends Area2D
 @export var Fundo = false
 @export var TexturaFundo = "default"
 func _ready():
+	hide()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
