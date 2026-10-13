@@ -2,16 +2,81 @@
 
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/characters/Fox.png" id="1_58c3k"]
 [ext_resource type="Script" uid="uid://b1hq1qi30minh" path="res://scripts/objects/Enemy.gd" id="1_t3eek"]
+[ext_resource type="Texture2D" uid="uid://b2giiy0jjsql4" path="res://assets/sprites/objects/tiny_bosses.png" id="3_6ipsb"]
+[ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/characters/Polaris.png" id="4_uiui7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8kq1"]
+atlas = ExtResource("3_6ipsb")
+region = Rect2(0, 0, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prcif"]
+atlas = ExtResource("3_6ipsb")
+region = Rect2(19, 0, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsntr"]
+atlas = ExtResource("3_6ipsb")
+region = Rect2(0, 32, 19, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pmg6p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_58c3k")
+}],
+"loop": 1,
+"name": &"Fox",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8kq1")
+}],
+"loop": 1,
+"name": &"Miss Sheepard",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prcif")
+}],
+"loop": 1,
+"name": &"Oithon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_uiui7")
+}],
+"loop": 1,
+"name": &"Polaris",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsntr")
+}],
+"loop": 1,
+"name": &"Vunerona",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t3eek"]
 radius = 35.014282
 
 [node name="Enemy" type="Area2D" unique_id=1211658649]
+z_index = 4096
 script = ExtResource("1_t3eek")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=700937002]
-position = Vector2(0, -28)
-texture = ExtResource("1_58c3k")
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=680070047]
+unique_name_in_owner = true
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_pmg6p")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735701073]
 position = Vector2(0, -9)
