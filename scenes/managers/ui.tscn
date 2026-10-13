@@ -56,6 +56,125 @@ grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("5_gh0ax")
 
+[node name="TextureRect2" type="TextureRect" parent="combat" unique_id=405754695]
+modulate = Color(0.9872399, 1, 0.9379286, 1)
+self_modulate = Color(0.8862616, 0.88626146, 0.8862615, 1)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -2.0
+offset_top = -45.0
+offset_right = 1.0
+offset_bottom = 58.0
+grow_horizontal = 2
+texture = ExtResource("7_wk6if")
+expand_mode = 1
+
+[node name="ColorRect2" type="ColorRect" parent="combat/TextureRect2" unique_id=810137136]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 21.0
+offset_top = 29.0
+offset_right = -30.0
+offset_bottom = 37.0
+grow_horizontal = 2
+color = Color(0.67851543, 0.7206767, 0.73864055, 0)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="combat/TextureRect2/ColorRect2" unique_id=1154482023]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="historico" type="Label" parent="combat/TextureRect2/ColorRect2/VBoxContainer" unique_id=998848559]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+text = "historico"
+
+[node name="inimigos" type="Control" parent="combat" unique_id=98714692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sprite1" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=1205157071]
+unique_name_in_owner = true
+position = Vector2(193, 77.99999)
+scale = Vector2(0.90625006, 0.90625006)
+sprite_frames = ExtResource("7_1abot")
+autoplay = "default"
+
+[node name="sprite2" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=2021364395]
+unique_name_in_owner = true
+position = Vector2(111.99999, 66.99999)
+scale = Vector2(0.90625006, 0.90625006)
+sprite_frames = ExtResource("7_1abot")
+autoplay = "default"
+
+[node name="sprite3" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=663761742]
+unique_name_in_owner = true
+position = Vector2(267, 64)
+scale = Vector2(0.90625006, 0.90625006)
+sprite_frames = ExtResource("7_1abot")
+autoplay = "default"
+
+[node name="inimigo1" type="Label" parent="combat/inimigos" unique_id=602676976]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -6.0
+offset_right = 33.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
+text = "INIMIGO"
+horizontal_alignment = 1
+
+[node name="inimigo2" type="Label" parent="combat/inimigos" unique_id=503397023]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -12.0
+offset_right = -47.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
+text = "INIMIGO"
+horizontal_alignment = 1
+
+[node name="inimigo3" type="Label" parent="combat/inimigos" unique_id=1067684751]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 41.0
+offset_top = -12.0
+offset_right = 108.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
+text = "INIMIGO"
+horizontal_alignment = 1
+
 [node name="HBoxContainer" type="HBoxContainer" parent="combat" unique_id=2080023358]
 layout_mode = 1
 anchors_preset = 7
@@ -244,118 +363,41 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.41568628)
+color = Color(0, 0, 0, 0.72300005)
 
-[node name="Label" type="Label" parent="combat/gameover" unique_id=1875382512]
+[node name="VBoxContainer" type="VBoxContainer" parent="combat/gameover" unique_id=197320001]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -6.5
-offset_right = 20.0
-offset_bottom = 6.5
+offset_left = -70.0
+offset_top = -23.5
+offset_right = 70.0
+offset_bottom = 23.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Voce perdeu!"
 
-[node name="TextureRect2" type="TextureRect" parent="combat" unique_id=405754695]
-modulate = Color(0.9872399, 1, 0.9379286, 1)
-self_modulate = Color(0.8862616, 0.88626146, 0.8862615, 1)
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -2.0
-offset_top = -45.0
-offset_right = 1.0
-offset_bottom = 58.0
-grow_horizontal = 2
-texture = ExtResource("7_wk6if")
-expand_mode = 1
-
-[node name="ColorRect2" type="ColorRect" parent="combat/TextureRect2" unique_id=810137136]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 21.0
-offset_top = 29.0
-offset_right = -30.0
-offset_bottom = 37.0
-grow_horizontal = 2
-color = Color(0.67851543, 0.7206767, 0.73864055, 0)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="combat/TextureRect2/ColorRect2" unique_id=1154482023]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="historico" type="Label" parent="combat/TextureRect2/ColorRect2/VBoxContainer" unique_id=998848559]
-unique_name_in_owner = true
+[node name="Label" type="Label" parent="combat/gameover/VBoxContainer" unique_id=1875382512]
 layout_mode = 2
-size_flags_vertical = 10
-text = "historico"
-
-[node name="inimigos" type="Control" parent="combat" unique_id=98714692]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="sprite1" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=1205157071]
-unique_name_in_owner = true
-position = Vector2(189.99998, 66.99999)
-scale = Vector2(0.90625006, 0.90625006)
-sprite_frames = ExtResource("7_1abot")
-autoplay = "default"
-
-[node name="sprite2" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=2021364395]
-unique_name_in_owner = true
-position = Vector2(111.99999, 66.99999)
-scale = Vector2(0.90625006, 0.90625006)
-sprite_frames = ExtResource("7_1abot")
-autoplay = "default"
-
-[node name="sprite3" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=663761742]
-unique_name_in_owner = true
-position = Vector2(267, 64)
-scale = Vector2(0.90625006, 0.90625006)
-sprite_frames = ExtResource("7_1abot")
-autoplay = "default"
-
-[node name="inimigo1" type="Label" parent="combat/inimigos" unique_id=602676976]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 164.0
-offset_top = 101.0
-offset_right = 218.0
-offset_bottom = 114.0
-theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
-text = "INIMIGO"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Voce perdeu!"
 horizontal_alignment = 1
 
-[node name="inimigo2" type="Label" parent="combat/inimigos" unique_id=503397023]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 86.0
-offset_top = 99.0
-offset_right = 140.0
-offset_bottom = 112.0
-theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
-text = "INIMIGO"
-horizontal_alignment = 1
+[node name="TryAgain" type="Button" parent="combat/gameover/VBoxContainer" unique_id=1550329008]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+text = "Tentar Denovo"
+autowrap_trim_flags = 0
 
-[node name="inimigo3" type="Label" parent="combat/inimigos" unique_id=1067684751]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 240.0
-offset_top = 98.0
-offset_right = 294.0
-offset_bottom = 111.0
-theme_override_colors/font_color = Color(0.77104205, 0.77720064, 0.7710341, 1)
-text = "INIMIGO"
-horizontal_alignment = 1
+[node name="Quit" type="Button" parent="combat/gameover/VBoxContainer" unique_id=386330824]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.61513877, 0.66141623, 1)
+text = "Desistir"
 
 [node name="Dialogo" type="Control" parent="." unique_id=396951711]
 unique_name_in_owner = true
@@ -643,6 +685,8 @@ text = "Fullscreen"
 [connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Cor/cor1" to="combat" method="_on_cor_1_pressed"]
 [connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Cor/cor3" to="combat" method="_on_cor_3_pressed"]
 [connection signal="pressed" from="combat/HBoxContainer/MarginContainer2/Acoes/Checar/Voltar2" to="combat" method="_on_voltar_2_pressed"]
+[connection signal="pressed" from="combat/gameover/VBoxContainer/TryAgain" to="combat" method="_on_try_again_pressed"]
+[connection signal="pressed" from="combat/gameover/VBoxContainer/Quit" to="combat" method="_on_quit_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Jogar" to="menu" method="_on_jogar_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Opcoes" to="menu" method="_on_opcoes_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/1/page1/VBoxContainer/VBoxContainer/Creditos" to="menu" method="_on_creditos_pressed"]

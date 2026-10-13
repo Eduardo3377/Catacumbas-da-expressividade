@@ -4,7 +4,7 @@ var jogadores: Array = []
 var inimigos: Array = []
 var turno_atual = 0
 var batalha_ativa = false
-
+var ids_inimigos
 @onready var acoes: TabContainer = %Acoes
 @onready var selected: Label = %Selected
 
@@ -61,19 +61,21 @@ func ler_csv(id) -> Dictionary:
 # Comabate
 ################################################################################
 # setup do combate e variaveis
-func combat(inimigo_id) -> void:
+func combat(ids) -> void:
 	GameManager.PararAndar = true
 	jogadores.clear()
 	inimigos.clear()
-	resetar_ui()
+	ids_inimigos = ids 
 	
+	gameover.hide()
+	resetar_ui()
 	# time do player
 	jogadores.append(ler_csv(1))
-	jogadores.append(ler_csv(2))
 	jogadores.append(ler_csv(3))
+	jogadores.append(ler_csv(2))
 	# time inimigo
-	print(inimigo_id)
-	for id in inimigo_id.slice(0, 3):
+	print(ids_inimigos)
+	for id in ids_inimigos.slice(0, 3):
 		if id == 0 || id == null:
 			continue
 		else: inimigos.append(ler_csv(id))
@@ -310,3 +312,11 @@ func _on_atk_1_pressed() -> void:
 
 func _on_atk_2_pressed() -> void:
 	player_atacar(1)
+
+
+func _on_try_again_pressed() -> void:
+	combat(ids_inimigos)
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
