@@ -7,6 +7,7 @@
 [node name="abrore" type="Node2D" unique_id=1210332972]
 
 [node name="folhatra" type="Node2D" parent="." unique_id=1732836545]
+z_index = 4096
 
 [node name="Folhatras" type="Sprite2D" parent="folhatra" unique_id=1070212412]
 modulate = Color(0.9419189, 0.9784277, 0.9287139, 1)
@@ -34,6 +35,7 @@ position = Vector2(-1, -40)
 texture = ExtResource("2_vj0c1")
 
 [node name="folhafrente" type="Node2D" parent="." unique_id=852619643]
+z_index = 4096
 
 [node name="Folhafrente" type="Sprite2D" parent="folhafrente" unique_id=177250783]
 position = Vector2(-33, -69)
