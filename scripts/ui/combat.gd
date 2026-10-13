@@ -14,9 +14,9 @@ var batalha_ativa = false
 @onready var inimigo_1: Label = %inimigo1
 @onready var inimigo_2: Label = %inimigo2
 @onready var inimigo_3: Label = %inimigo3
-@onready var sprite_1: TextureRect = %sprite1
-@onready var sprite_2: TextureRect = %sprite2
-@onready var sprite_3: TextureRect = %sprite3
+@onready var sprite_1: AnimatedSprite2D = %sprite1
+@onready var sprite_2: AnimatedSprite2D = %sprite2
+@onready var sprite_3: AnimatedSprite2D = %sprite3
 
 @onready var inimigodesc: RichTextLabel = %inimigodesc
 @onready var historico: Label = %historico
@@ -55,7 +55,6 @@ func ler_csv(id) -> Dictionary:
 			{"nome": coluna[6].strip_edges(), "dano": int(coluna[5])
 			}
 		],
-		"sprite": coluna[7].strip_edges()
 	}
 
 ################################################################################
@@ -227,7 +226,7 @@ func atualizar_ui() -> void:
 		var inimigo = [inimigo_1, inimigo_2, inimigo_3]
 		var sprites = [sprite_1, sprite_2, sprite_3]
 		inimigo[i].text = texto_hp(inimigos[i])
-		sprites[i].texture = carregar_sprite(inimigos[i]["sprite"])
+		sprites[i].play(inimigos[i]["nome"])
 		
 	var jogador = jogadores[turno_atual]
 
@@ -252,18 +251,12 @@ func resetar_ui() -> void:
 	inimigo_2.text = ""
 	inimigo_3.text = ""
 	
-	sprite_1.texture = null
-	sprite_2.texture = null
-	sprite_3.texture = null
+	sprite_1.play("default")
+	sprite_2.play("default")
+	sprite_3.play("default")
 
 	historico.text = "histórico"
 	
-func carregar_sprite(nome: String) -> Texture2D:
-	if nome.is_empty():
-		return null
-	var textura = load("res://assets/sprites/characters/" + nome + ".png")
-	return textura
-
 func texto_hp(personagem: Dictionary) -> String:
 	return (
 		personagem["nome"] + " " +

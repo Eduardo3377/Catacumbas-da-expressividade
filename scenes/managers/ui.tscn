@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cuog0ma42t077" path="res://assets/sprites/ui/Texturelabs_Paper_204S.jpg" id="4_u3q1e"]
 [ext_resource type="Texture2D" uid="uid://tt04phtopwvd" path="res://assets/sprites/ui/fullbook.png" id="5_gh0ax"]
 [ext_resource type="Script" uid="uid://capfm5afmq3ob" path="res://scripts/ui/dialogo.gd" id="6_bpi5a"]
+[ext_resource type="SpriteFrames" uid="uid://cha13xdc1rupp" path="res://assets/tres/battlesprites.tres" id="7_1abot"]
 [ext_resource type="Texture2D" uid="uid://ck4dxo1433an5" path="res://assets/sprites/ui/Texturelabs_Paper_138S.png" id="7_wk6if"]
 [ext_resource type="Script" uid="uid://rpnf8qf8ru2f" path="res://scripts/ui/menu.gd" id="8_nawgk"]
 [ext_resource type="Texture2D" uid="uid://d37bnrtd8mahs" path="res://assets/sprites/ui/Texturelabs_Paper_206S.jpg" id="9_fqwar"]
@@ -302,35 +303,26 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="sprite1" type="TextureRect" parent="combat/inimigos" unique_id=1232570522]
+[node name="sprite1" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=1205157071]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 171.0
-offset_top = 49.0
-offset_right = 211.0
-offset_bottom = 89.0
-expand_mode = 1
-stretch_mode = 3
+position = Vector2(189.99998, 66.99999)
+scale = Vector2(0.90625006, 0.90625006)
+sprite_frames = ExtResource("7_1abot")
+autoplay = "default"
 
-[node name="sprite2" type="TextureRect" parent="combat/inimigos" unique_id=1534845786]
+[node name="sprite2" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=2021364395]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 92.0
-offset_top = 48.0
-offset_right = 132.0
-offset_bottom = 88.0
-expand_mode = 1
-stretch_mode = 3
+position = Vector2(111.99999, 66.99999)
+scale = Vector2(0.90625006, 0.90625006)
+sprite_frames = ExtResource("7_1abot")
+autoplay = "default"
 
-[node name="sprite3" type="TextureRect" parent="combat/inimigos" unique_id=1979059372]
+[node name="sprite3" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=663761742]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 247.0
-offset_top = 47.0
-offset_right = 287.0
-offset_bottom = 87.0
-expand_mode = 1
-stretch_mode = 3
+position = Vector2(267, 64)
+scale = Vector2(0.90625006, 0.90625006)
+sprite_frames = ExtResource("7_1abot")
+autoplay = "default"
 
 [node name="inimigo1" type="Label" parent="combat/inimigos" unique_id=602676976]
 unique_name_in_owner = true
