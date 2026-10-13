@@ -69,7 +69,7 @@ func combat(inimigo_id) -> void:
 	
 	# time do player
 	jogadores.append(ler_csv(1))
-	jogadores.append(ler_csv(4))
+	jogadores.append(ler_csv(2))
 	jogadores.append(ler_csv(3))
 	# time inimigo
 	print(inimigo_id)
