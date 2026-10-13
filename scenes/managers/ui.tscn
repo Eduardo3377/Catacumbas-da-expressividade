@@ -218,12 +218,12 @@ theme_override_colors/font_color = Color(0.15594886, 0.16007765, 0.4834036, 1)
 [node name="Player2" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1607953645]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.5648658, 0.4568296, 0.13760671, 1)
+theme_override_colors/font_color = Color(0.5568628, 0.16078432, 0.44705883, 1)
 
 [node name="Player3" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1221464184]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.5568628, 0.16078432, 0.44705883, 1)
+theme_override_colors/font_color = Color(0.5647059, 0.45490196, 0.13725491, 1)
 
 [node name="MarginContainer2" type="MarginContainer" parent="combat/HBoxContainer" unique_id=666768581]
 layout_mode = 2

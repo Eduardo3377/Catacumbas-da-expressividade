@@ -71,8 +71,8 @@ func combat(ids) -> void:
 	resetar_ui()
 	# time do player
 	jogadores.append(ler_csv(1))
-	jogadores.append(ler_csv(3))
 	jogadores.append(ler_csv(2))
+	jogadores.append(ler_csv(3))
 	# time inimigo
 	print(ids_inimigos)
 	for id in ids_inimigos.slice(0, 3):
