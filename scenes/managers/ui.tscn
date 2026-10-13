@@ -23,6 +23,7 @@ script = ExtResource("1_37hbj")
 [node name="combat" type="Control" parent="." unique_id=1810204815]
 unique_name_in_owner = true
 process_mode = 3
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,11 +47,14 @@ expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="combat" unique_id=211934007]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = -1
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -192.0
 offset_top = -99.0
+offset_right = 192.0
 offset_bottom = 117.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -176,15 +180,17 @@ text = "INIMIGO"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="combat" unique_id=2080023358]
+propagate_maximum_size = false
+clip_contents = true
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -104.0
+offset_left = -106.0
 offset_top = -71.0
-offset_right = 107.0
+offset_right = 106.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_stretch_ratio = 0.0
@@ -201,7 +207,6 @@ layout_mode = 2
 [node name="Integrantes" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2" unique_id=2034231346]
 layout_mode = 2
 text = "Integrantes:"
-horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2" unique_id=1639956301]
 layout_mode = 2
@@ -209,14 +214,17 @@ layout_mode = 2
 [node name="Player1" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=139171309]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.15594886, 0.16007765, 0.4834036, 1)
 
 [node name="Player2" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1607953645]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.5573358, 0.16007765, 0.44796598, 1)
 
 [node name="Player3" type="Label" parent="combat/HBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1221464184]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.63105136, 0.50318396, 0.15594886, 1)
 
 [node name="MarginContainer2" type="MarginContainer" parent="combat/HBoxContainer" unique_id=666768581]
 layout_mode = 2
@@ -225,8 +233,10 @@ theme_override_constants/margin_left = 10
 
 [node name="Acoes" type="TabContainer" parent="combat/HBoxContainer/MarginContainer2" unique_id=27951698]
 unique_name_in_owner = true
+propagate_maximum_size = false
+clip_contents = true
 layout_mode = 2
-current_tab = 2
+current_tab = 1
 tabs_visible = false
 
 [node name="Acoes" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=1035721321]
@@ -268,14 +278,15 @@ text = "Fugir
 alignment = 0
 
 [node name="Ataque" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=1555570833]
-visible = false
+propagate_maximum_size = false
+clip_contents = true
 layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="Atk" type="Label" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=809608319]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Ataque:"
+text = "Ataque: "
 
 [node name="atk1" type="Button" parent="combat/HBoxContainer/MarginContainer2/Acoes/Ataque" unique_id=171156962]
 unique_name_in_owner = true
@@ -297,6 +308,7 @@ text = "Voltar"
 alignment = 0
 
 [node name="Cor" type="VBoxContainer" parent="combat/HBoxContainer/MarginContainer2/Acoes" unique_id=939566289]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -465,7 +477,6 @@ text = "oi"
 [node name="menu" type="Control" parent="." unique_id=105794058]
 unique_name_in_owner = true
 process_mode = 3
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

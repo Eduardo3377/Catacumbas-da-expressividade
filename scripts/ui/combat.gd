@@ -267,7 +267,7 @@ func texto_hp(personagem: Dictionary) -> String:
 
 func texto_dano(personagem: Dictionary, num_atk: int) -> String:
 	return (
-		personagem["ataques"][num_atk]["nome"] + " - " +
+		personagem["ataques"][num_atk]["nome"] + "/" +
 		str(personagem["ataques"][num_atk]["dano"]) + " dano"
 	)
 

@@ -499,6 +499,10 @@ TexturaFundo = "3"
 position = Vector2(670, 838)
 InimigoId = Array[int]([7, 0, 0])
 
+[node name="MsSheepard" parent="C" unique_id=771169291 instance=ExtResource("12_w3tgf")]
+position = Vector2(833, 490)
+InimigoId = Array[int]([12, 0, 0])
+
 [node name="Enemy3" parent="C" unique_id=916213682 instance=ExtResource("12_w3tgf")]
 position = Vector2(773, 750)
 InimigoId = Array[int]([8, 0, 0])
