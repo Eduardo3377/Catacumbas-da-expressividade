@@ -33,7 +33,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_4qgnw")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Catupiry",
 "speed": 5.0
 }, {
@@ -41,7 +41,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_lp6wr")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Coelho",
 "speed": 5.0
 }, {
@@ -58,7 +58,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1342q")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Edu",
 "speed": 5.0
 }, {
@@ -66,7 +66,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_p1wm5")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Esqueleto",
 "speed": 5.0
 }, {
@@ -74,7 +74,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_h52qc")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Fox",
 "speed": 5.0
 }, {
@@ -82,7 +82,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_lp6wr")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Miss Sheepard",
 "speed": 5.0
 }, {
@@ -90,7 +90,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_r46hx")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Oithon",
 "speed": 5.0
 }, {
@@ -98,7 +98,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_kg6bl")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Polaris",
 "speed": 5.0
 }, {
@@ -106,7 +106,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_lh5w0")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Slime",
 "speed": 5.0
 }, {
@@ -114,12 +114,12 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_1342q")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Zumbi",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }]
