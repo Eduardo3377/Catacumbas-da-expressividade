@@ -108,7 +108,6 @@ unique_name_in_owner = true
 position = Vector2(193, 77.99999)
 scale = Vector2(0.90625006, 0.90625006)
 sprite_frames = ExtResource("7_1abot")
-animation = &"Edu"
 autoplay = "default"
 
 [node name="sprite2" type="AnimatedSprite2D" parent="combat/inimigos" unique_id=2021364395]
