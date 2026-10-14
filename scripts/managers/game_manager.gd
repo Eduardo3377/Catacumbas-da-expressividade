@@ -3,9 +3,13 @@ var PlayerPosition = []
 var PlayerMoving: bool
 var PararAndar = false
 @onready var ui = get_tree().root.get_node("MainGame/Canvas/UI")
+@onready var mapa = get_tree().root.get_node("MainGame/Mapa/Mapa")
 signal bgchange 
 func _ready():
 	pass
+
+func colorir(cor):
+	mapa.colorir(cor)
 
 	
 func PlayerPos(position):

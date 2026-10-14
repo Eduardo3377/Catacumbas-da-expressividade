@@ -45,7 +45,7 @@ script = SubResource("GDScript_ll2y6")
 
 [node name="Vini" parent="Players" unique_id=1937835004 instance=ExtResource("9_j4x4q")]
 position = Vector2(192, 108)
-Index = 15
+Index = 30
 metadata/_edit_lock_ = true
 
 [node name="Pedro" parent="Players" unique_id=883880857 instance=ExtResource("8_c456e")]
@@ -55,7 +55,7 @@ metadata/_edit_lock_ = true
 
 [node name="Edu" parent="Players" unique_id=531438909 instance=ExtResource("11_ll2y6")]
 position = Vector2(192, 108)
-Index = 30
+Index = 15
 metadata/_edit_lock_ = true
 
 [node name="fox" parent="Players" unique_id=1629078187 instance=ExtResource("10_p6fov")]

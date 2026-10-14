@@ -17,7 +17,6 @@ func _ready() -> void:
 		csv.append(file.get_csv_line())
 	
 	var inimigo = ler_csv(InimigoId[0])
-	print(inimigo["nome"])
 	sprite.play(str(inimigo["nome"]))
 
 func ler_csv(id) -> Dictionary:
