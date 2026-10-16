@@ -5,7 +5,7 @@ var idAtual
 var csv: Array = []
 
 func _ready() -> void:
-	var file = FileAccess.open("res://data/roteiro/TCC CDE - Roteiro.csv", FileAccess.READ)
+	var file = FileAccess.open("res://data/TCC CDE - Roteiro.csv", FileAccess.READ)
 	while not file.eof_reached():
 		var linha = file.get_csv_line()
 		csv.append(linha)

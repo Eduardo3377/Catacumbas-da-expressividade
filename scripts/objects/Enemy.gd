@@ -5,13 +5,12 @@ var csv: Array = []
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		print("tocou no inigmigo")
 		get_node("/root/MainGame/Canvas/UI").combatstart(InimigoId)
 		set_deferred("monitoring", false)
 		hide()
 
 func _ready() -> void:
-	var file = FileAccess.open("res://data/combat/TCC CDE - Combat.csv", FileAccess.READ)
+	var file = FileAccess.open("res://data/TCC CDE - Combat.csv", FileAccess.READ)
 
 	while not file.eof_reached():
 		csv.append(file.get_csv_line())

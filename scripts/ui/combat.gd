@@ -35,7 +35,7 @@ var ids_inimigos
 # CSV
 ################################################################################
 func _ready() -> void:
-	var file = FileAccess.open("res://data/combat/TCC CDE - Combat.csv", FileAccess.READ)
+	var file = FileAccess.open("res://data/TCC CDE - Combat.csv", FileAccess.READ)
 
 	while not file.eof_reached():
 		csv.append(file.get_csv_line())
