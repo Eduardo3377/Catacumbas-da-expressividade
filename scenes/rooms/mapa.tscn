@@ -683,6 +683,7 @@ texture = ExtResource("8_w3tgf")
 
 [node name="arvoras" type="Node2D" parent="C" unique_id=1457244474]
 modulate = Color(1.0845727, 1.0845727, 1.0845727, 1)
+use_parent_material = true
 position = Vector2(538, 672)
 
 [node name="abrore" parent="C/arvoras" unique_id=1210332972 instance=ExtResource("13_w3tgf")]

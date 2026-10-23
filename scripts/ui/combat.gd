@@ -7,6 +7,7 @@ var batalha_ativa = false
 var ids_inimigos
 @onready var acoes: TabContainer = %Acoes
 @onready var selected: Label = %Selected
+@onready var sair: Button = %sair
 
 @onready var player_1: Label = %Player1
 @onready var player_2: Label = %Player2
@@ -55,6 +56,7 @@ func ler_csv(id) -> Dictionary:
 			{"nome": coluna[6].strip_edges(), "dano": int(coluna[5])
 			}
 		],
+		"naofugir": int(coluna[7]),
 	}
 
 ################################################################################
@@ -80,6 +82,7 @@ func combat(ids) -> void:
 			continue
 		else: inimigos.append(ler_csv(id))
 
+	checarfugir()
 	batalha_ativa = true
 	turno_atual = 0
 	acoes.current_tab = 0
@@ -192,6 +195,17 @@ func primeiro_vivo(time) -> int:
 			return i
 
 	return -1
+	
+func checarfugir() -> void:
+	var fugir = 0
+	for i in range(inimigos.size()):
+		if inimigos[i]["naofugir"] > 0:
+			fugir = 1
+	if fugir == 1:
+		sair.hide()
+	else:
+		sair.show()
+
 
 
 func personagems_vivos(time) -> Array:
