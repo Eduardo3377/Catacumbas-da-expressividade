@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://ctt2hm5rehfiw"]
+
+[ext_resource type="Texture2D" uid="uid://bfcqlw0ausyqb" path="res://assets/sprites/objects/cdabg.png" id="1_c40vc"]
+[ext_resource type="Texture2D" uid="uid://t42kujs46r1x" path="res://assets/sprites/objects/icon.svg" id="2_hfqg5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c40vc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pmg6p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c40vc")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hfqg5")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmg6p"]
+
+[node name="Porta" type="StaticBody2D" unique_id=295108326]
+physics_material_override = SubResource("PhysicsMaterial_c40vc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=601805587]
+sprite_frames = SubResource("SpriteFrames_pmg6p")
+animation = &"closed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=428324699]
+shape = SubResource("RectangleShape2D_pmg6p")

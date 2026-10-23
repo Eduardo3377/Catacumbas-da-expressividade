@@ -3,6 +3,8 @@ extends Node2D
 @onready var M: Node2D = %M
 @onready var Y: Node2D = %Y
 @onready var K: Node2D = %K
+@onready var porta: StaticBody2D = %Porta
+
 var gray = ShaderMaterial.new()
 
 func _ready():
@@ -10,11 +12,17 @@ func _ready():
 	C.material = gray
 	M.material = gray
 	Y.material = gray
-	pass
+	
+	porta.get_node("CollisionShape2D").set_deferred("disabled", false)
+	porta.get_node("AnimatedSprite2D").play("closed")
+
 func colorir(cor):
 	var node = get_node("%" + cor)
 	node.material = null
 	var inimigos  = node.get_node("Enemies")
 	inimigos.queue_free()
 	print(cor + " foi colorido")
-	pass
+	
+	if GameManager.EstadoCor >= 3:
+		porta.get_node("CollisionShape2D").set_deferred("disabled", true)
+		porta.get_node("AnimatedSprite2D").play("open")

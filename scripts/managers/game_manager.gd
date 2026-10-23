@@ -2,14 +2,18 @@ extends Node
 var PlayerPosition = []
 var PlayerMoving: bool
 var PararAndar = false
+var EstadoCor = 0
 @onready var ui = get_tree().root.get_node("MainGame/Canvas/UI")
 @onready var mapa = get_tree().root.get_node("MainGame/Mapa/Mapa")
 signal bgchange 
 func _ready():
+	EstadoCor = 0
 	pass
 
 func colorir(cor):
+	EstadoCor += 1
 	mapa.colorir(cor)
+
 
 	
 func PlayerPos(position):
