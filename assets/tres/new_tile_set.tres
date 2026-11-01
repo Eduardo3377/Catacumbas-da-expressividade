@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bk6qb4s7x2wde" path="res://assets/sprites/tilesets/grass_shadow.png" id="5_wpqjl"]
 [ext_resource type="Texture2D" uid="uid://2j1o4tn83uu6" path="res://assets/sprites/tilesets/catacubas.png" id="6_1dx0c"]
 [ext_resource type="Texture2D" uid="uid://d25wg34q5as4n" path="res://assets/sprites/tilesets/carpet.png" id="6_2b2wm"]
+[ext_resource type="Texture2D" uid="uid://bau8bd3gnhg0s" path="res://assets/sprites/tilesets/tileset1.png" id="6_b1upx"]
 [ext_resource type="Texture2D" uid="uid://8qfpc2bqcjxy" path="res://assets/sprites/tilesets/castle_props.png" id="6_i6f7h"]
 [ext_resource type="Texture2D" uid="uid://nurcoxk7c7hm" path="res://assets/sprites/tilesets/gray_.png" id="7_2b2wm"]
 [ext_resource type="Texture2D" uid="uid://bl727es8lt2m6" path="res://assets/sprites/tilesets/grasss.png" id="7_t5232"]
@@ -258,6 +259,25 @@ texture = ExtResource("5_i6f7h")
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6026n"]
+texture = ExtResource("6_b1upx")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b1upx"]
 texture = ExtResource("6_i6f7h")
@@ -818,5 +838,6 @@ sources/11 = SubResource("TileSetAtlasSource_wb661")
 sources/12 = SubResource("TileSetAtlasSource_h1y3i")
 sources/14 = SubResource("TileSetAtlasSource_b1upx")
 sources/15 = SubResource("TileSetAtlasSource_roelr")
+sources/13 = SubResource("TileSetAtlasSource_6026n")
 pattern_0 = SubResource("TileMapPattern_6026n")
 pattern_1 = SubResource("TileMapPattern_i6f7h")
