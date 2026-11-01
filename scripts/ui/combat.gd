@@ -95,6 +95,7 @@ func player_atacar(ataque_id: int) -> void:
 
 	var jogador = jogadores[turno_atual]
 	var ataque = jogador["ataques"][ataque_id]
+	
 	var alvo = inimigos[0]
 
 	alvo["hp"] -= ataque["dano"]
@@ -178,45 +179,6 @@ func proximo_turno() -> void:
 
 	atualizar_ui()
 
-
-func proximo_vivo(time) -> int:
-	for i in range(1, time.size() + 1):
-		var indice = (turno_atual + i) % time.size()
-
-		if time[indice]["hp"] > 0:
-			return indice
-
-	return -1
-
-
-func primeiro_vivo(time) -> int:
-	for i in range(time.size()):
-		if time[i]["hp"] > 0:
-			return i
-
-	return -1
-	
-func checarfugir() -> void:
-	var fugir = 0
-	for i in range(inimigos.size()):
-		if inimigos[i]["naofugir"] > 0:
-			fugir = 1
-	if fugir == 1:
-		sair.hide()
-	else:
-		sair.show()
-
-
-
-func personagems_vivos(time) -> Array:
-	var vivos: Array = []
-
-	for personagem in time:
-		if personagem["hp"] > 0:
-			vivos.append(personagem)
-
-	return vivos
-	
 func fim(status: int) -> void:
 	batalha_ativa = false
 	acoes.current_tab = 2
@@ -230,6 +192,46 @@ func fim(status: int) -> void:
 		gameover.show()
 
 
+##############################################################################
+# funcoes de ajuda
+##############################################################################
+
+func proximo_vivo(time) -> int:
+	for i in range(1, time.size() + 1):
+		var indice = (turno_atual + i) % time.size()
+
+		if time[indice]["hp"] > 0:
+			return indice
+
+	return -1
+
+func primeiro_vivo(time) -> int:
+	for i in range(time.size()):
+		if time[i]["hp"] > 0:
+			return i
+
+	return -1
+
+
+func checarfugir() -> void:
+	var fugir = 0
+	for i in range(inimigos.size()):
+		if inimigos[i]["naofugir"] > 0:
+			fugir = 1
+	if fugir == 1:
+		sair.hide()
+	else:
+		sair.show()
+
+func personagems_vivos(time) -> Array:
+	var vivos: Array = []
+
+	for personagem in time:
+		if personagem["hp"] > 0:
+			vivos.append(personagem)
+
+	return vivos
+	
 ################################################################################
 # UI
 ################################################################################
@@ -302,8 +304,7 @@ func selecionar_alvo(time):
 # botoes
 ################################################################################
 func _on_sair_pressed() -> void:
-	GameManager.PararAndar = false
-	hide()
+	fim(1)
 
 func _on_atk_pressed() -> void:
 	acoes.current_tab = 1
@@ -312,7 +313,7 @@ func _on_cor_pressed() -> void:
 	acoes.current_tab = 2
 
 func _on_checar_pressed() -> void:
-	# selecionar personagem
+	# insira selecionar personagem
 	acoes.current_tab = 3
 
 func _on_voltar_pressed() -> void:
