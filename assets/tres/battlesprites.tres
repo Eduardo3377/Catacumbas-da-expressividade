@@ -1,6 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cha13xdc1rupp"]
 
 [ext_resource type="Texture2D" uid="uid://cwtdijcuerg4f" path="res://assets/sprites/characters/catupiry.png" id="1_4qgnw"]
+[ext_resource type="Texture2D" uid="uid://iyhqyvguqp67" path="res://assets/sprites/characters/Bel Amat.png" id="1_r46hx"]
 [ext_resource type="Texture2D" uid="uid://dh1ihtn435ri" path="res://assets/sprites/characters/Coelho_do_mal_girando_faca_sheet.png" id="2_p1wm5"]
 [ext_resource type="Texture2D" uid="uid://da8j0bespjje" path="res://assets/sprites/players/protagonistas.png" id="3_h52qc"]
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/characters/Fox.png" id="4_h52qc"]
@@ -154,6 +155,14 @@ region = Rect2(64, 64, 64, 64)
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_r46hx")
+}],
+"loop": 1,
+"name": &"Bel Amat",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_4qgnw")

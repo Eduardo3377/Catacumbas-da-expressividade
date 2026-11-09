@@ -415,24 +415,24 @@ Fundo = true
 position = Vector2(261, 58)
 metadata/_edit_lock_ = true
 
+[node name="fala6" parent="K/Enemies" unique_id=869338063 instance=ExtResource("11_4bum4")]
+position = Vector2(-232, 349)
+scale = Vector2(1, 4)
+Fala = true
+FalaId = 96
+
 [node name="Enemy" parent="K/Enemies" unique_id=1211658649 instance=ExtResource("12_w3tgf")]
 position = Vector2(-168, 355)
 scale = Vector2(-1, 1)
 InimigoId = Array[int]([15, 0, 0])
 
 [node name="triggers" type="Node2D" parent="K" unique_id=440362974]
-position = Vector2(-244, -365)
+position = Vector2(-417, -1265)
 
 [node name="fala5" parent="K/triggers" unique_id=215922031 instance=ExtResource("11_4bum4")]
 position = Vector2(88, 37)
 Fala = true
 FalaId = 56
-
-[node name="fala6" parent="K/triggers" unique_id=869338063 instance=ExtResource("11_4bum4")]
-position = Vector2(273, 772)
-scale = Vector2(1, 4)
-Fala = true
-FalaId = 96
 
 [node name="fala4" parent="K/triggers" unique_id=523880802 instance=ExtResource("11_4bum4")]
 position = Vector2(88, 6)
@@ -1362,7 +1362,7 @@ position = Vector2(-48, 94)
 InimigoId = Array[int]([8, 0, 0])
 
 [node name="Enemy6" parent="Y/Enemies" unique_id=988212606 instance=ExtResource("12_w3tgf")]
-position = Vector2(-210, -334)
+position = Vector2(-256, -339)
 InimigoId = Array[int]([8, 0, 0])
 
 [node name="Enemy11" parent="Y/Enemies" unique_id=1854317396 instance=ExtResource("12_w3tgf")]
@@ -1382,11 +1382,11 @@ position = Vector2(129, 15)
 InimigoId = Array[int]([8, 0, 0])
 
 [node name="Enemy7" parent="Y/Enemies" unique_id=1464901128 instance=ExtResource("12_w3tgf")]
-position = Vector2(-157, -302)
-InimigoId = Array[int]([8, 0, 0])
+position = Vector2(-160, -333)
+InimigoId = Array[int]([13, 0, 0])
 
 [node name="Enemy12" parent="Y/Enemies" unique_id=1432320963 instance=ExtResource("12_w3tgf")]
-position = Vector2(-105, -334)
+position = Vector2(-54, -342)
 InimigoId = Array[int]([8, 0, 0])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Y" unique_id=475888097]
@@ -1521,7 +1521,7 @@ position = Vector2(-60, -395)
 texture = ExtResource("33_yt537")
 
 [node name="cartucho" parent="Y" unique_id=1856875161 instance=ExtResource("21_dxis2")]
-position = Vector2(-158, -368)
+position = Vector2(-161, -375)
 cor = "Y"
 
 [connection signal="body_entered" from="M/Enemies/oitho" to="M/Enemies/oitho" method="_on_body_entered"]

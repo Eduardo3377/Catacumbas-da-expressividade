@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://bqx3ikhtklypw" path="res://assets/sprites/characters/zumbu_small.png" id="8_qosbx"]
 [ext_resource type="Texture2D" uid="uid://fvpscrvgkqx" path="res://assets/sprites/objects/Gelidinho.png" id="9_w0bdi"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsntr"]
+atlas = ExtResource("3_6ipsb")
+region = Rect2(0, 32, 19, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8kq1"]
 atlas = ExtResource("3_6ipsb")
 region = Rect2(0, 0, 19, 32)
@@ -18,10 +22,6 @@ region = Rect2(0, 0, 19, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_prcif"]
 atlas = ExtResource("3_6ipsb")
 region = Rect2(19, 0, 19, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jsntr"]
-atlas = ExtResource("3_6ipsb")
-region = Rect2(0, 32, 19, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eftcs"]
 atlas = ExtResource("9_w0bdi")
@@ -41,6 +41,14 @@ region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pmg6p"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsntr")
+}],
+"loop": 1,
+"name": &"Bel Amat",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_jsntr")
@@ -103,14 +111,6 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Slime",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jsntr")
-}],
-"loop": 1,
-"name": &"Vunerona",
 "speed": 5.0
 }, {
 "frames": [{
