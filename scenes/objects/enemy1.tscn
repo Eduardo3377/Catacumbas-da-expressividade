@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b2giiy0jjsql4" path="res://assets/sprites/objects/tiny_bosses.png" id="3_6ipsb"]
 [ext_resource type="Texture2D" uid="uid://cegy53rsanwgi" path="res://assets/sprites/characters/skeleton_small.png" id="3_w0bdi"]
 [ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/characters/Polaris.png" id="4_uiui7"]
+[ext_resource type="Texture2D" uid="uid://bkx3vle6x6pcn" path="res://assets/sprites/characters/marmorita.png" id="5_eftcs"]
 [ext_resource type="Texture2D" uid="uid://dwa260amcjj0s" path="res://assets/sprites/characters/slime_small.png" id="7_eftcs"]
 [ext_resource type="Texture2D" uid="uid://bqx3ikhtklypw" path="res://assets/sprites/characters/zumbu_small.png" id="8_qosbx"]
 [ext_resource type="Texture2D" uid="uid://fvpscrvgkqx" path="res://assets/sprites/objects/Gelidinho.png" id="9_w0bdi"]
@@ -62,6 +63,14 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Fox",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eftcs")
+}],
+"loop": 1,
+"name": &"Marmorita",
 "speed": 5.0
 }, {
 "frames": [{
@@ -142,7 +151,6 @@ unique_name_in_owner = true
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_pmg6p")
 autoplay = "default"
-frame_progress = 0.76298845
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735701073]
 position = Vector2(0, -9)

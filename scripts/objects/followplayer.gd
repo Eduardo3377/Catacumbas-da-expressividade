@@ -6,6 +6,8 @@ var Next_pos: Vector2
 
 func _ready() -> void:
 	GameManager.bgchange.connect(bgchange)
+	if Background:
+		bgchange("default")
 	
 func _physics_process(_delta: float) -> void:
 	ArraySize = len(GameManager.PlayerPosition) -1

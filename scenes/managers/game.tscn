@@ -36,12 +36,13 @@ metadata/_edit_lock_ = true
 
 [node name="background" parent="Mapa" unique_id=1011117589 instance=ExtResource("10_vigns")]
 z_index = -1000
-position = Vector2(192, 108)
+position = Vector2(-707, 613)
 metadata/_edit_lock_ = true
 
 [node name="Mapa" parent="Mapa" unique_id=59091156 instance=ExtResource("6_3g53l")]
 
 [node name="Players" type="Node2D" parent="Mapa" unique_id=499072006]
+position = Vector2(-899, 505)
 script = SubResource("GDScript_ll2y6")
 
 [node name="Vini" parent="Mapa/Players" unique_id=1937835004 instance=ExtResource("9_j4x4q")]

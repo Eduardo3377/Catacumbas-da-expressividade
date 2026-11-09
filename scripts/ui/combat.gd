@@ -295,7 +295,7 @@ func checar(inimigo) -> void:
 	)
 	acoes.current_tab = 3
 	
-func selecionar_alvo(time):
+func selecionar_alvo(_time):
 	acoes.current_tab = 4
 	
 	pass

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://crumfuv4x5le1" path="res://assets/sprites/characters/Fox.png" id="4_h52qc"]
 [ext_resource type="Texture2D" uid="uid://b10y4a4o6dl5i" path="res://assets/sprites/characters/skeleton_sheet.png" id="4_r46hx"]
 [ext_resource type="Texture2D" uid="uid://2258d6q7agj3" path="res://assets/sprites/characters/The manager.png" id="5_lp6wr"]
+[ext_resource type="Texture2D" uid="uid://bkx3vle6x6pcn" path="res://assets/sprites/characters/marmorita.png" id="6_h52qc"]
 [ext_resource type="Texture2D" uid="uid://c22afptatrpj7" path="res://assets/sprites/characters/Polaris.png" id="6_kg6bl"]
 [ext_resource type="Texture2D" uid="uid://cs51llnsys5dy" path="res://assets/sprites/characters/Oithom_sheet.png" id="7_kg6bl"]
 [ext_resource type="Texture2D" uid="uid://qxfq7v4f5i36" path="res://assets/sprites/characters/slime_sheet.png" id="9_lh5w0"]
@@ -236,6 +237,14 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Fox",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_h52qc")
+}],
+"loop": 1,
+"name": &"Marmorita",
 "speed": 5.0
 }, {
 "frames": [{

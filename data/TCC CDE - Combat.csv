@@ -1,13 +1,16 @@
 nome,cor,hp,atk1,atk1nome,atk2,atk2nome,naofugir
-Vini,C,50,7,Psypunch,12,Psyquake,0
-Edu,M,40,6,Paper Fold,10,Paper Cut,0
-Pedro,Y,60,8,Slashes,16,Behead,0
-Fox,M,30,20,Bite,25,Paper Cut,0
-Polaris,K,500,-50,Copium,9999,Despair,1
+Vini,C,55,7,Psypunch,12,Psyquake,0
+Edu,M,50,6,Paper Fold,10,Paper Cut,0
+Pedro,Y,45,8,Slashes,16,Behead,0
+Fox,"K, M",300,10,Bite,15,Paper Cut,1
+Polaris,"C, M, Y, K",670,-100,Hope,67,Despair,1
 Slime,K,40,-20,Goop,50,Slime,0
-Zumbi,K,45,50,Punch,60,Bite,0
+Zumbi,K,45,50,Prince Neo Ron,60,Bite,0
 Esqueleto,K,40,-30,Lucky Bone,50,Unlucky Bone,0
 Coelho,K,50,20,Feral Bite,50,Stab,0
-Oithon,M,100,20,Staff,80,Eight,1
-Catupiry,M,70,50,Flex,51,Fatal Flex,1
-Miss Sheepard,C,100,30,Stapler,100,Bribe,1
+Oithon,"K, M",100,28,Staff,88,Eight,1
+Catupiry,"K, M",70,50,Flex,51,Fatal Flex,1
+Miss Sheepard,"K, C",100,30,Stapler,50,Bribe,1
+Bel Amat,"K, Y",100,30,Pillow strike,88,Nap,1
+Prince Neo Ron,K,150,20,Vibe,30,Coding,1
+Marmorita,"C, M, Y, K",40,10,Rock,15,Sword,1
