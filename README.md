@@ -23,3 +23,11 @@ Licenciada sob a SIL Open Font License, versão 1.1.
 
 https://github.com/petrvanblokland/TYPETR-Bitcount
 
+
+
+
+
+
+# Links
+Documentacão, aberta apenas para desenvolvedores
+https://docs.google.com/document/d/1OBypDlmw9b6LwuZ1Ez9HVPJn-KS4EXmCoAexYZvyJ64/edit?usp=sharing
